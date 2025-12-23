@@ -1,6 +1,1 @@
-import "server-only";
-import { neonAuth } from "@neondatabase/neon-js/auth/next";
-
-export async function getSession() {
-  return await neonAuth();
-}
+export { getSession } from "@repo/neon-auth";
