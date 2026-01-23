@@ -138,4 +138,3 @@ Made with [contrib.rocks](https://contrib.rocks).
 ## License
 
 MIT
-# serverless-node-neon-aws
