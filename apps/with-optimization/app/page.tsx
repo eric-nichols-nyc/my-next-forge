@@ -14,10 +14,34 @@ import {
   Code,
   Layers,
   TrendingUp,
+  Network,
+  Cpu,
+  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 
 const strategies = [
+  {
+    name: "Network Bottleneck",
+    description: "Waterfall vs parallel API requests — debug and discuss",
+    href: "/network-bottleneck",
+    icon: Network,
+    color: "text-amber-500",
+  },
+  {
+    name: "useMemo",
+    description: "Before/after: expensive computation on every render vs memoized",
+    href: "/use-memo-demo",
+    icon: Cpu,
+    color: "text-cyan-500",
+  },
+  {
+    name: "Optimization demos",
+    description: "Slow input (useDeferredValue), slow tab (useTransition), caching",
+    href: "/optimization-demos",
+    icon: Sparkles,
+    color: "text-violet-500",
+  },
   {
     name: "SWR (Data Fetching)",
     description: "Stale-while-revalidate data fetching for optimal performance",
