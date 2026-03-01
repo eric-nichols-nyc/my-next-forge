@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { ArrowLeft, Zap, CheckCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle, Zap } from "lucide-react";
 import Link from "next/link";
 
 const PerformanceTipsPage = () => {
@@ -72,19 +72,20 @@ const PerformanceTipsPage = () => {
           <CardHeader>
             <CardTitle>Performance Tips</CardTitle>
             <CardDescription>
-              Best practices and optimization strategies for Next.js applications
+              Best practices and optimization strategies for Next.js
+              applications
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             {tips.map((tip) => (
-              <div key={tip.category} className="rounded-lg border p-4">
+              <div className="rounded-lg border p-4" key={tip.category}>
                 <div className="mb-3 flex items-center gap-2">
                   <Zap className="h-5 w-5 text-primary" />
                   <h3 className="font-semibold">{tip.category}</h3>
                 </div>
                 <ul className="space-y-2">
                   {tip.items.map((item, index) => (
-                    <li key={index} className="flex items-start gap-2">
+                    <li className="flex items-start gap-2" key={index}>
                       <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-500" />
                       <span className="text-muted-foreground text-sm">
                         {item}
@@ -130,4 +131,3 @@ const PerformanceTipsPage = () => {
 };
 
 export default PerformanceTipsPage;
-

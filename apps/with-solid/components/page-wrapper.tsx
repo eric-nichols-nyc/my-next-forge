@@ -14,9 +14,6 @@ type PageWrapperProps = {
  */
 export function PageWrapper({ children, context }: PageWrapperProps) {
   return (
-    <PageContextProvider context={context}>
-      {children}
-    </PageContextProvider>
+    <PageContextProvider context={context}>{children}</PageContextProvider>
   );
 }
-

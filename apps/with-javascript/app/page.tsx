@@ -24,9 +24,9 @@ const HomePage = () => (
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
             <p className="text-center text-muted-foreground text-sm">
-              Explore core JavaScript concepts including scope, closures, event loop,
-              promises, prototypes, and more. Use the sidebar to navigate between
-              concepts and deepen your understanding of JavaScript.
+              Explore core JavaScript concepts including scope, closures, event
+              loop, promises, prototypes, and more. Use the sidebar to navigate
+              between concepts and deepen your understanding of JavaScript.
             </p>
             <div className="flex justify-center">
               <ModeToggle />
@@ -58,7 +58,9 @@ const HomePage = () => (
               </ul>
             </div>
             <div>
-              <h3 className="mb-2 font-semibold text-sm">Objects & Prototypes</h3>
+              <h3 className="mb-2 font-semibold text-sm">
+                Objects & Prototypes
+              </h3>
               <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
                 <li>Prototype</li>
                 <li>Prototype Chain</li>
@@ -81,4 +83,3 @@ const HomePage = () => (
 );
 
 export default HomePage;
-

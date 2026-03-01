@@ -67,20 +67,17 @@ export const MappedTypesExamples = () => {
       <CardContent className="space-y-4">
         <div className="flex flex-wrap gap-2">
           {(
-            [
-              "original",
-              "readonly",
-              "optional",
-              "stringify",
-            ] as Array<keyof typeof typeInfo>
+            ["original", "readonly", "optional", "stringify"] as Array<
+              keyof typeof typeInfo
+            >
           ).map((type) => (
             <button
-              key={type}
               className={`rounded px-3 py-1 text-xs transition-colors ${
                 selectedType === type
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted hover:bg-muted/80"
               }`}
+              key={type}
               onClick={() => {
                 setSelectedType(type);
               }}
@@ -91,7 +88,7 @@ export const MappedTypesExamples = () => {
           ))}
         </div>
         <div className="rounded-lg bg-muted p-4">
-          <p className="mb-2 text-xs font-semibold">
+          <p className="mb-2 font-semibold text-xs">
             {typeNames[selectedType]}
           </p>
           <pre className="text-xs">
@@ -102,4 +99,3 @@ export const MappedTypesExamples = () => {
     </Card>
   );
 };
-

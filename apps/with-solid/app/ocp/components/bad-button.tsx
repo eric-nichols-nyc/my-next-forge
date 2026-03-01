@@ -27,9 +27,8 @@ export const BadButton = ({ type, label, onClick }: BadButtonProps) => {
   };
 
   return (
-    <Button onClick={onClick} className={getStyles()}>
+    <Button className={getStyles()} onClick={onClick}>
       {label}
     </Button>
   );
 };
-

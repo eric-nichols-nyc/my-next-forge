@@ -17,11 +17,3 @@ export class HttpClient {
     return this.adapter.post(url, data);
   }
 }
-
-
-
-
-
-
-
-

@@ -20,11 +20,3 @@ export class FetchAdapter implements HttpAdapter {
     return response.json();
   }
 }
-
-
-
-
-
-
-
-

@@ -1,5 +1,10 @@
 "use client";
 
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@repo/design-system/components/ui/alert";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   Card,
@@ -17,17 +22,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@repo/design-system/components/ui/select";
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@repo/design-system/components/ui/alert";
-import { Send, Bell } from "lucide-react";
+import { Bell, Send } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
+  getNotificationVariant,
   type Notification,
   type NotificationType,
-  getNotificationVariant,
 } from "@/lib/notification-service";
 
 export default function TestDashboardPage() {
@@ -83,7 +83,7 @@ export default function TestDashboardPage() {
       }
 
       setSuccess(
-        `Notification sent! (${data.connections} connection${data.connections !== 1 ? "s" : ""} active)`,
+        `Notification sent! (${data.connections} connection${data.connections !== 1 ? "s" : ""} active)`
       );
       setMessage(""); // Clear message field
     } catch (error) {
@@ -99,7 +99,9 @@ export default function TestDashboardPage() {
       <div className="flex w-full max-w-4xl flex-col gap-6">
         <Card>
           <CardHeader>
-            <CardTitle className="text-3xl">Notification Test Dashboard</CardTitle>
+            <CardTitle className="text-3xl">
+              Notification Test Dashboard
+            </CardTitle>
             <CardDescription>
               Send notifications and see them appear in real-time
             </CardDescription>
@@ -124,7 +126,10 @@ export default function TestDashboardPage() {
 
               <div className="space-y-2">
                 <Label htmlFor="type">Notification Type</Label>
-                <Select value={type} onValueChange={(value) => setType(value as NotificationType)}>
+                <Select
+                  onValueChange={(value) => setType(value as NotificationType)}
+                  value={type}
+                >
                   <SelectTrigger id="type">
                     <SelectValue />
                   </SelectTrigger>
@@ -141,11 +146,11 @@ export default function TestDashboardPage() {
                 <Label htmlFor="message">Message</Label>
                 <Input
                   id="message"
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Enter notification message..."
                   required
                   type="text"
                   value={message}
-                  onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
 
@@ -177,7 +182,8 @@ export default function TestDashboardPage() {
                   <Bell className="h-4 w-4" />
                   <AlertTitle>Waiting for notifications</AlertTitle>
                   <AlertDescription>
-                    Send a notification using the form above to see it appear here in real-time.
+                    Send a notification using the form above to see it appear
+                    here in real-time.
                   </AlertDescription>
                 </Alert>
               ) : (

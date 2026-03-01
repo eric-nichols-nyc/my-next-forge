@@ -13,12 +13,16 @@ import {
   TabsList,
   TabsTrigger,
 } from "@repo/design-system/components/ui/tabs";
-import { SplitLayout } from "@/components/split-layout";
 import { ComponentCodeLayout } from "@/components/component-code-layout";
-import { BadForm } from "./components/bad-form";
-import { BaseForm, DeletableForm, ExportableForm } from "./components/good-form";
+import { SplitLayout } from "@/components/split-layout";
 import { AdvancedBadService } from "./components/advanced-bad-service";
 import { AdvancedGoodService } from "./components/advanced-good-service";
+import { BadForm } from "./components/bad-form";
+import {
+  BaseForm,
+  DeletableForm,
+  ExportableForm,
+} from "./components/good-form";
 
 const badCode = `"use client";
 
@@ -224,8 +228,7 @@ const ISPPage = () => (
         <CardHeader>
           <CardTitle>Interface Segregation Principle</CardTitle>
           <CardDescription>
-            Clients should not be forced to depend on interfaces they do not
-            use
+            Clients should not be forced to depend on interfaces they do not use
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -239,7 +242,7 @@ const ISPPage = () => (
           </div>
           <div>
             <h3 className="mb-2 font-semibold">Benefits</h3>
-            <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
               <li>Reduces coupling</li>
               <li>Prevents unnecessary dependencies</li>
               <li>More flexible and maintainable code</li>
@@ -260,40 +263,40 @@ const ISPPage = () => (
           <SplitLayout
             left={
               <ComponentCodeLayout
+                code={badCode}
                 component={
                   <BadForm
-                    onSubmit={() => {}}
                     onCancel={() => {}}
                     onDelete={() => {}}
                     onExport={() => {}}
                     onPrint={() => {}}
+                    onSubmit={() => {}}
                   />
                 }
-                code={badCode}
-                title="❌ Bad Component"
                 description="Forces all components to implement unused props"
+                title="❌ Bad Component"
               />
             }
             right={
               <ComponentCodeLayout
+                code={goodCode}
                 component={
                   <div className="space-y-4">
-                    <BaseForm onSubmit={() => {}} onCancel={() => {}} />
+                    <BaseForm onCancel={() => {}} onSubmit={() => {}} />
                     <DeletableForm
-                      onSubmit={() => {}}
                       onCancel={() => {}}
                       onDelete={() => {}}
+                      onSubmit={() => {}}
                     />
                     <ExportableForm
-                      onSubmit={() => {}}
                       onCancel={() => {}}
                       onExport={() => {}}
+                      onSubmit={() => {}}
                     />
                   </div>
                 }
-                code={goodCode}
-                title="✅ Good Component"
                 description="Segregated - components only use what they need"
+                title="✅ Good Component"
               />
             }
           />
@@ -324,4 +327,3 @@ const ISPPage = () => (
 );
 
 export default ISPPage;
-

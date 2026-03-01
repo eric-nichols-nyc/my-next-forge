@@ -30,7 +30,7 @@ const SSGPage = async () => {
     <main className="min-h-screen bg-background p-8">
       <div className="mx-auto max-w-4xl">
         <Link href="/">
-          <Button variant="ghost" className="mb-4">
+          <Button className="mb-4" variant="ghost">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
@@ -47,7 +47,7 @@ const SSGPage = async () => {
           <CardContent className="space-y-4">
             <div className="rounded-lg bg-muted p-4">
               <h3 className="mb-2 font-semibold">How it works:</h3>
-              <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+              <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
                 <li>During build time, Next.js calls getData()</li>
                 <li>Server renders React components to HTML</li>
                 <li>HTML is saved as static files</li>
@@ -58,26 +58,26 @@ const SSGPage = async () => {
 
             <div className="space-y-2">
               <div className="flex items-center justify-between rounded-lg border p-3">
-                <span className="text-sm font-medium">Build Time:</span>
-                <span className="text-sm text-muted-foreground">
+                <span className="font-medium text-sm">Build Time:</span>
+                <span className="text-muted-foreground text-sm">
                   {data.buildTime}
                 </span>
               </div>
 
               <div className="space-y-2">
                 <div className="rounded-lg border p-3">
-                  <p className="text-sm font-medium">Message:</p>
+                  <p className="font-medium text-sm">Message:</p>
                   <p className="text-muted-foreground">{data.message}</p>
                 </div>
                 <div className="rounded-lg border p-3">
-                  <p className="text-sm font-medium">Data Timestamp:</p>
+                  <p className="font-medium text-sm">Data Timestamp:</p>
                   <p className="text-muted-foreground">{data.timestamp}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">
+                  <p className="mt-1 text-muted-foreground text-xs">
                     (This was generated at build time)
                   </p>
                 </div>
                 <div className="rounded-lg border p-3">
-                  <p className="text-sm font-medium">Random Number:</p>
+                  <p className="font-medium text-sm">Random Number:</p>
                   <p className="text-muted-foreground">{data.randomNumber}</p>
                 </div>
               </div>
@@ -90,7 +90,9 @@ const SSGPage = async () => {
               <ul className="mt-1 list-inside list-disc space-y-1 text-green-700 dark:text-green-300">
                 <li>Fastest performance: Pre-rendered HTML served instantly</li>
                 <li>Excellent SEO: Full HTML available to search engines</li>
-                <li>Scalable: Can be served from CDN with minimal server load</li>
+                <li>
+                  Scalable: Can be served from CDN with minimal server load
+                </li>
                 <li>Cost-effective: No server processing per request</li>
               </ul>
             </div>
@@ -101,8 +103,7 @@ const SSGPage = async () => {
               </p>
               <p className="mt-1 text-yellow-700 dark:text-yellow-300">
                 Best for content that doesn&apos;t change frequently, such as
-                blog posts, documentation, marketing pages, or product
-                catalogs.
+                blog posts, documentation, marketing pages, or product catalogs.
               </p>
             </div>
           </CardContent>
@@ -113,4 +114,3 @@ const SSGPage = async () => {
 };
 
 export default SSGPage;
-

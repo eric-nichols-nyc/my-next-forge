@@ -16,11 +16,3 @@ export class MockAdapter implements HttpAdapter {
     return { success: true, data };
   }
 }
-
-
-
-
-
-
-
-

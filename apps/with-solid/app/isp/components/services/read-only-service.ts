@@ -10,11 +10,3 @@ export class ReadOnlyService implements Readable {
     console.log("Reading data");
   }
 }
-
-
-
-
-
-
-
-

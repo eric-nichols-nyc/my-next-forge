@@ -1,8 +1,13 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/design-system/components/ui/card";
-import { useState, useEffect } from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/design-system/components/ui/card";
+import { useEffect, useState } from "react";
 
 /**
  * ❌ BAD: Advanced example violating SRP
@@ -20,14 +25,16 @@ export const AdvancedBadDashboard = () => {
   const [stats, setStats] = useState({ total: 0, active: 0 });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [cache, setCache] = useState<{ data: any[]; timestamp: number } | null>(null);
+  const [cache, setCache] = useState<{ data: any[]; timestamp: number } | null>(
+    null
+  );
 
   // Data fetching logic
   useEffect(() => {
     const fetchData = async () => {
       try {
         // Check cache first
-        if (cache && Date.now() - cache.timestamp < 30000) {
+        if (cache && Date.now() - cache.timestamp < 30_000) {
           setUsers(cache.data);
           setLoading(false);
           return;
@@ -84,20 +91,20 @@ export const AdvancedBadDashboard = () => {
       <CardContent className="space-y-4">
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <p className="text-sm text-muted-foreground">Total Users</p>
-            <p className="text-2xl font-bold">{stats.total}</p>
+            <p className="text-muted-foreground text-sm">Total Users</p>
+            <p className="font-bold text-2xl">{stats.total}</p>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground">Active Users</p>
-            <p className="text-2xl font-bold">{stats.active}</p>
+            <p className="text-muted-foreground text-sm">Active Users</p>
+            <p className="font-bold text-2xl">{stats.active}</p>
           </div>
         </div>
         <div className="space-y-2">
           <h3 className="font-semibold">Users</h3>
           {users.map((user) => (
-            <div key={user.id} className="p-2 border rounded">
+            <div className="rounded border p-2" key={user.id}>
               <p className="font-medium">{user.displayName}</p>
-              <p className="text-sm text-muted-foreground">{user.email}</p>
+              <p className="text-muted-foreground text-sm">{user.email}</p>
             </div>
           ))}
         </div>
@@ -106,4 +113,3 @@ export const AdvancedBadDashboard = () => {
     </Card>
   );
 };
-

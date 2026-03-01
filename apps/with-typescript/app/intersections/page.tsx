@@ -99,4 +99,3 @@ const IntersectionsPage = () => (
 );
 
 export default IntersectionsPage;
-

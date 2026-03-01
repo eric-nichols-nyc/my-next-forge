@@ -51,8 +51,8 @@
  * - API Routes: Detailed authorization, role checks, business logic
  */
 
-import { NextResponse, type NextRequest } from "next/server";
 import { jwtVerify } from "jose";
+import { type NextRequest, NextResponse } from "next/server";
 
 /**
  * =============================================================================
@@ -73,7 +73,7 @@ const allowedOrigins = [
  * In production, use environment variables stored securely
  */
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "your-secret-key-change-in-production",
+  process.env.JWT_SECRET || "your-secret-key-change-in-production"
 );
 
 /**
@@ -93,13 +93,11 @@ export interface AuthenticatedUser {
  *   const user = getUserFromHeaders(request.headers);
  *   if (!user) return Response.json({ error: "Unauthorized" }, { status: 401 });
  */
-export function getUserFromHeaders(
-  headers: Headers,
-): AuthenticatedUser | null {
+export function getUserFromHeaders(headers: Headers): AuthenticatedUser | null {
   const email = headers.get("x-user-email");
   const role = headers.get("x-user-role");
 
-  if (!email || !role) {
+  if (!(email && role)) {
     return null;
   }
 
@@ -120,7 +118,8 @@ function handlePreflight(origin: string | null): NextResponse {
       headers: {
         "Access-Control-Allow-Origin": origin,
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization, X-CSRF-Token",
+        "Access-Control-Allow-Headers":
+          "Content-Type, Authorization, X-CSRF-Token",
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Max-Age": "86400", // Cache preflight for 24 hours
       },
@@ -217,7 +216,7 @@ export async function proxy(request: NextRequest) {
     if (request.nextUrl.pathname.startsWith("/api/protected")) {
       response = NextResponse.json(
         { error: "Unauthorized - Authentication required" },
-        { status: 401 },
+        { status: 401 }
       );
     } else {
       // For other routes, continue without user info
@@ -249,7 +248,7 @@ export async function proxy(request: NextRequest) {
   try {
     const { payload: verifiedPayload } = await jwtVerify(
       sessionCookie.value,
-      JWT_SECRET,
+      JWT_SECRET
     );
 
     // Type assertion - in production, validate the payload shape
@@ -273,7 +272,7 @@ export async function proxy(request: NextRequest) {
           error: "Invalid or expired session",
           hint: "Please log in again",
         },
-        { status: 401 },
+        { status: 401 }
       );
     } else {
       // Invalid token - clear the cookie and continue
@@ -297,12 +296,12 @@ export async function proxy(request: NextRequest) {
    * The JWT payload contains user data (email, role) set during login.
    * We extract it and validate it exists.
    */
-  if (!payload.email || !payload.role) {
+  if (!(payload.email && payload.role)) {
     // Malformed token - missing required fields
     if (request.nextUrl.pathname.startsWith("/api/protected")) {
       response = NextResponse.json(
         { error: "Invalid session data" },
-        { status: 401 },
+        { status: 401 }
       );
     } else {
       response = NextResponse.next();

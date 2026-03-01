@@ -78,17 +78,27 @@ const GeneratorsPage = () => (
       <CardHeader>
         <CardTitle>Generators</CardTitle>
         <CardDescription>
-          Generator functions are special functions that can be paused and resumed, allowing you to control execution flow and create iterators.
+          Generator functions are special functions that can be paused and
+          resumed, allowing you to control execution flow and create iterators.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="mb-2 font-semibold">Key Concepts</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li>Generator functions use <code>function*</code> syntax</li>
-            <li><code>yield</code> pauses execution and returns a value</li>
-            <li><code>.next()</code> resumes execution and returns <code>{`{value, done}`}</code></li>
-            <li>Can be iterated with <code>for...of</code> loops</li>
+            <li>
+              Generator functions use <code>function*</code> syntax
+            </li>
+            <li>
+              <code>yield</code> pauses execution and returns a value
+            </li>
+            <li>
+              <code>.next()</code> resumes execution and returns{" "}
+              <code>{"{value, done}"}</code>
+            </li>
+            <li>
+              Can be iterated with <code>for...of</code> loops
+            </li>
             <li>Enable lazy evaluation and infinite sequences</li>
           </ul>
         </div>
@@ -128,4 +138,3 @@ const GeneratorsPage = () => (
 );
 
 export default GeneratorsPage;
-

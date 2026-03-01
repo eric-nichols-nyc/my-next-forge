@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
   Sidebar,
   SidebarContent,
@@ -14,6 +12,8 @@ import {
   SidebarMenuItem,
 } from "@repo/design-system/components/ui/sidebar";
 import { Code2 } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const menuItems = [
   {
@@ -93,7 +93,9 @@ export const Sidenav = () => {
     (item) => item.category === "asynchronous"
   );
   const objectsItems = menuItems.filter((item) => item.category === "objects");
-  const advancedItems = menuItems.filter((item) => item.category === "advanced");
+  const advancedItems = menuItems.filter(
+    (item) => item.category === "advanced"
+  );
 
   return (
     <Sidebar>
@@ -200,4 +202,3 @@ export const Sidenav = () => {
     </Sidebar>
   );
 };
-

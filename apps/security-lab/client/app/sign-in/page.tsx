@@ -11,7 +11,7 @@ import {
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { useState } from "react";
-import { loginAction, type LoginResult } from "./actions";
+import { type LoginResult, loginAction } from "./actions";
 
 const API_URL = "http://localhost:4000/api/auth/login";
 
@@ -49,7 +49,8 @@ export default function SignInPage() {
     }
   }
 
-  const emailError = result?.success === false && result.fieldErrors?.email?.[0];
+  const emailError =
+    result?.success === false && result.fieldErrors?.email?.[0];
   const passwordError =
     result?.success === false && result.fieldErrors?.password?.[0];
 

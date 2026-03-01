@@ -47,7 +47,7 @@ const CSRPage = () => {
     <main className="min-h-screen bg-background p-8">
       <div className="mx-auto max-w-4xl">
         <Link href="/">
-          <Button variant="ghost" className="mb-4">
+          <Button className="mb-4" variant="ghost">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
@@ -64,7 +64,7 @@ const CSRPage = () => {
           <CardContent className="space-y-4">
             <div className="rounded-lg bg-muted p-4">
               <h3 className="mb-2 font-semibold">How it works:</h3>
-              <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+              <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
                 <li>Page HTML is sent to the browser</li>
                 <li>JavaScript bundle loads and executes</li>
                 <li>React components render on the client</li>
@@ -75,10 +75,8 @@ const CSRPage = () => {
 
             <div className="space-y-2">
               <div className="flex items-center justify-between rounded-lg border p-3">
-                <span className="text-sm font-medium">
-                  Client Render Time:
-                </span>
-                <span className="text-sm text-muted-foreground">
+                <span className="font-medium text-sm">Client Render Time:</span>
+                <span className="text-muted-foreground text-sm">
                   {clientRenderTime}
                 </span>
               </div>
@@ -86,28 +84,32 @@ const CSRPage = () => {
               {isLoading ? (
                 <div className="rounded-lg border p-6 text-center">
                   <RefreshCw className="mx-auto h-8 w-8 animate-spin text-muted-foreground" />
-                  <p className="mt-2 text-sm text-muted-foreground">
+                  <p className="mt-2 text-muted-foreground text-sm">
                     Loading data...
                   </p>
                 </div>
               ) : data ? (
                 <div className="space-y-2">
                   <div className="rounded-lg border p-3">
-                    <p className="text-sm font-medium">Message:</p>
+                    <p className="font-medium text-sm">Message:</p>
                     <p className="text-muted-foreground">{data.message}</p>
                   </div>
                   <div className="rounded-lg border p-3">
-                    <p className="text-sm font-medium">Data Timestamp:</p>
+                    <p className="font-medium text-sm">Data Timestamp:</p>
                     <p className="text-muted-foreground">{data.timestamp}</p>
                   </div>
                   <div className="rounded-lg border p-3">
-                    <p className="text-sm font-medium">Random Number:</p>
+                    <p className="font-medium text-sm">Random Number:</p>
                     <p className="text-muted-foreground">{data.randomNumber}</p>
                   </div>
                 </div>
               ) : null}
 
-              <Button onClick={handleRefresh} className="w-full" variant="outline">
+              <Button
+                className="w-full"
+                onClick={handleRefresh}
+                variant="outline"
+              >
                 <RefreshCw className="mr-2 h-4 w-4" />
                 Refresh Data
               </Button>
@@ -131,4 +133,3 @@ const CSRPage = () => {
 };
 
 export default CSRPage;
-

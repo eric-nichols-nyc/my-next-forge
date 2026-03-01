@@ -66,17 +66,29 @@ const AsyncAwaitPage = () => (
       <CardHeader>
         <CardTitle>Async/Await</CardTitle>
         <CardDescription>
-          <code>async</code>/<code>await</code> is syntactic sugar built on top of Promises, making asynchronous code look and behave like synchronous code.
+          <code>async</code>/<code>await</code> is syntactic sugar built on top
+          of Promises, making asynchronous code look and behave like synchronous
+          code.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="mb-2 font-semibold">Key Concepts</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><code>async</code> functions always return a Promise</li>
-            <li><code>await</code> pauses execution until the Promise settles</li>
-            <li><code>await</code> can only be used inside <code>async</code> functions</li>
-            <li>Use <code>try/catch</code> for error handling (instead of <code>.catch()</code>)</li>
+            <li>
+              <code>async</code> functions always return a Promise
+            </li>
+            <li>
+              <code>await</code> pauses execution until the Promise settles
+            </li>
+            <li>
+              <code>await</code> can only be used inside <code>async</code>{" "}
+              functions
+            </li>
+            <li>
+              Use <code>try/catch</code> for error handling (instead of{" "}
+              <code>.catch()</code>)
+            </li>
           </ul>
         </div>
         <div>
@@ -91,9 +103,14 @@ const AsyncAwaitPage = () => (
         <div>
           <h3 className="mb-2 font-semibold">Best Practices</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li>Use <code>Promise.all()</code> for parallel operations</li>
+            <li>
+              Use <code>Promise.all()</code> for parallel operations
+            </li>
             <li>Always handle errors with try/catch</li>
-            <li>Don't forget <code>await</code> - missing it returns a Promise, not the value</li>
+            <li>
+              Don't forget <code>await</code> - missing it returns a Promise,
+              not the value
+            </li>
             <li>Consider using top-level await in modules (ES2022)</li>
           </ul>
         </div>
@@ -114,4 +131,3 @@ const AsyncAwaitPage = () => (
 );
 
 export default AsyncAwaitPage;
-

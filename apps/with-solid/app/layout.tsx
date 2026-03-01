@@ -1,15 +1,15 @@
 import "./styles.css";
-import { fonts } from "@repo/design-system/lib/fonts";
-import { ThemeProvider } from "@repo/design-system/providers/theme";
-import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import {
   SidebarInset,
   SidebarProvider,
 } from "@repo/design-system/components/ui/sidebar";
-import { Sidenav } from "@/components/sidenav";
-import { Header } from "@/components/header";
+import { fonts } from "@repo/design-system/lib/fonts";
+import { ThemeProvider } from "@repo/design-system/providers/theme";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Chatbot } from "@/components/chatbot";
+import { Header } from "@/components/header";
+import { Sidenav } from "@/components/sidenav";
 import { PageContextProvider } from "@/contexts/page-context";
 
 export const metadata: Metadata = {
@@ -44,4 +44,3 @@ const RootLayout = ({ children }: RootLayoutProperties) => (
 );
 
 export default RootLayout;
-

@@ -50,7 +50,7 @@ export function generateNotification(): Omit<Notification, "id" | "timestamp"> {
  * Create a complete notification with ID and timestamp
  */
 export function createNotification(
-  notification?: Omit<Notification, "id" | "timestamp">,
+  notification?: Omit<Notification, "id" | "timestamp">
 ): Notification {
   const baseNotification = notification ?? generateNotification();
   return {
@@ -64,7 +64,7 @@ export function createNotification(
  * Get notification variant for UI components
  */
 export function getNotificationVariant(
-  type: NotificationType,
+  type: NotificationType
 ): "default" | "destructive" {
   return type === "error" ? "destructive" : "default";
 }

@@ -13,8 +13,8 @@ const RootLayout = ({ children }: RootLayoutProperties) => (
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
-        enableSystem
         disableTransitionOnChange
+        enableSystem
       >
         {children}
       </ThemeProvider>

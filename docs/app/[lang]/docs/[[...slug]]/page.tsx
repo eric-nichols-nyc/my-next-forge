@@ -46,11 +46,7 @@ const Page = async ({ params }: PageProps<"/[lang]/docs/[[...slug]]">) => {
             <ScrollTop />
             <Feedback />
             <CopyPage text={markdown} />
-            <AskAI
-              href={page.url}
-              title={page.data.title}
-              content={markdown}
-            />
+            <AskAI content={markdown} href={page.url} title={page.data.title} />
             <OpenInChat href={page.url} />
           </div>
         ),

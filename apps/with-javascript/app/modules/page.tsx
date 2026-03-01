@@ -59,25 +59,46 @@ const ModulesPage = () => (
       <CardHeader>
         <CardTitle>Modules</CardTitle>
         <CardDescription>
-          ES6 modules provide a way to organize code into reusable units with explicit imports and exports, replacing global scope pollution.
+          ES6 modules provide a way to organize code into reusable units with
+          explicit imports and exports, replacing global scope pollution.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="mb-2 font-semibold">Export Types</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Named Exports:</strong> Multiple exports per module (<code>export const</code>)</li>
-            <li><strong>Default Export:</strong> Single export per module (<code>export default</code>)</li>
-            <li><strong>Re-exports:</strong> Export from another module (<code>export { } from</code>)</li>
+            <li>
+              <strong>Named Exports:</strong> Multiple exports per module (
+              <code>export const</code>)
+            </li>
+            <li>
+              <strong>Default Export:</strong> Single export per module (
+              <code>export default</code>)
+            </li>
+            <li>
+              <strong>Re-exports:</strong> Export from another module (
+              <code>export {} from</code>)
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Import Types</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Named Imports:</strong> <code>import { name } from</code></li>
-            <li><strong>Default Import:</strong> <code>import defaultName from</code></li>
-            <li><strong>Namespace Import:</strong> <code>import * as alias from</code></li>
-            <li><strong>Dynamic Import:</strong> <code>await import()</code> - loads at runtime</li>
+            <li>
+              <strong>Named Imports:</strong> <code>import {name} from</code>
+            </li>
+            <li>
+              <strong>Default Import:</strong>{" "}
+              <code>import defaultName from</code>
+            </li>
+            <li>
+              <strong>Namespace Import:</strong>{" "}
+              <code>import * as alias from</code>
+            </li>
+            <li>
+              <strong>Dynamic Import:</strong> <code>await import()</code> -
+              loads at runtime
+            </li>
           </ul>
         </div>
         <div>
@@ -86,7 +107,9 @@ const ModulesPage = () => (
             <li>Each module has its own scope (not global)</li>
             <li>Modules are strict mode by default</li>
             <li>Modules are executed once (cached)</li>
-            <li>Top-level <code>await</code> is allowed in modules (ES2022)</li>
+            <li>
+              Top-level <code>await</code> is allowed in modules (ES2022)
+            </li>
             <li>Circular dependencies are handled</li>
           </ul>
         </div>
@@ -117,4 +140,3 @@ const ModulesPage = () => (
 );
 
 export default ModulesPage;
-

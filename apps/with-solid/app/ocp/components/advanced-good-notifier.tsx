@@ -2,9 +2,9 @@
 
 import { Card, CardContent } from "@repo/design-system/components/ui/card";
 import { EmailNotifier } from "./notifiers/email-notifier";
-import { SmsNotifier } from "./notifiers/sms-notifier";
 import { PushNotifier } from "./notifiers/push-notifier";
 import { SlackNotifier } from "./notifiers/slack-notifier";
+import { SmsNotifier } from "./notifiers/sms-notifier";
 
 /**
  * ✅ GOOD: Open for extension - can add new notifiers without modifying this
@@ -32,10 +32,11 @@ export const AdvancedGoodNotifier = () => {
 
   return (
     <Card>
-      <CardContent className="pt-6 space-y-4">
+      <CardContent className="space-y-4 pt-6">
         <h3 className="font-semibold">Notifications</h3>
         {notifications.map((notif, idx) => {
-          const NotifierComponent = notifiers[notif.type as keyof typeof notifiers];
+          const NotifierComponent =
+            notifiers[notif.type as keyof typeof notifiers];
           if (!NotifierComponent) return null;
           return (
             <NotifierComponent
@@ -49,4 +50,3 @@ export const AdvancedGoodNotifier = () => {
     </Card>
   );
 };
-

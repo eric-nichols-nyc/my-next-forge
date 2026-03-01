@@ -10,10 +10,10 @@ import {
 } from "@repo/design-system/components/ui/card";
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
-import { signUp } from "@/lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { signUp } from "@/lib/auth-client";
 
 const SignUpPage = () => {
   const router = useRouter();
@@ -47,57 +47,53 @@ const SignUpPage = () => {
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>Sign up</CardTitle>
-          <CardDescription>
-            Create an account with your email
-          </CardDescription>
+          <CardDescription>Create an account with your email</CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
               <Input
                 id="name"
-                type="text"
-                placeholder="Your name"
-                value={name}
                 onChange={(e) => setName(e.target.value)}
+                placeholder="Your name"
+                type="text"
+                value={name}
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
-                type="email"
-                placeholder="you@example.com"
-                value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
                 required
+                type="email"
+                value={email}
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <Input
                 id="password"
-                type="password"
-                value={password}
+                minLength={8}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                minLength={8}
+                type="password"
+                value={password}
               />
               <p className="text-muted-foreground text-xs">
                 Minimum 8 characters
               </p>
             </div>
-            {error && (
-              <p className="text-destructive text-sm">{error}</p>
-            )}
-            <Button type="submit" className="w-full" disabled={loading}>
+            {error && <p className="text-destructive text-sm">{error}</p>}
+            <Button className="w-full" disabled={loading} type="submit">
               {loading ? "Creating account..." : "Sign up"}
             </Button>
           </form>
           <p className="mt-4 text-center text-muted-foreground text-sm">
             Already have an account?{" "}
-            <Link href="/sign-in" className="text-primary underline">
+            <Link className="text-primary underline" href="/sign-in">
               Sign in
             </Link>
           </p>

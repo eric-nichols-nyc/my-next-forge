@@ -40,18 +40,18 @@ import { SecureTransferForm } from "./secure-transfer-form";
 export default function SecureFormPage() {
   return (
     <main className="min-h-screen bg-background p-8">
-      <div className="max-w-2xl mx-auto space-y-8">
-        <header className="text-center space-y-2">
-          <h1 className="text-3xl font-bold">Secure Form Demo</h1>
+      <div className="mx-auto max-w-2xl space-y-8">
+        <header className="space-y-2 text-center">
+          <h1 className="font-bold text-3xl">Secure Form Demo</h1>
           <p className="text-muted-foreground">
             A demonstration of secure form handling in Next.js
           </p>
         </header>
 
         {/* Security explanation card */}
-        <div className="bg-card border rounded-lg p-6 space-y-4">
-          <h2 className="text-xl font-semibold">🔐 Security Features</h2>
-          <ul className="space-y-2 text-sm text-muted-foreground">
+        <div className="space-y-4 rounded-lg border bg-card p-6">
+          <h2 className="font-semibold text-xl">🔐 Security Features</h2>
+          <ul className="space-y-2 text-muted-foreground text-sm">
             <li>
               ✅ <strong>CSRF Token</strong> — Prevents cross-site request
               forgery
@@ -73,7 +73,7 @@ export default function SecureFormPage() {
         <SecureTransferForm />
 
         {/* Educational notes */}
-        <div className="bg-muted/50 border rounded-lg p-6 space-y-4 text-sm">
+        <div className="space-y-4 rounded-lg border bg-muted/50 p-6 text-sm">
           <h3 className="font-semibold">📚 How This Form is Protected</h3>
 
           <div className="space-y-3">

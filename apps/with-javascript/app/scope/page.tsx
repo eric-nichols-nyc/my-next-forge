@@ -44,25 +44,46 @@ const ScopePage = () => (
       <CardHeader>
         <CardTitle>Scope</CardTitle>
         <CardDescription>
-          Scope determines the accessibility of variables, functions, and objects in different parts of your code.
+          Scope determines the accessibility of variables, functions, and
+          objects in different parts of your code.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="mb-2 font-semibold">Types of Scope</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Global Scope:</strong> Variables declared outside any function or block</li>
-            <li><strong>Function Scope:</strong> Variables declared with <code>var</code> are function-scoped</li>
-            <li><strong>Block Scope:</strong> Variables declared with <code>let</code> and <code>const</code> are block-scoped</li>
-            <li><strong>Lexical Scope:</strong> Inner functions have access to outer function variables</li>
+            <li>
+              <strong>Global Scope:</strong> Variables declared outside any
+              function or block
+            </li>
+            <li>
+              <strong>Function Scope:</strong> Variables declared with{" "}
+              <code>var</code> are function-scoped
+            </li>
+            <li>
+              <strong>Block Scope:</strong> Variables declared with{" "}
+              <code>let</code> and <code>const</code> are block-scoped
+            </li>
+            <li>
+              <strong>Lexical Scope:</strong> Inner functions have access to
+              outer function variables
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Key Concepts</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><code>var</code> is function-scoped, not block-scoped</li>
-            <li><code>let</code> and <code>const</code> are block-scoped (introduced in ES6)</li>
-            <li>JavaScript uses lexical scoping - inner functions can access outer scope</li>
+            <li>
+              <code>var</code> is function-scoped, not block-scoped
+            </li>
+            <li>
+              <code>let</code> and <code>const</code> are block-scoped
+              (introduced in ES6)
+            </li>
+            <li>
+              JavaScript uses lexical scoping - inner functions can access outer
+              scope
+            </li>
             <li>Scope chain determines which variables are accessible</li>
           </ul>
         </div>
@@ -83,4 +104,3 @@ const ScopePage = () => (
 );
 
 export default ScopePage;
-

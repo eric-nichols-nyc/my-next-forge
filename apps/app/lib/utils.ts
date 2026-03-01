@@ -62,4 +62,3 @@ export function delay(ms: number): Promise<void> {
 export function generateId(): string {
   return Math.random().toString(36).substring(2, 11);
 }
-

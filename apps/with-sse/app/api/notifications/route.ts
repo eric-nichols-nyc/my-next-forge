@@ -14,7 +14,10 @@
  * }
  */
 
-import { createNotification, type NotificationType } from "@/lib/notification-service";
+import {
+  createNotification,
+  type NotificationType,
+} from "@/lib/notification-service";
 import { notificationStore } from "@/lib/notification-store";
 
 export async function POST(request: Request) {
@@ -22,10 +25,10 @@ export async function POST(request: Request) {
     const body = await request.json();
 
     // Validate request body
-    if (!body.type || !body.message) {
+    if (!(body.type && body.message)) {
       return Response.json(
         { error: "Missing required fields: type and message" },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -33,11 +36,16 @@ export async function POST(request: Request) {
     const message = body.message as string;
 
     // Validate notification type
-    const validTypes: NotificationType[] = ["info", "success", "warning", "error"];
+    const validTypes: NotificationType[] = [
+      "info",
+      "success",
+      "warning",
+      "error",
+    ];
     if (!validTypes.includes(type)) {
       return Response.json(
         { error: `Invalid type. Must be one of: ${validTypes.join(", ")}` },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -56,7 +64,7 @@ export async function POST(request: Request) {
     console.error("Error creating notification:", error);
     return Response.json(
       { error: "Failed to create notification" },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }

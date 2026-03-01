@@ -66,27 +66,54 @@ const ThisKeywordPage = () => (
       <CardHeader>
         <CardTitle>This Keyword</CardTitle>
         <CardDescription>
-          The <code>this</code> keyword refers to the object that is executing the current function. Its value depends on how the function is called.
+          The <code>this</code> keyword refers to the object that is executing
+          the current function. Its value depends on how the function is called.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="mb-2 font-semibold">This Binding Rules</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Global:</strong> <code>this</code> refers to the global object (or undefined in strict mode)</li>
-            <li><strong>Method:</strong> <code>this</code> refers to the object that owns the method</li>
-            <li><strong>Constructor:</strong> <code>this</code> refers to the newly created instance</li>
-            <li><strong>Explicit:</strong> <code>call()</code>, <code>apply()</code>, or <code>bind()</code> can set <code>this</code></li>
-            <li><strong>Arrow Functions:</strong> <code>this</code> is lexically bound (from parent scope)</li>
+            <li>
+              <strong>Global:</strong> <code>this</code> refers to the global
+              object (or undefined in strict mode)
+            </li>
+            <li>
+              <strong>Method:</strong> <code>this</code> refers to the object
+              that owns the method
+            </li>
+            <li>
+              <strong>Constructor:</strong> <code>this</code> refers to the
+              newly created instance
+            </li>
+            <li>
+              <strong>Explicit:</strong> <code>call()</code>,{" "}
+              <code>apply()</code>, or <code>bind()</code> can set{" "}
+              <code>this</code>
+            </li>
+            <li>
+              <strong>Arrow Functions:</strong> <code>this</code> is lexically
+              bound (from parent scope)
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Key Concepts</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><code>this</code> is determined at runtime, not definition time</li>
-            <li>Arrow functions don't have their own <code>this</code> - they inherit it</li>
-            <li>Use <code>bind()</code>, <code>call()</code>, or <code>apply()</code> to explicitly set <code>this</code></li>
-            <li>In classes, <code>this</code> always refers to the instance</li>
+            <li>
+              <code>this</code> is determined at runtime, not definition time
+            </li>
+            <li>
+              Arrow functions don't have their own <code>this</code> - they
+              inherit it
+            </li>
+            <li>
+              Use <code>bind()</code>, <code>call()</code>, or{" "}
+              <code>apply()</code> to explicitly set <code>this</code>
+            </li>
+            <li>
+              In classes, <code>this</code> always refers to the instance
+            </li>
           </ul>
         </div>
       </CardContent>
@@ -106,4 +133,3 @@ const ThisKeywordPage = () => (
 );
 
 export default ThisKeywordPage;
-

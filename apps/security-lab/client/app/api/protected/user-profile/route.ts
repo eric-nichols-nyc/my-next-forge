@@ -75,10 +75,7 @@ export async function GET(request: Request) {
     // This shouldn't happen for /api/protected/* routes because
     // middleware blocks unauthenticated requests before they reach here.
     // But it's good defensive programming.
-    return Response.json(
-      { error: "Unauthorized" },
-      { status: 401 },
-    );
+    return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   /**
@@ -146,7 +143,7 @@ export async function PUT(request: Request) {
   } catch {
     return Response.json(
       { error: "Invalid JSON in request body" },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
@@ -166,4 +163,3 @@ export async function PUT(request: Request) {
     },
   });
 }
-

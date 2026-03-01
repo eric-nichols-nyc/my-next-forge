@@ -57,7 +57,7 @@
  *    Example: Free tier = 100/day, Pro = 10,000/day, Enterprise = unlimited
  */
 
-import { apiLimiter, authLimiter, sensitiveLimiter } from "@/lib/rate-limit";
+import { apiLimiter, authLimiter } from "@/lib/rate-limit";
 
 /**
  * Helper to extract client IP address.
@@ -122,7 +122,7 @@ export async function GET(request: Request) {
         headers: {
           "Retry-After": "60", // Standard header: wait 60 seconds
         },
-      },
+      }
     );
   }
 
@@ -130,7 +130,7 @@ export async function GET(request: Request) {
   return Response.json({
     success: true,
     message: "Request processed successfully",
-    ip: ip,
+    ip,
     timestamp: new Date().toISOString(),
     hint: "Try hitting this endpoint rapidly to see rate limiting in action!",
   });
@@ -148,7 +148,7 @@ export async function POST(request: Request) {
   } catch {
     return Response.json(
       { error: "Too many requests" },
-      { status: 429, headers: { "Retry-After": "60" } },
+      { status: 429, headers: { "Retry-After": "60" } }
     );
   }
 

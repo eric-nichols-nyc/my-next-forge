@@ -45,4 +45,3 @@ test.describe("Counter Demo", () => {
     expect(await counter.textContent()).toBe("0");
   });
 });
-

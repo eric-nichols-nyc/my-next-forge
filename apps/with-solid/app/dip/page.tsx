@@ -13,12 +13,12 @@ import {
   TabsList,
   TabsTrigger,
 } from "@repo/design-system/components/ui/tabs";
-import { SplitLayout } from "@/components/split-layout";
 import { ComponentCodeLayout } from "@/components/component-code-layout";
-import { BadUserList } from "./components/bad-user-list";
-import { GoodUserList } from "./components/good-user-list";
+import { SplitLayout } from "@/components/split-layout";
 import { AdvancedBadApi } from "./components/advanced-bad-api";
 import { AdvancedGoodApi } from "./components/advanced-good-api";
+import { BadUserList } from "./components/bad-user-list";
+import { GoodUserList } from "./components/good-user-list";
 
 const badCode = `"use client";
 
@@ -222,7 +222,7 @@ const DIPPage = () => (
           </div>
           <div>
             <h3 className="mb-2 font-semibold">Benefits</h3>
-            <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
               <li>Reduced coupling between modules</li>
               <li>Easier to test and mock</li>
               <li>More flexible architecture</li>
@@ -243,18 +243,18 @@ const DIPPage = () => (
           <SplitLayout
             left={
               <ComponentCodeLayout
-                component={<BadUserList />}
                 code={badCode}
-                title="❌ Bad Component"
+                component={<BadUserList />}
                 description="Directly depends on localStorage - hard to test or swap"
+                title="❌ Bad Component"
               />
             }
             right={
               <ComponentCodeLayout
-                component={<GoodUserList />}
                 code={goodCode}
-                title="✅ Good Component"
+                component={<GoodUserList />}
                 description="Depends on Storage abstraction - easy to test and swap implementations"
+                title="✅ Good Component"
               />
             }
           />
@@ -285,4 +285,3 @@ const DIPPage = () => (
 );
 
 export default DIPPage;
-

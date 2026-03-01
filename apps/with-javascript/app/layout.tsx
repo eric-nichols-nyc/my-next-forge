@@ -1,18 +1,19 @@
 import "./styles.css";
-import { fonts } from "@repo/design-system/lib/fonts";
-import { ThemeProvider } from "@repo/design-system/providers/theme";
-import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import {
   SidebarInset,
   SidebarProvider,
 } from "@repo/design-system/components/ui/sidebar";
-import { Sidenav } from "@/components/sidenav";
+import { fonts } from "@repo/design-system/lib/fonts";
+import { ThemeProvider } from "@repo/design-system/providers/theme";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Header } from "@/components/header";
+import { Sidenav } from "@/components/sidenav";
 
 export const metadata: Metadata = {
   title: "JavaScript Core Concepts",
-  description: "Learn JavaScript core concepts like event loop, promises, prototype, and more",
+  description:
+    "Learn JavaScript core concepts like event loop, promises, prototype, and more",
   icons: {
     icon: "/icon.svg",
   },
@@ -39,4 +40,3 @@ const RootLayout = ({ children }: RootLayoutProperties) => (
 );
 
 export default RootLayout;
-

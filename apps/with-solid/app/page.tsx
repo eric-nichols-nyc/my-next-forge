@@ -23,8 +23,9 @@ const HomePage = () => (
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
             <p className="text-center text-muted-foreground text-sm">
-              Demonstrate SOLID principles and best practices in React and Next.js
-              applications. Use the sidebar to navigate between principles.
+              Demonstrate SOLID principles and best practices in React and
+              Next.js applications. Use the sidebar to navigate between
+              principles.
             </p>
             <div className="flex justify-center">
               <ModeToggle />
@@ -37,11 +38,11 @@ const HomePage = () => (
           <CardContent className="pt-6">
             <div className="relative aspect-video w-full overflow-hidden rounded-lg">
               <Image
-                src="/assets/solid-principles.png"
                 alt="SOLID Principles Overview"
-                fill
                 className="object-contain"
+                fill
                 priority
+                src="/assets/solid-principles.png"
               />
             </div>
           </CardContent>
@@ -52,4 +53,3 @@ const HomePage = () => (
 );
 
 export default HomePage;
-

@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { Code, Server, Zap, RefreshCw, Layers } from "lucide-react";
+import { Code, Layers, RefreshCw, Server, Zap } from "lucide-react";
 import Link from "next/link";
 
 const strategies = [
@@ -53,7 +53,7 @@ const HomePage = () => (
     <div className="mx-auto max-w-6xl">
       <div className="mb-8 flex items-center justify-between">
         <div>
-          <h1 className="text-4xl font-bold">Render Lab</h1>
+          <h1 className="font-bold text-4xl">Render Lab</h1>
           <p className="mt-2 text-muted-foreground">
             Explore different Next.js rendering strategies
           </p>
@@ -65,7 +65,7 @@ const HomePage = () => (
         {strategies.map((strategy) => {
           const Icon = strategy.icon;
           return (
-            <Link key={strategy.href} href={strategy.href}>
+            <Link href={strategy.href} key={strategy.href}>
               <Card className="h-full transition-all hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-4 flex items-center gap-3">
@@ -100,7 +100,7 @@ const HomePage = () => (
             and rendered, along with timestamps to help you understand when and
             where the rendering occurs.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground">
+          <p className="mt-4 text-muted-foreground text-sm">
             View the source code to see the implementation details of each
             strategy.
           </p>
@@ -111,4 +111,3 @@ const HomePage = () => (
 );
 
 export default HomePage;
-

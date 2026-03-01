@@ -25,18 +25,13 @@ export const CodeBlock = ({ code }: CodeBlockProperties) => {
         <code>{code}</code>
       </pre>
       <Button
-        className="absolute right-2 top-2"
+        className="absolute top-2 right-2"
         onClick={handleCopy}
         size="sm"
         variant="ghost"
       >
-        {copied ? (
-          <Check className="h-4 w-4" />
-        ) : (
-          <Copy className="h-4 w-4" />
-        )}
+        {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
       </Button>
     </div>
   );
 };
-

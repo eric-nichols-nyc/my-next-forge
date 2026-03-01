@@ -22,15 +22,21 @@ export const AdvancedBadNotifier = () => {
     // Must modify this function to add new types
     switch (notification.type) {
       case "email":
-        console.log(`Sending email to ${notification.recipient}: ${notification.message}`);
+        console.log(
+          `Sending email to ${notification.recipient}: ${notification.message}`
+        );
         // Email sending logic
         break;
       case "sms":
-        console.log(`Sending SMS to ${notification.recipient}: ${notification.message}`);
+        console.log(
+          `Sending SMS to ${notification.recipient}: ${notification.message}`
+        );
         // SMS sending logic
         break;
       case "push":
-        console.log(`Sending push to ${notification.recipient}: ${notification.message}`);
+        console.log(
+          `Sending push to ${notification.recipient}: ${notification.message}`
+        );
         // Push notification logic
         break;
       default:
@@ -40,14 +46,14 @@ export const AdvancedBadNotifier = () => {
 
   return (
     <Card>
-      <CardContent className="pt-6 space-y-4">
+      <CardContent className="space-y-4 pt-6">
         <h3 className="font-semibold">Notifications</h3>
         {notifications.map((notif, idx) => (
-          <div key={idx} className="p-3 border rounded">
-            <p className="text-sm font-medium">{notif.type.toUpperCase()}</p>
-            <p className="text-sm text-muted-foreground">{notif.message}</p>
+          <div className="rounded border p-3" key={idx}>
+            <p className="font-medium text-sm">{notif.type.toUpperCase()}</p>
+            <p className="text-muted-foreground text-sm">{notif.message}</p>
             <button
-              className="mt-2 text-xs text-primary hover:underline"
+              className="mt-2 text-primary text-xs hover:underline"
               onClick={() => sendNotification(notif)}
             >
               Send
@@ -58,4 +64,3 @@ export const AdvancedBadNotifier = () => {
     </Card>
   );
 };
-

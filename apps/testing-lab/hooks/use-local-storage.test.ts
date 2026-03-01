@@ -53,9 +53,7 @@ describe("useLocalStorage", () => {
   });
 
   it("removes value from localStorage", () => {
-    const { result } = renderHook(() =>
-      useLocalStorage("test-key", "initial")
-    );
+    const { result } = renderHook(() => useLocalStorage("test-key", "initial"));
 
     act(() => {
       result.current.setValue("stored");
@@ -73,9 +71,7 @@ describe("useLocalStorage", () => {
 
   it("handles complex objects", () => {
     const initialValue = { name: "John", age: 30 };
-    const { result } = renderHook(() =>
-      useLocalStorage("user", initialValue)
-    );
+    const { result } = renderHook(() => useLocalStorage("user", initialValue));
 
     expect(result.current.value).toEqual(initialValue);
 
@@ -87,9 +83,7 @@ describe("useLocalStorage", () => {
   });
 
   it("handles arrays", () => {
-    const { result } = renderHook(() =>
-      useLocalStorage<string[]>("items", [])
-    );
+    const { result } = renderHook(() => useLocalStorage<string[]>("items", []));
 
     act(() => {
       result.current.setValue(["a", "b", "c"]);
@@ -98,4 +92,3 @@ describe("useLocalStorage", () => {
     expect(result.current.value).toEqual(["a", "b", "c"]);
   });
 });
-

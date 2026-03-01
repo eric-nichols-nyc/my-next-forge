@@ -104,4 +104,3 @@ const MappedTypesPage = () => (
 );
 
 export default MappedTypesPage;
-

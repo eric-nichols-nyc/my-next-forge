@@ -8,11 +8,3 @@ export class CashPayment {
     console.log(`Processing cash payment of $${this.amount}`);
   }
 }
-
-
-
-
-
-
-
-

@@ -8,8 +8,8 @@ import {
 import { Bell } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
-  type Notification,
   getNotificationVariant,
+  type Notification,
 } from "@/lib/notification-service";
 
 export const NotificationsDisplay = () => {

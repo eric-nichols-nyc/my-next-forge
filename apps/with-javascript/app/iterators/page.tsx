@@ -82,25 +82,42 @@ const IteratorsPage = () => (
       <CardHeader>
         <CardTitle>Iterators</CardTitle>
         <CardDescription>
-          Iterators are objects that define how to traverse a sequence of values. They implement the Iterator and Iterable protocols.
+          Iterators are objects that define how to traverse a sequence of
+          values. They implement the Iterator and Iterable protocols.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="mb-2 font-semibold">Two Protocols</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Iterable Protocol:</strong> Object must have <code>Symbol.iterator</code> method</li>
-            <li><strong>Iterator Protocol:</strong> Must have <code>next()</code> returning <code>{`{value, done}`}</code></li>
-            <li>Many built-in types are iterable (Arrays, Strings, Maps, Sets)</li>
+            <li>
+              <strong>Iterable Protocol:</strong> Object must have{" "}
+              <code>Symbol.iterator</code> method
+            </li>
+            <li>
+              <strong>Iterator Protocol:</strong> Must have <code>next()</code>{" "}
+              returning <code>{"{value, done}"}</code>
+            </li>
+            <li>
+              Many built-in types are iterable (Arrays, Strings, Maps, Sets)
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Using Iterators</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><code>for...of</code> loops automatically use iterators</li>
-            <li><code>...spread</code> operator works with iterables</li>
-            <li><code>Array.from()</code> can convert iterables to arrays</li>
-            <li><code>destructuring</code> works with iterables</li>
+            <li>
+              <code>for...of</code> loops automatically use iterators
+            </li>
+            <li>
+              <code>...spread</code> operator works with iterables
+            </li>
+            <li>
+              <code>Array.from()</code> can convert iterables to arrays
+            </li>
+            <li>
+              <code>destructuring</code> works with iterables
+            </li>
           </ul>
         </div>
         <div>
@@ -129,4 +146,3 @@ const IteratorsPage = () => (
 );
 
 export default IteratorsPage;
-

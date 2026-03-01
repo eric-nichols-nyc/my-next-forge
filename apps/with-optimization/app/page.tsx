@@ -7,15 +7,15 @@ import {
   CardTitle,
 } from "@repo/design-system/components/ui/card";
 import {
-  Zap,
-  Package,
-  Image,
   Code,
-  Layers,
-  TrendingUp,
-  Network,
   Cpu,
+  Image,
+  Layers,
+  Network,
+  Package,
   Sparkles,
+  TrendingUp,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -29,14 +29,16 @@ const strategies = [
   },
   {
     name: "useMemo",
-    description: "Before/after: expensive computation on every render vs memoized",
+    description:
+      "Before/after: expensive computation on every render vs memoized",
     href: "/use-memo-demo",
     icon: Cpu,
     color: "text-cyan-500",
   },
   {
     name: "Optimization demos",
-    description: "Slow input (useDeferredValue), slow tab (useTransition), caching",
+    description:
+      "Slow input (useDeferredValue), slow tab (useTransition), caching",
     href: "/optimization-demos",
     icon: Sparkles,
     color: "text-violet-500",
@@ -89,7 +91,7 @@ const HomePage = () => (
   <main className="min-h-screen bg-background p-8">
     <div className="mx-auto max-w-6xl">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold">Next.js Optimization Lab</h1>
+        <h1 className="font-bold text-4xl">Next.js Optimization Lab</h1>
         <p className="mt-2 text-muted-foreground">
           Explore optimization strategies to improve your Next.js application
           performance
@@ -100,7 +102,7 @@ const HomePage = () => (
         {strategies.map((strategy) => {
           const Icon = strategy.icon;
           return (
-            <Link key={strategy.href} href={strategy.href}>
+            <Link href={strategy.href} key={strategy.href}>
               <Card className="h-full transition-all hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-4 flex items-center gap-3">
@@ -135,7 +137,7 @@ const HomePage = () => (
             different techniques to improve performance, reduce bundle size, and
             enhance user experience.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground">
+          <p className="mt-4 text-muted-foreground text-sm">
             View the source code to see the implementation details of each
             optimization strategy.
           </p>
@@ -146,4 +148,3 @@ const HomePage = () => (
 );
 
 export default HomePage;
-

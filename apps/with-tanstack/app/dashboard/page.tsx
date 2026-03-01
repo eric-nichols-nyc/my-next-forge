@@ -1,6 +1,5 @@
 "use client";
 
-import { AuthHeader } from "@/components/auth-header";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   Card,
@@ -9,18 +8,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { useSession } from "@/lib/auth-client";
 import { ArrowLeft, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { AuthHeader } from "@/components/auth-header";
+import { useSession } from "@/lib/auth-client";
 
 const DashboardPage = () => {
   const router = useRouter();
   const { data: session, isPending } = useSession();
 
   useEffect(() => {
-    if (!isPending && !session?.user) {
+    if (!(isPending || session?.user)) {
       router.push("/sign-in");
     }
   }, [isPending, session?.user, router]);
@@ -44,7 +44,7 @@ const DashboardPage = () => {
       <div className="mx-auto max-w-4xl">
         <div className="mb-8 flex items-center justify-between">
           <Link href="/">
-            <Button variant="ghost" size="sm">
+            <Button size="sm" variant="ghost">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
             </Button>
@@ -86,7 +86,7 @@ const DashboardPage = () => {
             </div>
 
             <div className="flex gap-2">
-              <Button variant="outline" asChild>
+              <Button asChild variant="outline">
                 <Link href="/users">View Users Example</Link>
               </Button>
             </div>

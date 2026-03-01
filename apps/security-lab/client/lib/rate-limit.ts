@@ -77,7 +77,7 @@ type RateLimitOptions = {
 export function rateLimit(options: RateLimitOptions) {
   const tokenCache = new LRUCache<string, [number]>({
     max: options.uniqueTokenPerInterval || 500,
-    ttl: options.interval || 60000,
+    ttl: options.interval || 60_000,
   });
 
   return {

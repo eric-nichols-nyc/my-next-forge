@@ -1,6 +1,11 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/design-system/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/design-system/components/ui/card";
 import type { ComponentProps } from "react";
 
 /**
@@ -26,20 +31,19 @@ export const ClickableCard = ({
   children,
   onClick,
   ...props
-}: BaseCardProps & { onClick?: () => void } & ComponentProps<"div">) => {
-  return (
-    <div onClick={onClick} className={onClick ? "cursor-pointer" : ""} {...props}>
-      <BaseCard title={title}>{children}</BaseCard>
-    </div>
-  );
-};
+}: BaseCardProps & { onClick?: () => void } & ComponentProps<"div">) => (
+  <div className={onClick ? "cursor-pointer" : ""} onClick={onClick} {...props}>
+    <BaseCard title={title}>{children}</BaseCard>
+  </div>
+);
 
 // Also substitutable
-export const HoverableCard = ({ title, children, ...props }: BaseCardProps & ComponentProps<"div">) => {
-  return (
-    <div className="hover:shadow-lg transition-shadow" {...props}>
-      <BaseCard title={title}>{children}</BaseCard>
-    </div>
-  );
-};
-
+export const HoverableCard = ({
+  title,
+  children,
+  ...props
+}: BaseCardProps & ComponentProps<"div">) => (
+  <div className="transition-shadow hover:shadow-lg" {...props}>
+    <BaseCard title={title}>{children}</BaseCard>
+  </div>
+);

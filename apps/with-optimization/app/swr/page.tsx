@@ -8,12 +8,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { ArrowLeft, RefreshCw, Clock, Zap } from "lucide-react";
+import { ArrowLeft, Clock, RefreshCw, Zap } from "lucide-react";
 import Link from "next/link";
 import useSWR from "swr";
 
-const fetcher = (url: string) =>
-  fetch(url).then((res) => res.json());
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const SWRPage = () => {
   const { data, error, isLoading, mutate } = useSWR("/api/users", fetcher, {
@@ -77,7 +76,9 @@ const SWRPage = () => {
                     </span>
                   )}
                   {error && (
-                    <span className="text-red-500 text-sm">Error loading data</span>
+                    <span className="text-red-500 text-sm">
+                      Error loading data
+                    </span>
                   )}
                   {data && (
                     <span className="text-green-500 text-sm">Data loaded</span>
@@ -100,22 +101,29 @@ const SWRPage = () => {
                   <div className="rounded-lg border p-4">
                     <h3 className="mb-3 font-semibold">Users List:</h3>
                     <div className="space-y-2">
-                      {data.users.map((user: { id: number; name: string; email: string; role: string }) => (
-                        <div
-                          key={user.id}
-                          className="flex items-center justify-between rounded border p-3"
-                        >
-                          <div>
-                            <p className="font-medium">{user.name}</p>
-                            <p className="text-muted-foreground text-sm">
-                              {user.email}
-                            </p>
+                      {data.users.map(
+                        (user: {
+                          id: number;
+                          name: string;
+                          email: string;
+                          role: string;
+                        }) => (
+                          <div
+                            className="flex items-center justify-between rounded border p-3"
+                            key={user.id}
+                          >
+                            <div>
+                              <p className="font-medium">{user.name}</p>
+                              <p className="text-muted-foreground text-sm">
+                                {user.email}
+                              </p>
+                            </div>
+                            <span className="rounded bg-primary/10 px-2 py-1 text-xs">
+                              {user.role}
+                            </span>
                           </div>
-                          <span className="rounded bg-primary/10 px-2 py-1 text-xs">
-                            {user.role}
-                          </span>
-                        </div>
-                      ))}
+                        )
+                      )}
                     </div>
                   </div>
                 </>
@@ -123,9 +131,9 @@ const SWRPage = () => {
 
               <div className="flex gap-2">
                 <Button
+                  className="flex-1"
                   onClick={() => mutate()}
                   variant="outline"
-                  className="flex-1"
                 >
                   <RefreshCw className="mr-2 h-4 w-4" />
                   Revalidate
@@ -168,4 +176,3 @@ const SWRPage = () => {
 };
 
 export default SWRPage;
-

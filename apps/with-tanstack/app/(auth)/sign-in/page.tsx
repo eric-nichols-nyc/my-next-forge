@@ -10,10 +10,10 @@ import {
 } from "@repo/design-system/components/ui/card";
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
-import { signIn } from "@/lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { signIn } from "@/lib/auth-client";
 
 const SignInPage = () => {
   const router = useRouter();
@@ -50,38 +50,36 @@ const SignInPage = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
-                type="email"
-                placeholder="you@example.com"
-                value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
                 required
+                type="email"
+                value={email}
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <Input
                 id="password"
-                type="password"
-                value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                type="password"
+                value={password}
               />
             </div>
-            {error && (
-              <p className="text-destructive text-sm">{error}</p>
-            )}
-            <Button type="submit" className="w-full" disabled={loading}>
+            {error && <p className="text-destructive text-sm">{error}</p>}
+            <Button className="w-full" disabled={loading} type="submit">
               {loading ? "Signing in..." : "Sign in"}
             </Button>
           </form>
           <p className="mt-4 text-center text-muted-foreground text-sm">
             Don&apos;t have an account?{" "}
-            <Link href="/sign-up" className="text-primary underline">
+            <Link className="text-primary underline" href="/sign-up">
               Sign up
             </Link>
           </p>

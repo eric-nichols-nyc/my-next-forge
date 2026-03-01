@@ -8,14 +8,8 @@ export class PayPalPayment {
   ) {}
 
   process() {
-    console.log(`Processing PayPal payment of $${this.amount} for ${this.email}`);
+    console.log(
+      `Processing PayPal payment of $${this.amount} for ${this.email}`
+    );
   }
 }
-
-
-
-
-
-
-
-

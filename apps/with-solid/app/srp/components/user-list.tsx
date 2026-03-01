@@ -16,12 +16,11 @@ export function UserList({ users }: UserListProps) {
     <div className="space-y-2">
       <h3 className="font-semibold">Users</h3>
       {users.map((user) => (
-        <div key={user.id} className="p-2 border rounded">
+        <div className="rounded border p-2" key={user.id}>
           <p className="font-medium">{user.displayName}</p>
-          <p className="text-sm text-muted-foreground">{user.email}</p>
+          <p className="text-muted-foreground text-sm">{user.email}</p>
         </div>
       ))}
     </div>
   );
 }
-

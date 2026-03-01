@@ -1,5 +1,5 @@
 import { renderHook, waitFor } from "@testing-library/react";
-import { http, HttpResponse } from "msw";
+import { HttpResponse, http } from "msw";
 import { describe, expect, it } from "vitest";
 import { server } from "../mocks/server";
 import { useFetch } from "./use-fetch";
@@ -29,9 +29,7 @@ describe("useFetch", () => {
   it("handles fetch errors", async () => {
     // Override handler for this test
     server.use(
-      http.get("/api/users", () => {
-        return new HttpResponse(null, { status: 500 });
-      })
+      http.get("/api/users", () => new HttpResponse(null, { status: 500 }))
     );
 
     const { result } = renderHook(() => useFetch("/api/users"));
@@ -69,4 +67,3 @@ describe("useFetch", () => {
     });
   });
 });
-

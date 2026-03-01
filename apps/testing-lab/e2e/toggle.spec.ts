@@ -42,4 +42,3 @@ test.describe("Toggle Demo", () => {
     expect(await status.textContent()).toContain("ON");
   });
 });
-

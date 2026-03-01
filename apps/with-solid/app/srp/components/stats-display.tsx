@@ -9,14 +9,13 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
   return (
     <div className="grid grid-cols-2 gap-4">
       <div>
-        <p className="text-sm text-muted-foreground">Total Users</p>
-        <p className="text-2xl font-bold">{stats.total}</p>
+        <p className="text-muted-foreground text-sm">Total Users</p>
+        <p className="font-bold text-2xl">{stats.total}</p>
       </div>
       <div>
-        <p className="text-sm text-muted-foreground">Active Users</p>
-        <p className="text-2xl font-bold">{stats.active}</p>
+        <p className="text-muted-foreground text-sm">Active Users</p>
+        <p className="font-bold text-2xl">{stats.active}</p>
       </div>
     </div>
   );
 }
-

@@ -31,23 +31,31 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if route is public
-  const isPublicRoute = publicRoutes.some((route) => pathname.startsWith(route));
+  const isPublicRoute = publicRoutes.some((route) =>
+    pathname.startsWith(route)
+  );
 
   // For auth check, we need to handle this differently since proxy is sync
   // We'll use a simpler cookie-based check here
-  const hasAuthCookie = request.cookies.getAll().some(
-    (cookie) => cookie.name.includes("auth-token") || cookie.name.includes("sb-")
-  );
+  const hasAuthCookie = request.cookies
+    .getAll()
+    .some(
+      (cookie) =>
+        cookie.name.includes("auth-token") || cookie.name.includes("sb-")
+    );
 
   // Redirect unauthenticated users to login (except for public routes)
-  if (!hasAuthCookie && !isPublicRoute) {
+  if (!(hasAuthCookie || isPublicRoute)) {
     const loginUrl = new URL("/login", request.url);
     loginUrl.searchParams.set("redirect", pathname);
     return NextResponse.redirect(loginUrl);
   }
 
   // Redirect authenticated users away from auth pages to dashboard
-  if (hasAuthCookie && (pathname === "/login" || pathname === "/signup" || pathname === "/")) {
+  if (
+    hasAuthCookie &&
+    (pathname === "/login" || pathname === "/signup" || pathname === "/")
+  ) {
     return NextResponse.redirect(new URL("/dashboard", request.url));
   }
 
@@ -59,4 +67,3 @@ export const config = {
     "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
-

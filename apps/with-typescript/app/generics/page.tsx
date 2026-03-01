@@ -63,8 +63,8 @@ const GenericsPage = () => (
         <div>
           <h3 className="mb-2 font-semibold">Definition</h3>
           <p className="text-muted-foreground text-sm">
-            Generics are a way to make components work with any data type and not
-            restrict to one data type. They allow you to write flexible,
+            Generics are a way to make components work with any data type and
+            not restrict to one data type. They allow you to write flexible,
             reusable code while maintaining full type safety.
           </p>
         </div>
@@ -102,4 +102,3 @@ const GenericsPage = () => (
 );
 
 export default GenericsPage;
-

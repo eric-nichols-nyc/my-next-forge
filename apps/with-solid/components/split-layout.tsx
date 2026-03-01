@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
 import { cn } from "@repo/design-system/lib/utils";
+import type { ReactNode } from "react";
 
 type SplitLayoutProperties = {
   readonly left: ReactNode;
@@ -17,10 +17,7 @@ export const SplitLayout = ({
   rightClassName,
 }: SplitLayoutProperties) => (
   <div
-    className={cn(
-      "flex min-h-full flex-col gap-4 p-4 lg:flex-row",
-      className
-    )}
+    className={cn("flex min-h-full flex-col gap-4 p-4 lg:flex-row", className)}
   >
     <div
       className={cn(
@@ -40,4 +37,3 @@ export const SplitLayout = ({
     </div>
   </div>
 );
-

@@ -20,9 +20,7 @@ const HomePage = () => (
           <Sparkles className="h-6 w-6 text-primary" />
         </div>
         <CardTitle className="text-2xl">TweakCN</CardTitle>
-        <CardDescription>
-          Your new Next.js application
-        </CardDescription>
+        <CardDescription>Your new Next.js application</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <p className="text-center text-muted-foreground text-sm">
@@ -38,4 +36,3 @@ const HomePage = () => (
 );
 
 export default HomePage;
-

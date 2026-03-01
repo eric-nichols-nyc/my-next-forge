@@ -127,7 +127,7 @@ export async function DELETE(request: Request) {
   if (!targetUserId) {
     return Response.json(
       { error: "userId query parameter is required" },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
@@ -154,4 +154,3 @@ export async function DELETE(request: Request) {
     note: "In production, this would actually delete the user from the database",
   });
 }
-

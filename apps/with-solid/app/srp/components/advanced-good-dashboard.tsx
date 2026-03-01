@@ -1,11 +1,16 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/design-system/components/ui/card";
 import { Button } from "@repo/design-system/components/ui/button";
-import { useUsers } from "./hooks/use-users";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/design-system/components/ui/card";
 import { useStats } from "./hooks/use-stats";
-import { UserList } from "./user-list";
+import { useUsers } from "./hooks/use-users";
 import { StatsDisplay } from "./stats-display";
+import { UserList } from "./user-list";
 
 /**
  * ✅ GOOD: Advanced example following SRP
@@ -36,4 +41,3 @@ export const AdvancedGoodDashboard = () => {
     </Card>
   );
 };
-

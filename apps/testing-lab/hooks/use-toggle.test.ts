@@ -47,4 +47,3 @@ describe("useToggle", () => {
     expect(result.current.value).toBe(false);
   });
 });
-

@@ -8,7 +8,8 @@ describe("Security Utilities", () => {
   describe("Input Sanitization", () => {
     it("should detect potential XSS in script tags", () => {
       const maliciousInput = '<script>alert("xss")</script>';
-      const containsScript = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+      const containsScript =
+        /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
       expect(containsScript.test(maliciousInput)).toBe(true);
     });
 
@@ -77,4 +78,3 @@ describe("Security Utilities", () => {
     });
   });
 });
-

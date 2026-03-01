@@ -74,35 +74,60 @@ const PromisesPage = () => (
       <CardHeader>
         <CardTitle>Promises</CardTitle>
         <CardDescription>
-          A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+          A Promise is an object representing the eventual completion or failure
+          of an asynchronous operation.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="mb-2 font-semibold">Promise States</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Pending:</strong> Initial state, neither fulfilled nor rejected</li>
-            <li><strong>Fulfilled:</strong> Operation completed successfully</li>
-            <li><strong>Rejected:</strong> Operation failed</li>
+            <li>
+              <strong>Pending:</strong> Initial state, neither fulfilled nor
+              rejected
+            </li>
+            <li>
+              <strong>Fulfilled:</strong> Operation completed successfully
+            </li>
+            <li>
+              <strong>Rejected:</strong> Operation failed
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Promise Methods</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><code>.then()</code>: Handles fulfilled state</li>
-            <li><code>.catch()</code>: Handles rejected state</li>
-            <li><code>.finally()</code>: Always executes regardless of outcome</li>
-            <li><code>Promise.all()</code>: Waits for all promises to fulfill</li>
-            <li><code>Promise.race()</code>: Returns first settled promise</li>
-            <li><code>Promise.allSettled()</code>: Waits for all promises to settle</li>
-            <li><code>Promise.any()</code>: Returns first fulfilled promise</li>
+            <li>
+              <code>.then()</code>: Handles fulfilled state
+            </li>
+            <li>
+              <code>.catch()</code>: Handles rejected state
+            </li>
+            <li>
+              <code>.finally()</code>: Always executes regardless of outcome
+            </li>
+            <li>
+              <code>Promise.all()</code>: Waits for all promises to fulfill
+            </li>
+            <li>
+              <code>Promise.race()</code>: Returns first settled promise
+            </li>
+            <li>
+              <code>Promise.allSettled()</code>: Waits for all promises to
+              settle
+            </li>
+            <li>
+              <code>Promise.any()</code>: Returns first fulfilled promise
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Benefits</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
             <li>Avoids callback hell (pyramid of doom)</li>
-            <li>Better error handling with <code>.catch()</code></li>
+            <li>
+              Better error handling with <code>.catch()</code>
+            </li>
             <li>Chaining for sequential async operations</li>
             <li>Composable and testable</li>
           </ul>
@@ -124,4 +149,3 @@ const PromisesPage = () => (
 );
 
 export default PromisesPage;
-

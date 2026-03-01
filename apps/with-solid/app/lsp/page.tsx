@@ -13,12 +13,12 @@ import {
   TabsList,
   TabsTrigger,
 } from "@repo/design-system/components/ui/tabs";
-import { SplitLayout } from "@/components/split-layout";
 import { ComponentCodeLayout } from "@/components/component-code-layout";
-import { Card as BadCard } from "./components/bad-card";
-import { BaseCard, ClickableCard, HoverableCard } from "./components/good-card";
+import { SplitLayout } from "@/components/split-layout";
 import { AdvancedBadPayment } from "./components/advanced-bad-payment";
 import { AdvancedGoodPayment } from "./components/advanced-good-payment";
+import { Card as BadCard } from "./components/bad-card";
+import { BaseCard, ClickableCard, HoverableCard } from "./components/good-card";
 
 const badCode = `"use client";
 
@@ -195,7 +195,7 @@ const LSPPage = () => (
           </div>
           <div>
             <h3 className="mb-2 font-semibold">Benefits</h3>
-            <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
               <li>Ensures proper inheritance hierarchies</li>
               <li>Prevents unexpected behavior</li>
               <li>Maintains contract compliance</li>
@@ -216,26 +216,27 @@ const LSPPage = () => (
           <SplitLayout
             left={
               <ComponentCodeLayout
+                code={badCode}
                 component={
                   <div className="space-y-2">
                     <BadCard title="Base Card">Can be used here</BadCard>
                   </div>
                 }
-                code={badCode}
-                title="❌ Bad Component"
                 description="ClickableCard requires onClick prop, cannot substitute base Card"
+                title="❌ Bad Component"
               />
             }
             right={
               <ComponentCodeLayout
+                code={goodCode}
                 component={
                   <div className="space-y-2">
                     <BaseCard title="Base Card">Base implementation</BaseCard>
                     <ClickableCard
-                      title="Clickable Card"
                       onClick={() => {
                         console.log("Clicked!");
                       }}
+                      title="Clickable Card"
                     >
                       Can substitute BaseCard
                     </ClickableCard>
@@ -244,9 +245,8 @@ const LSPPage = () => (
                     </HoverableCard>
                   </div>
                 }
-                code={goodCode}
-                title="✅ Good Component"
                 description="All variants can be used interchangeably"
+                title="✅ Good Component"
               />
             }
           />
@@ -277,4 +277,3 @@ const LSPPage = () => (
 );
 
 export default LSPPage;
-

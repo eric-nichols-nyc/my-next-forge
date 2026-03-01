@@ -57,11 +57,11 @@
  *    ⚠️ Doesn't work for form submissions
  */
 
+import { jwtVerify, SignJWT } from "jose";
 import { cookies } from "next/headers";
-import { SignJWT, jwtVerify } from "jose";
 
 const CSRF_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "csrf-secret-change-in-production",
+  process.env.JWT_SECRET || "csrf-secret-change-in-production"
 );
 const CSRF_COOKIE_NAME = "csrf_token";
 const CSRF_TOKEN_EXPIRY = "1h"; // Tokens expire after 1 hour
@@ -144,7 +144,7 @@ export async function getCSRFFromCookie(): Promise<string | undefined> {
  * 4. Verify they match (double-submit check)
  */
 export async function validateCSRFRequest(
-  submittedToken: string | null,
+  submittedToken: string | null
 ): Promise<{ valid: boolean; error?: string }> {
   // Check if token was submitted
   if (!submittedToken) {

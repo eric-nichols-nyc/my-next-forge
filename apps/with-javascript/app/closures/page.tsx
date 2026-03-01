@@ -54,7 +54,8 @@ const ClosuresPage = () => (
       <CardHeader>
         <CardTitle>Closures</CardTitle>
         <CardDescription>
-          A closure is a function that has access to variables in its outer (enclosing) lexical scope, even after the outer function has returned.
+          A closure is a function that has access to variables in its outer
+          (enclosing) lexical scope, even after the outer function has returned.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -70,10 +71,19 @@ const ClosuresPage = () => (
         <div>
           <h3 className="mb-2 font-semibold">Common Use Cases</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Data Privacy:</strong> Encapsulate private variables</li>
-            <li><strong>Function Factories:</strong> Create specialized functions</li>
-            <li><strong>Event Handlers:</strong> Maintain state in callbacks</li>
-            <li><strong>Module Pattern:</strong> Create namespaces and prevent global pollution</li>
+            <li>
+              <strong>Data Privacy:</strong> Encapsulate private variables
+            </li>
+            <li>
+              <strong>Function Factories:</strong> Create specialized functions
+            </li>
+            <li>
+              <strong>Event Handlers:</strong> Maintain state in callbacks
+            </li>
+            <li>
+              <strong>Module Pattern:</strong> Create namespaces and prevent
+              global pollution
+            </li>
           </ul>
         </div>
       </CardContent>
@@ -93,4 +103,3 @@ const ClosuresPage = () => (
 );
 
 export default ClosuresPage;
-

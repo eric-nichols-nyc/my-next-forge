@@ -1,4 +1,3 @@
-import { Button } from "@repo/design-system/components/ui/button";
 import {
   Card,
   CardContent,
@@ -76,7 +75,9 @@ export default function Page() {
           <div className="rounded-lg bg-muted p-4 font-mono text-sm">
             <p className="text-muted-foreground"># Unit tests with Vitest</p>
             <p>pnpm test</p>
-            <p className="mt-2 text-muted-foreground"># E2E tests with Playwright</p>
+            <p className="mt-2 text-muted-foreground">
+              # E2E tests with Playwright
+            </p>
             <p>pnpm test:e2e</p>
           </div>
         </CardContent>
@@ -84,4 +85,3 @@ export default function Page() {
     </main>
   );
 }
-

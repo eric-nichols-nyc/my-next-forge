@@ -1,6 +1,11 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/design-system/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/design-system/components/ui/card";
 
 /**
  * ❌ BAD: Advanced example violating LSP
@@ -37,10 +42,10 @@ export const AdvancedBadPayment = () => {
       <CardHeader>
         <CardTitle>Payment Processing</CardTitle>
       </CardHeader>
-      <CardContent className="pt-6 space-y-4">
+      <CardContent className="space-y-4 pt-6">
         <div className="space-y-2">
           <button
-            className="w-full p-2 border rounded text-left"
+            className="w-full rounded border p-2 text-left"
             onClick={() => {
               try {
                 processPayment(cashPayment);
@@ -52,7 +57,7 @@ export const AdvancedBadPayment = () => {
             Process Cash Payment
           </button>
           <button
-            className="w-full p-2 border rounded text-left text-red-600"
+            className="w-full rounded border p-2 text-left text-red-600"
             onClick={() => {
               try {
                 processPayment(creditCardPayment);
@@ -64,18 +69,10 @@ export const AdvancedBadPayment = () => {
             Process Credit Card (Breaks LSP)
           </button>
         </div>
-        <p className="text-xs text-muted-foreground">
+        <p className="text-muted-foreground text-xs">
           CreditCardPayment cannot substitute Payment - violates LSP
         </p>
       </CardContent>
     </Card>
   );
 };
-
-
-
-
-
-
-
-

@@ -1,9 +1,9 @@
 "use client";
 
+import { SidebarTrigger } from "@repo/design-system/components/ui/sidebar";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SidebarTrigger } from "@repo/design-system/components/ui/sidebar";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -24,4 +24,3 @@ export const Header = () => {
     </header>
   );
 };
-

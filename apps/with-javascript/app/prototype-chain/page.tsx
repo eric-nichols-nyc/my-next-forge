@@ -70,7 +70,9 @@ const PrototypeChainPage = () => (
       <CardHeader>
         <CardTitle>Prototype Chain</CardTitle>
         <CardDescription>
-          The prototype chain is the mechanism by which JavaScript objects inherit features from one another. It forms a linked list of prototype objects.
+          The prototype chain is the mechanism by which JavaScript objects
+          inherit features from one another. It forms a linked list of prototype
+          objects.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -78,27 +80,51 @@ const PrototypeChainPage = () => (
           <h3 className="mb-2 font-semibold">How It Works</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
             <li>When accessing a property, JavaScript searches up the chain</li>
-            <li>It starts with the object itself, then its prototype, then the prototype's prototype, etc.</li>
-            <li>The chain ends at <code>Object.prototype</code>, which has <code>null</code> as its prototype</li>
+            <li>
+              It starts with the object itself, then its prototype, then the
+              prototype's prototype, etc.
+            </li>
+            <li>
+              The chain ends at <code>Object.prototype</code>, which has{" "}
+              <code>null</code> as its prototype
+            </li>
             <li>This forms the basis of inheritance in JavaScript</li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Property Lookup</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><code>obj.property</code>: Searches entire chain until found or <code>null</code></li>
-            <li><code>obj.hasOwnProperty('prop')</code>: Only checks own properties</li>
-            <li><code>'prop' in obj</code>: Checks entire chain</li>
+            <li>
+              <code>obj.property</code>: Searches entire chain until found or{" "}
+              <code>null</code>
+            </li>
+            <li>
+              <code>obj.hasOwnProperty('prop')</code>: Only checks own
+              properties
+            </li>
+            <li>
+              <code>'prop' in obj</code>: Checks entire chain
+            </li>
             <li>Shadowing: Own properties override inherited ones</li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Constructor Functions</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li>Constructor's <code>prototype</code> becomes the instance's <code>__proto__</code></li>
-            <li>Use <code>Object.create()</code> to set up inheritance</li>
-            <li>Always fix the <code>constructor</code> property after setting prototype</li>
-            <li><code>instanceof</code> checks the entire prototype chain</li>
+            <li>
+              Constructor's <code>prototype</code> becomes the instance's{" "}
+              <code>__proto__</code>
+            </li>
+            <li>
+              Use <code>Object.create()</code> to set up inheritance
+            </li>
+            <li>
+              Always fix the <code>constructor</code> property after setting
+              prototype
+            </li>
+            <li>
+              <code>instanceof</code> checks the entire prototype chain
+            </li>
           </ul>
         </div>
       </CardContent>
@@ -118,4 +144,3 @@ const PrototypeChainPage = () => (
 );
 
 export default PrototypeChainPage;
-

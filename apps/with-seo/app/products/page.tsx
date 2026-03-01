@@ -40,8 +40,8 @@ export default function ProductsPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-6">Our Products</h1>
-      <p className="text-lg mb-8">
+      <h1 className="mb-6 font-bold text-4xl">Our Products</h1>
+      <p className="mb-8 text-lg">
         Discover our range of products! This page demonstrates a product listing
         with links to individual product pages.
       </p>
@@ -49,25 +49,25 @@ export default function ProductsPage() {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (
           <div
+            className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             key={product.id}
-            className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
           >
-            <h2 className="text-xl font-semibold mb-3">
+            <h2 className="mb-3 font-semibold text-xl">
               <a
-                href={`/products/${product.id}`}
                 className="text-blue-600 hover:text-blue-800 hover:underline"
+                href={`/products/${product.id}`}
               >
                 {product.name}
               </a>
             </h2>
-            <p className="text-gray-600 mb-4">{product.description}</p>
+            <p className="mb-4 text-gray-600">{product.description}</p>
 
             <div className="mb-4">
-              <span className="text-2xl font-bold text-green-600">
+              <span className="font-bold text-2xl text-green-600">
                 ${product.price}
               </span>
               <span
-                className={`ml-3 px-2 py-1 rounded-full text-xs ${
+                className={`ml-3 rounded-full px-2 py-1 text-xs ${
                   product.inStock
                     ? "bg-green-100 text-green-800"
                     : "bg-red-100 text-red-800"
@@ -77,8 +77,8 @@ export default function ProductsPage() {
               </span>
             </div>
 
-            <div className="text-sm text-gray-500 mb-4">
-              <div className="flex items-center mb-1">
+            <div className="mb-4 text-gray-500 text-sm">
+              <div className="mb-1 flex items-center">
                 <span className="text-yellow-500">★</span>
                 <span className="ml-1">{product.rating}</span>
                 <span className="ml-2">({product.reviews} reviews)</span>
@@ -89,8 +89,8 @@ export default function ProductsPage() {
             </div>
 
             <a
+              className="inline-block rounded bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
               href={`/products/${product.id}`}
-              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
             >
               View Details
             </a>
@@ -98,8 +98,8 @@ export default function ProductsPage() {
         ))}
       </div>
 
-      <div className="mt-8 bg-orange-50 p-6 rounded-lg">
-        <h2 className="text-2xl font-semibold mb-4">Teaching Notes</h2>
+      <div className="mt-8 rounded-lg bg-orange-50 p-6">
+        <h2 className="mb-4 font-semibold text-2xl">Teaching Notes</h2>
         <p className="mb-2">This products listing page demonstrates:</p>
         <ul className="list-disc pl-6">
           <li>E-commerce listing page optimization</li>

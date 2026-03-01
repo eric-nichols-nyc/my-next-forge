@@ -11,11 +11,11 @@ export function PushNotifier({ message, recipient }: PushNotifierProps) {
   };
 
   return (
-    <div className="p-3 border rounded">
-      <p className="text-sm font-medium">PUSH</p>
-      <p className="text-sm text-muted-foreground">{message}</p>
+    <div className="rounded border p-3">
+      <p className="font-medium text-sm">PUSH</p>
+      <p className="text-muted-foreground text-sm">{message}</p>
       <button
-        className="mt-2 text-xs text-primary hover:underline"
+        className="mt-2 text-primary text-xs hover:underline"
         onClick={send}
       >
         Send
@@ -23,4 +23,3 @@ export function PushNotifier({ message, recipient }: PushNotifierProps) {
     </div>
   );
 }
-

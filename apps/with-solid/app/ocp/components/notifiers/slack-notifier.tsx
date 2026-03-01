@@ -14,11 +14,11 @@ export function SlackNotifier({ message, recipient }: SlackNotifierProps) {
   };
 
   return (
-    <div className="p-3 border rounded">
-      <p className="text-sm font-medium">SLACK</p>
-      <p className="text-sm text-muted-foreground">{message}</p>
+    <div className="rounded border p-3">
+      <p className="font-medium text-sm">SLACK</p>
+      <p className="text-muted-foreground text-sm">{message}</p>
       <button
-        className="mt-2 text-xs text-primary hover:underline"
+        className="mt-2 text-primary text-xs hover:underline"
         onClick={send}
       >
         Send
@@ -26,4 +26,3 @@ export function SlackNotifier({ message, recipient }: SlackNotifierProps) {
     </div>
   );
 }
-

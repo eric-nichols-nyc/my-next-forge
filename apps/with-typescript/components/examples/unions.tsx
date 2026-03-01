@@ -17,11 +17,11 @@ export const UnionExamples = () => {
   const processStatus = (s: Status): string => {
     if (s === "pending") {
       return "Processing...";
-    } else if (s === "approved") {
-      return "✓ Approved";
-    } else {
-      return "✗ Rejected";
     }
+    if (s === "approved") {
+      return "✓ Approved";
+    }
+    return "✗ Rejected";
   };
 
   return (
@@ -69,4 +69,3 @@ export const UnionExamples = () => {
     </Card>
   );
 };
-

@@ -12,4 +12,3 @@ export function useStats(users: User[]) {
 
   return { total, active };
 }
-

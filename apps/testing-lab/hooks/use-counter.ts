@@ -7,11 +7,15 @@ type UseCounterOptions = {
 };
 
 export function useCounter(initialValue = 0, options: UseCounterOptions = {}) {
-  const { min = Number.NEGATIVE_INFINITY, max = Number.POSITIVE_INFINITY, step = 1 } = options;
+  const {
+    min = Number.NEGATIVE_INFINITY,
+    max = Number.POSITIVE_INFINITY,
+    step = 1,
+  } = options;
 
-  const [count, setCount] = useState(() => {
-    return Math.min(Math.max(initialValue, min), max);
-  });
+  const [count, setCount] = useState(() =>
+    Math.min(Math.max(initialValue, min), max)
+  );
 
   const increment = useCallback(() => {
     setCount((prev) => Math.min(prev + step, max));
@@ -34,4 +38,3 @@ export function useCounter(initialValue = 0, options: UseCounterOptions = {}) {
 
   return { count, increment, decrement, reset, set };
 }
-

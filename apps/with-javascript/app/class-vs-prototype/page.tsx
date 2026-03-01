@@ -88,35 +88,68 @@ const ClassVsPrototypePage = () => (
       <CardHeader>
         <CardTitle>Class vs Prototype</CardTitle>
         <CardDescription>
-          ES6 classes are syntactic sugar over JavaScript's existing prototype-based inheritance. They don't introduce a new inheritance model.
+          ES6 classes are syntactic sugar over JavaScript's existing
+          prototype-based inheritance. They don't introduce a new inheritance
+          model.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
           <h3 className="mb-2 font-semibold">Key Differences</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Syntax:</strong> Classes provide cleaner, more familiar syntax</li>
-            <li><strong>Hoisting:</strong> Classes are not hoisted (unlike function declarations)</li>
-            <li><strong>Strict Mode:</strong> Class bodies are always in strict mode</li>
-            <li><strong>Under the Hood:</strong> Classes compile to prototype-based code</li>
+            <li>
+              <strong>Syntax:</strong> Classes provide cleaner, more familiar
+              syntax
+            </li>
+            <li>
+              <strong>Hoisting:</strong> Classes are not hoisted (unlike
+              function declarations)
+            </li>
+            <li>
+              <strong>Strict Mode:</strong> Class bodies are always in strict
+              mode
+            </li>
+            <li>
+              <strong>Under the Hood:</strong> Classes compile to
+              prototype-based code
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Class Features</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><code>constructor</code>: Special method for initialization</li>
-            <li><code>extends</code>: Cleaner inheritance syntax</li>
-            <li><code>super</code>: Access parent class methods</li>
-            <li><code>static</code>: Class methods (not on instances)</li>
-            <li><code>private</code> fields (ES2022): True encapsulation</li>
+            <li>
+              <code>constructor</code>: Special method for initialization
+            </li>
+            <li>
+              <code>extends</code>: Cleaner inheritance syntax
+            </li>
+            <li>
+              <code>super</code>: Access parent class methods
+            </li>
+            <li>
+              <code>static</code>: Class methods (not on instances)
+            </li>
+            <li>
+              <code>private</code> fields (ES2022): True encapsulation
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="mb-2 font-semibold">When to Use</h3>
           <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-            <li><strong>Classes:</strong> Modern code, better readability, familiar OOP syntax</li>
-            <li><strong>Prototypes:</strong> Legacy code, understanding fundamentals, custom patterns</li>
-            <li>Both achieve the same result - choose based on preference and codebase</li>
+            <li>
+              <strong>Classes:</strong> Modern code, better readability,
+              familiar OOP syntax
+            </li>
+            <li>
+              <strong>Prototypes:</strong> Legacy code, understanding
+              fundamentals, custom patterns
+            </li>
+            <li>
+              Both achieve the same result - choose based on preference and
+              codebase
+            </li>
           </ul>
         </div>
       </CardContent>
@@ -136,4 +169,3 @@ const ClassVsPrototypePage = () => (
 );
 
 export default ClassVsPrototypePage;
-

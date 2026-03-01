@@ -53,11 +53,7 @@
  *     -d '{"csrf_token":"fake-token","action":"transfer","amount":100}'
  */
 
-import {
-  setCSRFCookie,
-  validateCSRFRequest,
-  getCSRFFromCookie,
-} from "@/lib/csrf";
+import { setCSRFCookie, validateCSRFRequest } from "@/lib/csrf";
 
 /**
  * GET /api/csrf-demo
@@ -168,7 +164,7 @@ export async function POST(request: Request) {
          * is often sufficient.
          */
       },
-      { status: 403 },
+      { status: 403 }
     );
   }
 

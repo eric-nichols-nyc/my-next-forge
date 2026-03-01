@@ -50,4 +50,3 @@ ${goodCode}
 
 When answering questions, reference these specific code examples and explain how they demonstrate the principle.`;
 }
-

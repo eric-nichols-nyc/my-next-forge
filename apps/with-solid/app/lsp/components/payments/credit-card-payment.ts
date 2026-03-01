@@ -8,14 +8,8 @@ export class CreditCardPayment {
   ) {}
 
   process() {
-    console.log(`Processing credit card payment of $${this.amount} with card ending in ${this.cardNumber.slice(-4)}`);
+    console.log(
+      `Processing credit card payment of $${this.amount} with card ending in ${this.cardNumber.slice(-4)}`
+    );
   }
 }
-
-
-
-
-
-
-
-

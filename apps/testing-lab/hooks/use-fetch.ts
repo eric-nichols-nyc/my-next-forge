@@ -42,4 +42,3 @@ export function useFetch<T>(url: string) {
 
   return { ...state, refetch };
 }
-

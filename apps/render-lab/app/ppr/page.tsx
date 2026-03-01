@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { ArrowLeft, AlertTriangle } from "lucide-react";
+import { AlertTriangle, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -38,15 +38,15 @@ async function DynamicContent() {
   return (
     <div className="space-y-2">
       <div className="rounded-lg border p-3">
-        <p className="text-sm font-medium">Dynamic Message:</p>
+        <p className="font-medium text-sm">Dynamic Message:</p>
         <p className="text-muted-foreground">{data.message}</p>
       </div>
       <div className="rounded-lg border p-3">
-        <p className="text-sm font-medium">Dynamic Timestamp:</p>
+        <p className="font-medium text-sm">Dynamic Timestamp:</p>
         <p className="text-muted-foreground">{data.timestamp}</p>
       </div>
       <div className="rounded-lg border p-3">
-        <p className="text-sm font-medium">Random Number:</p>
+        <p className="font-medium text-sm">Random Number:</p>
         <p className="text-muted-foreground">{data.randomNumber}</p>
       </div>
     </div>
@@ -58,7 +58,7 @@ function DynamicContentLoading() {
   return (
     <div className="rounded-lg border p-6 text-center">
       <div className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-      <p className="mt-2 text-sm text-muted-foreground">
+      <p className="mt-2 text-muted-foreground text-sm">
         Loading dynamic content...
       </p>
     </div>
@@ -72,7 +72,7 @@ const PPRPage = async () => {
     <main className="min-h-screen bg-background p-8">
       <div className="mx-auto max-w-4xl">
         <Link href="/">
-          <Button variant="ghost" className="mb-4">
+          <Button className="mb-4" variant="ghost">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
@@ -105,7 +105,7 @@ const PPRPage = async () => {
 
             <div className="rounded-lg bg-muted p-4">
               <h3 className="mb-2 font-semibold">How it works:</h3>
-              <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+              <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
                 <li>Static parts are pre-rendered at build time</li>
                 <li>Dynamic parts are wrapped in Suspense boundaries</li>
                 <li>Pre-rendered HTML is sent immediately</li>
@@ -116,22 +116,22 @@ const PPRPage = async () => {
 
             <div className="space-y-4">
               <div>
-                <h3 className="mb-2 text-sm font-semibold">
+                <h3 className="mb-2 font-semibold text-sm">
                   Static Content (Pre-rendered):
                 </h3>
                 <div className="space-y-2">
                   <div className="rounded-lg border p-3">
-                    <p className="text-sm font-medium">Title:</p>
+                    <p className="font-medium text-sm">Title:</p>
                     <p className="text-muted-foreground">{staticData.title}</p>
                   </div>
                   <div className="rounded-lg border p-3">
-                    <p className="text-sm font-medium">Description:</p>
+                    <p className="font-medium text-sm">Description:</p>
                     <p className="text-muted-foreground">
                       {staticData.description}
                     </p>
                   </div>
                   <div className="rounded-lg border p-3">
-                    <p className="text-sm font-medium">Build Time:</p>
+                    <p className="font-medium text-sm">Build Time:</p>
                     <p className="text-muted-foreground">
                       {staticData.buildTime}
                     </p>
@@ -140,7 +140,7 @@ const PPRPage = async () => {
               </div>
 
               <div>
-                <h3 className="mb-2 text-sm font-semibold">
+                <h3 className="mb-2 font-semibold text-sm">
                   Dynamic Content (Rendered on-demand):
                 </h3>
                 <Suspense fallback={<DynamicContentLoading />}>
@@ -179,4 +179,3 @@ const PPRPage = async () => {
 };
 
 export default PPRPage;
-

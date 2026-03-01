@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Card, CardContent } from "@repo/design-system/components/ui/card";
+import { useEffect, useState } from "react";
 
 /**
  * ✅ GOOD: Depends on abstraction (Storage interface)
@@ -36,17 +36,17 @@ export const GoodUserList = ({ storage = localStorage }: GoodUserListProps) => {
 
   return (
     <Card>
-      <CardContent className="pt-6 space-y-4">
+      <CardContent className="space-y-4 pt-6">
         <div className="space-y-2">
           {users.map((user, i) => (
-            <div key={i} className="p-2 border rounded">
+            <div className="rounded border p-2" key={i}>
               {user}
             </div>
           ))}
         </div>
         <button
+          className="rounded bg-primary px-4 py-2 text-primary-foreground"
           onClick={() => addUser(`User ${users.length + 1}`)}
-          className="px-4 py-2 bg-primary text-primary-foreground rounded"
         >
           Add User
         </button>
@@ -65,4 +65,3 @@ export const createMockStorage = (): Storage => {
     },
   };
 };
-

@@ -13,12 +13,16 @@ import {
   TabsList,
   TabsTrigger,
 } from "@repo/design-system/components/ui/tabs";
-import { SplitLayout } from "@/components/split-layout";
 import { ComponentCodeLayout } from "@/components/component-code-layout";
-import { BadButton } from "./components/bad-button";
-import { GoodButton, SuccessButton, WarningButton } from "./components/good-button";
+import { SplitLayout } from "@/components/split-layout";
 import { AdvancedBadNotifier } from "./components/advanced-bad-notifier";
 import { AdvancedGoodNotifier } from "./components/advanced-good-notifier";
+import { BadButton } from "./components/bad-button";
+import {
+  GoodButton,
+  SuccessButton,
+  WarningButton,
+} from "./components/good-button";
 
 const badCode = `"use client";
 
@@ -187,7 +191,7 @@ const OCPPage = () => (
           </div>
           <div>
             <h3 className="mb-2 font-semibold">Benefits</h3>
-            <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
               <li>Reduced risk of breaking existing functionality</li>
               <li>Easier to add new features</li>
               <li>Better code stability</li>
@@ -199,44 +203,62 @@ const OCPPage = () => (
     </div>
 
     <div className="flex-1 p-6 pt-0">
-      <Tabs defaultValue="basic" className="flex h-full flex-col">
+      <Tabs className="flex h-full flex-col" defaultValue="basic">
         <TabsList className="mb-4">
           <TabsTrigger value="basic">Basic Examples</TabsTrigger>
           <TabsTrigger value="advanced">Advanced Examples</TabsTrigger>
         </TabsList>
-        <TabsContent value="basic" className="min-h-0 flex-1">
+        <TabsContent className="min-h-0 flex-1" value="basic">
           <SplitLayout
             left={
               <ComponentCodeLayout
+                code={badCode}
                 component={
                   <div className="space-y-2">
-                    <BadButton type="primary" label="Primary" onClick={() => {}} />
-                    <BadButton type="secondary" label="Secondary" onClick={() => {}} />
-                    <BadButton type="danger" label="Danger" onClick={() => {}} />
+                    <BadButton
+                      label="Primary"
+                      onClick={() => {}}
+                      type="primary"
+                    />
+                    <BadButton
+                      label="Secondary"
+                      onClick={() => {}}
+                      type="secondary"
+                    />
+                    <BadButton
+                      label="Danger"
+                      onClick={() => {}}
+                      type="danger"
+                    />
                   </div>
                 }
-                code={badCode}
-                title="❌ Bad Component"
                 description="Must modify component to add new button types"
+                title="❌ Bad Component"
               />
             }
             right={
               <ComponentCodeLayout
+                code={goodCode}
                 component={
                   <div className="space-y-2">
                     <GoodButton label="Base Button" onClick={() => {}} />
-                    <SuccessButton label="Success (Extended)" onClick={() => {}} />
-                    <WarningButton label="Warning (Extended)" onClick={() => {}} />
+                    <SuccessButton
+                      label="Success (Extended)"
+                      onClick={() => {}}
+                    />
+                    <WarningButton
+                      label="Warning (Extended)"
+                      onClick={() => {}}
+                    />
                   </div>
                 }
-                code={goodCode}
-                title="✅ Good Component"
                 description="Extended without modifying base component"
+                title="✅ Good Component"
               />
             }
           />
         </TabsContent>
-        <TabsContent value="advanced" className="min-h-0 flex-1">
+        <TabsContent className="min-h-0 flex-1" value="advanced">
           <SplitLayout
             left={
               <ComponentCodeLayout
@@ -262,4 +284,3 @@ const OCPPage = () => (
 );
 
 export default OCPPage;
-

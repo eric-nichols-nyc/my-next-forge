@@ -1,6 +1,11 @@
 "use client";
 
-import { Card as UICard, CardContent, CardHeader, CardTitle } from "@repo/design-system/components/ui/card";
+import {
+  CardContent,
+  CardHeader,
+  CardTitle,
+  Card as UICard,
+} from "@repo/design-system/components/ui/card";
 
 /**
  * ❌ BAD: ClickableCard violates LSP
@@ -20,12 +25,15 @@ export const Card = ({ title, children }: CardProps) => (
   </UICard>
 );
 
-export const ClickableCard = ({ title, children, onClick }: CardProps & { onClick: () => void }) => {
+export const ClickableCard = ({
+  title,
+  children,
+  onClick,
+}: CardProps & { onClick: () => void }) => {
   // Violates LSP: Adds required prop that base Card doesn't have
   return (
-    <div onClick={onClick} className="cursor-pointer">
+    <div className="cursor-pointer" onClick={onClick}>
       <Card title={title}>{children}</Card>
     </div>
   );
 };
-

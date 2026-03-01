@@ -95,4 +95,3 @@ const TemplateLiteralsPage = () => (
 );
 
 export default TemplateLiteralsPage;
-

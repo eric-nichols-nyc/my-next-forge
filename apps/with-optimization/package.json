@@ -16,6 +16,7 @@
     "next-themes": "^0.4.6",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "react-window": "^2.2.7",
     "swr": "^2.2.5"
   },
   "devDependencies": {
@@ -29,4 +30,3 @@
     "typescript": "^5.9.3"
   }
 }
-

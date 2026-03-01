@@ -101,4 +101,3 @@ const BasicTypesPage = () => (
 );
 
 export default BasicTypesPage;
-

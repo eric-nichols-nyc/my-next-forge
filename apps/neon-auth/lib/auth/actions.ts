@@ -1,10 +1,9 @@
+export type { SignInState, SignUpState } from "@repo/neon-auth";
 export {
-  signUpAction,
   signInAction,
   signOutAction,
+  signUpAction,
 } from "@repo/neon-auth";
-
-export type { SignUpState, SignInState } from "@repo/neon-auth";
 
 const signUpSchema = z.object({
   email: z

@@ -1,6 +1,7 @@
 // app/api/login/route.ts
-import { cookies } from "next/headers";
+
 import { SignJWT } from "jose";
+import { cookies } from "next/headers";
 import { z } from "zod";
 
 /**
@@ -122,7 +123,7 @@ async function validateCredentials(email: string, password: string) {
   await new Promise((resolve) => setTimeout(resolve, 100));
 
   const user = MOCK_USERS.find(
-    (u) => u.email === email && u.password === password,
+    (u) => u.email === email && u.password === password
   );
 
   return user || null;
@@ -146,7 +147,7 @@ export async function POST(request: Request) {
         error: "Validation failed",
         details: validation.error.flatten().fieldErrors,
       },
-      { status: 400 },
+      { status: 400 }
     );
   }
 
@@ -161,7 +162,7 @@ export async function POST(request: Request) {
     // Don't say "user not found" vs "wrong password" — that reveals info
     return Response.json(
       { error: "Invalid email or password" },
-      { status: 401 },
+      { status: 401 }
     );
   }
 
@@ -204,7 +205,7 @@ export async function POST(request: Request) {
     // maxAge: 86400 (24 hours in seconds)
     // → Cookie expires after 24 hours
     // → Limits window of exposure if token is somehow compromised
-    maxAge: 86400,
+    maxAge: 86_400,
   });
 
   return Response.json({

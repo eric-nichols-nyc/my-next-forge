@@ -23,4 +23,3 @@ const RootLayout = ({ children }: RootLayoutProperties) => (
 );
 
 export default RootLayout;
-

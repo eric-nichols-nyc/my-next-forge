@@ -26,7 +26,7 @@ export const TemplateLiteralsExamples = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="rounded-lg bg-muted p-4">
-            <p className="mb-2 text-xs font-semibold">
+            <p className="mb-2 font-semibold text-xs">
               Type: `on${"Click" | "Hover" | "Focus"}`
             </p>
             <div className="space-y-1">
@@ -45,7 +45,7 @@ export const TemplateLiteralsExamples = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="rounded-lg bg-muted p-4">
-            <p className="mb-2 text-xs font-semibold">
+            <p className="mb-2 font-semibold text-xs">
               Type: `/api/${string}/${string}`
             </p>
             <div className="space-y-1">
@@ -61,4 +61,3 @@ export const TemplateLiteralsExamples = () => {
     </div>
   );
 };
-

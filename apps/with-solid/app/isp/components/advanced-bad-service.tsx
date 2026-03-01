@@ -1,6 +1,11 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/design-system/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/design-system/components/ui/card";
 
 /**
  * ❌ BAD: Fat interface - forces clients to implement unused methods
@@ -46,16 +51,16 @@ export const AdvancedBadService = () => {
       <CardHeader>
         <CardTitle>Service Interface</CardTitle>
       </CardHeader>
-      <CardContent className="pt-6 space-y-4">
+      <CardContent className="space-y-4 pt-6">
         <div className="space-y-2">
           <button
-            className="w-full p-2 border rounded text-left"
+            className="w-full rounded border p-2 text-left"
             onClick={() => readOnlyService.read()}
           >
             Read (Works)
           </button>
           <button
-            className="w-full p-2 border rounded text-left text-red-600"
+            className="w-full rounded border p-2 text-left text-red-600"
             onClick={() => {
               try {
                 readOnlyService.create();
@@ -67,18 +72,10 @@ export const AdvancedBadService = () => {
             Create (Throws Error - Not Needed)
           </button>
         </div>
-        <p className="text-xs text-muted-foreground">
+        <p className="text-muted-foreground text-xs">
           ReadOnlyService forced to implement unused methods
         </p>
       </CardContent>
     </Card>
   );
 };
-
-
-
-
-
-
-
-

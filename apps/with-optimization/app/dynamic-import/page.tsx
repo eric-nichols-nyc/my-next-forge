@@ -9,23 +9,20 @@ import {
   CardTitle,
 } from "@repo/design-system/components/ui/card";
 import { ArrowLeft, Code, Loader2 } from "lucide-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useState } from "react";
-import dynamic from "next/dynamic";
 
 // Dynamic import with loading state
-const HeavyComponent = dynamic(
-  () => import("./heavy-component"),
-  {
-    loading: () => (
-      <div className="flex items-center justify-center p-8">
-        <Loader2 className="h-6 w-6 animate-spin text-primary" />
-        <span className="ml-2 text-muted-foreground">Loading component...</span>
-      </div>
-    ),
-    ssr: false, // Disable SSR for this component
-  }
-);
+const HeavyComponent = dynamic(() => import("./heavy-component"), {
+  loading: () => (
+    <div className="flex items-center justify-center p-8">
+      <Loader2 className="h-6 w-6 animate-spin text-primary" />
+      <span className="ml-2 text-muted-foreground">Loading component...</span>
+    </div>
+  ),
+  ssr: false, // Disable SSR for this component
+});
 
 const DynamicImportPage = () => {
   const [showComponent, setShowComponent] = useState(false);
@@ -51,22 +48,14 @@ const DynamicImportPage = () => {
             <div className="rounded-lg bg-muted p-4">
               <h3 className="mb-2 font-semibold">How Dynamic Imports Work:</h3>
               <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
-                <li>
-                  Components are loaded only when needed (lazy loading)
-                </li>
+                <li>Components are loaded only when needed (lazy loading)</li>
                 <li>
                   Reduces initial bundle size and improves Time to Interactive
                   (TTI)
                 </li>
-                <li>
-                  Can disable SSR for client-only components
-                </li>
-                <li>
-                  Supports loading states and error boundaries
-                </li>
-                <li>
-                  Automatic code splitting by Next.js
-                </li>
+                <li>Can disable SSR for client-only components</li>
+                <li>Supports loading states and error boundaries</li>
+                <li>Automatic code splitting by Next.js</li>
               </ul>
             </div>
 
@@ -122,7 +111,9 @@ const HeavyComponent = dynamic(
                 <li>Components with heavy dependencies</li>
                 <li>Client-only components (charts, maps, etc.)</li>
                 <li>Conditionally rendered components</li>
-                <li>Third-party libraries that are only used in specific routes</li>
+                <li>
+                  Third-party libraries that are only used in specific routes
+                </li>
               </ul>
             </div>
           </CardContent>
@@ -133,4 +124,3 @@ const HeavyComponent = dynamic(
 };
 
 export default DynamicImportPage;
-

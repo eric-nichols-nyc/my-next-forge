@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@repo/design-system/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, RefreshCw, Loader2, AlertCircle } from "lucide-react";
+import { AlertCircle, ArrowLeft, Loader2, RefreshCw } from "lucide-react";
 import Link from "next/link";
 
 type User = {
@@ -94,8 +94,8 @@ const UsersPage = () => {
                   <div className="space-y-2">
                     {data.users.map((user) => (
                       <div
-                        key={user.id}
                         className="flex items-center justify-between rounded border p-3"
+                        key={user.id}
                       >
                         <div>
                           <p className="font-medium">{user.name}</p>
@@ -114,10 +114,10 @@ const UsersPage = () => {
             )}
 
             <Button
-              onClick={() => refetch()}
-              variant="outline"
               className="w-full"
               disabled={isFetching}
+              onClick={() => refetch()}
+              variant="outline"
             >
               <RefreshCw
                 className={`mr-2 h-4 w-4 ${isFetching ? "animate-spin" : ""}`}

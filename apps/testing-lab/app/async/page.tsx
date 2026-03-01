@@ -29,9 +29,7 @@ export default function AsyncPage() {
           <Card>
             <CardHeader>
               <CardTitle>waitFor</CardTitle>
-              <CardDescription>
-                Wait for a condition to be true
-              </CardDescription>
+              <CardDescription>Wait for a condition to be true</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="rounded-lg bg-muted p-4 font-mono text-sm">
@@ -101,4 +99,3 @@ it("debounces input", async () => {
     </main>
   );
 }
-

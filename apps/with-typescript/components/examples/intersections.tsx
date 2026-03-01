@@ -34,7 +34,7 @@ export const IntersectionsExamples = () => {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="rounded-lg bg-muted p-4">
-          <p className="mb-2 text-xs font-semibold">Type: Person & Employee</p>
+          <p className="mb-2 font-semibold text-xs">Type: Person & Employee</p>
           <div className="space-y-1 text-sm">
             <p>
               <span className="font-semibold">Name:</span> {worker.name}
@@ -62,4 +62,3 @@ export const IntersectionsExamples = () => {
     </Card>
   );
 };
-

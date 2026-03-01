@@ -36,7 +36,11 @@ const UseMemoDemoPage = () => {
   const [renderCount, setRenderCount] = useState(0);
 
   // Before: runs on every render (including when only renderCount changes)
-  const resultBefore = expensiveFilterAndSort(ITEMS, minValue, "Before (no useMemo)");
+  const resultBefore = expensiveFilterAndSort(
+    ITEMS,
+    minValue,
+    "Before (no useMemo)"
+  );
 
   // After: runs only when minValue changes
   const resultAfter = useMemo(
@@ -74,18 +78,18 @@ const UseMemoDemoPage = () => {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex flex-wrap items-center gap-3">
-              <Button variant="outline" size="sm" onClick={triggerReRender}>
+              <Button onClick={triggerReRender} size="sm" variant="outline">
                 Re-render (count: {renderCount})
               </Button>
               <label className="flex items-center gap-2 text-sm">
                 <span className="text-muted-foreground">Min value:</span>
                 <input
-                  type="range"
-                  min={0}
-                  max={100}
-                  value={minValue}
-                  onChange={(e) => setMinValue(Number(e.target.value))}
                   className="w-32"
+                  max={100}
+                  min={0}
+                  onChange={(e) => setMinValue(Number(e.target.value))}
+                  type="range"
+                  value={minValue}
                 />
                 <span>{minValue}</span>
               </label>
@@ -109,7 +113,9 @@ const UseMemoDemoPage = () => {
                   After (with useMemo)
                 </h3>
                 <p className="mb-2 text-muted-foreground text-sm">
-                  Runs only when <code className="rounded bg-muted px-1">minValue</code> changes.
+                  Runs only when{" "}
+                  <code className="rounded bg-muted px-1">minValue</code>{" "}
+                  changes.
                 </p>
                 <p className="font-mono text-sm">
                   Result length: {resultAfter.length}
@@ -121,12 +127,13 @@ const UseMemoDemoPage = () => {
               <h3 className="mb-2 font-semibold">What to look for</h3>
               <ul className="list-inside list-disc space-y-1 text-muted-foreground text-sm">
                 <li>
-                  <strong>Before:</strong> Every “Re-render” click runs the heavy
-                  filter/sort again even though the result is the same.
+                  <strong>Before:</strong> Every “Re-render” click runs the
+                  heavy filter/sort again even though the result is the same.
                 </li>
                 <li>
-                  <strong>After:</strong> useMemo returns the cached result until{" "}
-                  <code className="rounded bg-muted px-1">minValue</code> changes.
+                  <strong>After:</strong> useMemo returns the cached result
+                  until <code className="rounded bg-muted px-1">minValue</code>{" "}
+                  changes.
                 </li>
                 <li>
                   Use useMemo for expensive derived values; avoid it for cheap

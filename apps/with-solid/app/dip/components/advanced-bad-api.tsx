@@ -1,6 +1,11 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/design-system/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/design-system/components/ui/card";
 import { useState } from "react";
 
 /**
@@ -22,30 +27,22 @@ export const AdvancedBadApi = () => {
       <CardHeader>
         <CardTitle>API Client</CardTitle>
       </CardHeader>
-      <CardContent className="pt-6 space-y-4">
+      <CardContent className="space-y-4 pt-6">
         <button
-          className="w-full p-2 border rounded hover:bg-accent"
+          className="w-full rounded border p-2 hover:bg-accent"
           onClick={fetchData}
         >
           Fetch Data (Direct fetch dependency)
         </button>
         {data && (
-          <div className="p-2 border rounded text-sm">
+          <div className="rounded border p-2 text-sm">
             <pre>{data}</pre>
           </div>
         )}
-        <p className="text-xs text-muted-foreground">
+        <p className="text-muted-foreground text-xs">
           Hard to test or swap with mock API
         </p>
       </CardContent>
     </Card>
   );
 };
-
-
-
-
-
-
-
-

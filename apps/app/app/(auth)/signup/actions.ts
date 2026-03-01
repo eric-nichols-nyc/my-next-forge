@@ -1,7 +1,7 @@
 "use server";
 
-import { createClient } from "@/lib/supabase/server";
 import { z } from "zod";
+import { createClient } from "@/lib/supabase/server";
 
 const signupSchema = z.object({
   email: z
@@ -69,4 +69,3 @@ export async function signupAction(
     message: "Check your email for the confirmation link!",
   };
 }
-

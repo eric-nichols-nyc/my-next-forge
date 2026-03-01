@@ -1,8 +1,10 @@
 "use client";
 
+import { ModeToggle } from "@repo/design-system/components/mode-toggle";
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -10,21 +12,24 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarFooter,
 } from "@repo/design-system/components/ui/sidebar";
-import { ModeToggle } from "@repo/design-system/components/mode-toggle";
 import {
-  Home,
-  Zap,
-  Network,
-  Cpu,
-  Sparkles,
-  TrendingUp,
-  Package,
+  Activity,
+  BookOpen,
   Code,
+  Cpu,
+  Database,
+  HelpCircle,
+  Home,
   Image,
   Layers,
-  BookOpen,
+  Network,
+  Package,
+  ScrollText,
+  ShieldCheck,
+  Sparkles,
+  TrendingUp,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -32,6 +37,7 @@ import { usePathname } from "next/navigation";
 const mainNav = [
   { href: "/", label: "Home", icon: Home },
   { href: "/flashcards", label: "Flashcards", icon: BookOpen },
+  { href: "/faq", label: "FAQ", icon: HelpCircle },
 ];
 
 const demosNav = [
@@ -39,10 +45,34 @@ const demosNav = [
   { href: "/use-memo-demo", label: "useMemo", icon: Cpu },
   { href: "/optimization-demos", label: "Optimization demos", icon: Sparkles },
   { href: "/swr", label: "SWR", icon: TrendingUp },
-  { href: "/bundle-analyzer", label: "Bundle Analyzer", icon: Package },
+  {
+    href: "/bundle-analyzer",
+    label: "Tree Shaking and Bundle Analysis",
+    icon: Package,
+  },
   { href: "/dynamic-import", label: "Dynamic Imports", icon: Code },
   { href: "/image-optimization", label: "Image Optimization", icon: Image },
   { href: "/code-splitting", label: "Code Splitting", icon: Layers },
+  {
+    href: "/list-virtualization",
+    label: "List Virtualization",
+    icon: ScrollText,
+  },
+  {
+    href: "/performance-monitoring",
+    label: "Performance Monitoring and Profiling",
+    icon: Activity,
+  },
+  {
+    href: "/database-api-optimization",
+    label: "Database and API Optimization",
+    icon: Database,
+  },
+  {
+    href: "/memory-leak-prevention",
+    label: "Memory Leak Prevention",
+    icon: ShieldCheck,
+  },
   { href: "/performance-tips", label: "Performance Tips", icon: Zap },
 ];
 

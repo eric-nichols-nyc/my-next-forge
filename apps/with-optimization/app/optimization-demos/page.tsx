@@ -10,20 +10,9 @@ import {
 } from "@repo/design-system/components/ui/card";
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
-import {
-  ArrowLeft,
-  Database,
-  Keyboard,
-  Layers,
-  Zap,
-} from "lucide-react";
+import { ArrowLeft, Database, Keyboard, Layers, Zap } from "lucide-react";
 import Link from "next/link";
-import {
-  useDeferredValue,
-  useRef,
-  useState,
-  useTransition,
-} from "react";
+import { useDeferredValue, useRef, useState, useTransition } from "react";
 
 const DEMO_ITEMS = Array.from({ length: 8000 }, (_, i) => `Item ${i + 1}`);
 
@@ -70,20 +59,20 @@ function SlowInputSection() {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex items-center gap-2">
-          <Label htmlFor="filter-query" className="shrink-0">
+          <Label className="shrink-0" htmlFor="filter-query">
             Filter:
           </Label>
           <Input
+            className="max-w-xs"
             id="filter-query"
-            value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Type to filter 8000 items…"
-            className="max-w-xs"
+            value={query}
           />
           <Button
-            variant={useDeferred ? "default" : "outline"}
-            size="sm"
             onClick={() => setUseDeferred((v) => !v)}
+            size="sm"
+            variant={useDeferred ? "default" : "outline"}
           >
             {useDeferred ? "After (useDeferredValue)" : "Before (sync)"}
           </Button>
@@ -136,31 +125,30 @@ function SlowTabSection() {
           <CardTitle>Slow tab (useTransition)</CardTitle>
         </div>
         <CardDescription>
-          Switch to “Heavy” tab. Before: UI freezes until the heavy tab
-          renders. After: tab switches immediately; content streams in without
-          blocking.
+          Switch to “Heavy” tab. Before: UI freezes until the heavy tab renders.
+          After: tab switches immediately; content streams in without blocking.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex items-center gap-2">
           <Button
-            variant={tab === "light" ? "default" : "outline"}
-            size="sm"
             onClick={() => setTabWithTransition("light")}
+            size="sm"
+            variant={tab === "light" ? "default" : "outline"}
           >
             Light
           </Button>
           <Button
-            variant={tab === "heavy" ? "default" : "outline"}
-            size="sm"
             onClick={() => setTabWithTransition("heavy")}
+            size="sm"
+            variant={tab === "heavy" ? "default" : "outline"}
           >
             Heavy
           </Button>
           <Button
-            variant={useTransitionFlag ? "default" : "outline"}
-            size="sm"
             onClick={() => setUseTransitionFlag((v) => !v)}
+            size="sm"
+            variant={useTransitionFlag ? "default" : "outline"}
           >
             {useTransitionFlag ? "After (useTransition)" : "Before (sync)"}
           </Button>
@@ -226,23 +214,23 @@ function CachingSection() {
           <CardTitle>Caching</CardTitle>
         </div>
         <CardDescription>
-          Before: every "Load" waits 1.5s. After: first load is slow; next
-          loads use cache (instant). Clear cache to reset.
+          Before: every "Load" waits 1.5s. After: first load is slow; next loads
+          use cache (instant). Clear cache to reset.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex flex-wrap items-center gap-2">
-          <Button variant="outline" size="sm" onClick={load} disabled={loading}>
+          <Button disabled={loading} onClick={load} size="sm" variant="outline">
             {loading ? "Loading…" : "Load data"}
           </Button>
           <Button
-            variant={useCache ? "default" : "outline"}
-            size="sm"
             onClick={() => setUseCache((v) => !v)}
+            size="sm"
+            variant={useCache ? "default" : "outline"}
           >
             {useCache ? "After (cached)" : "Before (no cache)"}
           </Button>
-          <Button variant="ghost" size="sm" onClick={clearCache}>
+          <Button onClick={clearCache} size="sm" variant="ghost">
             Clear cache
           </Button>
         </div>
@@ -263,7 +251,7 @@ export default function OptimizationDemosPage() {
       <div className="mx-auto max-w-3xl space-y-8">
         <div className="flex items-center gap-4">
           <Link href="/">
-            <Button variant="ghost" size="sm">
+            <Button size="sm" variant="ghost">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back
             </Button>

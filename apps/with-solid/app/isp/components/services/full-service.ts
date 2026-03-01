@@ -28,11 +28,3 @@ export class FullService implements Readable, Writable {
     console.log("Deleting data");
   }
 }
-
-
-
-
-
-
-
-

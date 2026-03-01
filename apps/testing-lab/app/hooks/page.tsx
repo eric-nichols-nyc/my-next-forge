@@ -88,9 +88,7 @@ export default function HooksPage() {
           <Card>
             <CardHeader>
               <CardTitle>useToggle</CardTitle>
-              <CardDescription>
-                Boolean toggle with helpers
-              </CardDescription>
+              <CardDescription>Boolean toggle with helpers</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-center gap-4">
@@ -126,4 +124,3 @@ export default function HooksPage() {
     </main>
   );
 }
-

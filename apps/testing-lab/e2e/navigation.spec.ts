@@ -3,7 +3,9 @@ import { expect, test } from "@playwright/test";
 test.describe("Navigation", () => {
   test("homepage has correct title", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("heading", { name: "Testing Lab" })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Testing Lab" })
+    ).toBeVisible();
   });
 
   test("homepage shows all demo cards", async ({ page }) => {
@@ -20,4 +22,3 @@ test.describe("Navigation", () => {
     await expect(page).toHaveURL("/hooks");
   });
 });
-

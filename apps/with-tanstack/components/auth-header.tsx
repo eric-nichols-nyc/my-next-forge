@@ -1,10 +1,10 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
-import { signOut, useSession } from "@/lib/auth-client";
 import { LogIn, LogOut } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { signOut, useSession } from "@/lib/auth-client";
 
 export function AuthHeader() {
   const router = useRouter();
@@ -16,9 +16,7 @@ export function AuthHeader() {
   };
 
   if (isPending) {
-    return (
-      <div className="h-9 w-20 animate-pulse rounded bg-muted" />
-    );
+    return <div className="h-9 w-20 animate-pulse rounded bg-muted" />;
   }
 
   if (session?.user) {
@@ -27,7 +25,7 @@ export function AuthHeader() {
         <span className="text-muted-foreground text-sm">
           {session.user.name ?? session.user.email}
         </span>
-        <Button variant="outline" size="sm" onClick={handleSignOut}>
+        <Button onClick={handleSignOut} size="sm" variant="outline">
           <LogOut className="mr-2 h-4 w-4" />
           Sign out
         </Button>
@@ -36,7 +34,7 @@ export function AuthHeader() {
   }
 
   return (
-    <Button variant="outline" size="sm" asChild>
+    <Button asChild size="sm" variant="outline">
       <Link href="/sign-in">
         <LogIn className="mr-2 h-4 w-4" />
         Sign in

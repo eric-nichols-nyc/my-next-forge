@@ -70,7 +70,7 @@ export const GenericsExamples = () => {
           <Button onClick={handleAdd}>Add</Button>
         </div>
         <div className="rounded-lg bg-muted p-4">
-          <p className="mb-2 text-sm font-semibold">Items in container:</p>
+          <p className="mb-2 font-semibold text-sm">Items in container:</p>
           {items.length > 0 ? (
             <ul className="list-inside list-disc space-y-1 text-sm">
               {items.map((item, index) => (
@@ -90,4 +90,3 @@ export const GenericsExamples = () => {
     </Card>
   );
 };
-

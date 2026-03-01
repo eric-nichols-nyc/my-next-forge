@@ -95,22 +95,23 @@ const NetworkBottleneckPage = () => {
             </div>
             <CardDescription>
               Waterfall (sequential) vs parallel requests. Open DevTools →
-              Network to see the difference and use this for debugging/discussion.
+              Network to see the difference and use this for
+              debugging/discussion.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex flex-wrap gap-2">
               <Button
-                variant="outline"
-                onClick={() => run(false)}
                 disabled={loading}
+                onClick={() => run(false)}
+                variant="outline"
               >
                 Run sequential (waterfall)
               </Button>
               <Button
-                variant="outline"
-                onClick={() => run(true)}
                 disabled={loading}
+                onClick={() => run(true)}
+                variant="outline"
               >
                 Run parallel
               </Button>
@@ -122,9 +123,7 @@ const NetworkBottleneckPage = () => {
               </p>
             ) : null}
 
-            {error ? (
-              <p className="text-destructive text-sm">{error}</p>
-            ) : null}
+            {error ? <p className="text-destructive text-sm">{error}</p> : null}
 
             {elapsedMs !== null && !error ? (
               <div className="flex items-center gap-2 rounded-lg border bg-muted/50 p-3">
@@ -165,7 +164,8 @@ const NetworkBottleneckPage = () => {
                   Sequential: 5 × 600ms ≈ 3s. Parallel: ~600ms total.
                 </li>
                 <li>
-                  <strong>Fix:</strong> Use <code className="rounded bg-muted px-1">Promise.all</code> or
+                  <strong>Fix:</strong> Use{" "}
+                  <code className="rounded bg-muted px-1">Promise.all</code> or
                   a backend endpoint that returns all items in one call.
                 </li>
                 <li>

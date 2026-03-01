@@ -39,7 +39,7 @@ export function getUserFromRequest(request: Request): AuthenticatedUser | null {
   const email = request.headers.get("x-user-email");
   const role = request.headers.get("x-user-role");
 
-  if (!email || !role) {
+  if (!(email && role)) {
     return null;
   }
 
@@ -74,7 +74,7 @@ export function requireAuth(request: Request): AuthenticatedUser {
       {
         status: 401,
         headers: { "Content-Type": "application/json" },
-      },
+      }
     );
   }
 
@@ -103,7 +103,7 @@ export function requireAuth(request: Request): AuthenticatedUser {
  */
 export function requireRole(
   request: Request,
-  requiredRole: string,
+  requiredRole: string
 ): AuthenticatedUser {
   const user = requireAuth(request);
 
@@ -116,10 +116,9 @@ export function requireRole(
       {
         status: 403,
         headers: { "Content-Type": "application/json" },
-      },
+      }
     );
   }
 
   return user;
 }
-

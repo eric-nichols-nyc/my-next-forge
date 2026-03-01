@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type User = {
   id: string;
@@ -17,12 +17,15 @@ export function useUsers() {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [cache, setCache] = useState<{ data: User[]; timestamp: number } | null>(null);
+  const [cache, setCache] = useState<{
+    data: User[];
+    timestamp: number;
+  } | null>(null);
 
   const fetchUsers = async () => {
     try {
       // Check cache
-      if (cache && Date.now() - cache.timestamp < 30000) {
+      if (cache && Date.now() - cache.timestamp < 30_000) {
         setUsers(cache.data);
         setLoading(false);
         return;
@@ -54,4 +57,3 @@ export function useUsers() {
 
   return { users, loading, error, refresh: fetchUsers };
 }
-

@@ -131,4 +131,3 @@ describe("validateTransfer helper", () => {
     expect(result.success).toBe(false);
   });
 });
-

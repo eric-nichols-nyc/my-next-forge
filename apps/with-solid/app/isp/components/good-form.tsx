@@ -23,35 +23,38 @@ type PrintableFormProps = {
   onPrint: () => void;
 };
 
-export const BaseForm = ({ onSubmit, onCancel }: BaseFormProps) => {
-  return (
-    <Card>
-      <CardContent className="pt-6 space-y-4">
-        <form onSubmit={(e) => { e.preventDefault(); onSubmit(); }}>
-          <div className="space-y-2">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full rounded-md border px-3 py-2"
-            />
-          </div>
-          <div className="flex gap-2 mt-4">
-            <Button type="submit">Submit</Button>
-            <Button type="button" variant="outline" onClick={onCancel}>
-              Cancel
-            </Button>
-          </div>
-        </form>
-      </CardContent>
-    </Card>
-  );
-};
+export const BaseForm = ({ onSubmit, onCancel }: BaseFormProps) => (
+  <Card>
+    <CardContent className="space-y-4 pt-6">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          onSubmit();
+        }}
+      >
+        <div className="space-y-2">
+          <input
+            className="w-full rounded-md border px-3 py-2"
+            placeholder="Name"
+            type="text"
+          />
+        </div>
+        <div className="mt-4 flex gap-2">
+          <Button type="submit">Submit</Button>
+          <Button onClick={onCancel} type="button" variant="outline">
+            Cancel
+          </Button>
+        </div>
+      </form>
+    </CardContent>
+  </Card>
+);
 
 export const DeletableForm = (props: BaseFormProps & DeletableFormProps) => (
   <div>
-    <BaseForm onSubmit={props.onSubmit} onCancel={props.onCancel} />
+    <BaseForm onCancel={props.onCancel} onSubmit={props.onSubmit} />
     <div className="mt-2">
-      <Button variant="destructive" onClick={props.onDelete}>
+      <Button onClick={props.onDelete} variant="destructive">
         Delete
       </Button>
     </div>
@@ -60,12 +63,11 @@ export const DeletableForm = (props: BaseFormProps & DeletableFormProps) => (
 
 export const ExportableForm = (props: BaseFormProps & ExportableFormProps) => (
   <div>
-    <BaseForm onSubmit={props.onSubmit} onCancel={props.onCancel} />
+    <BaseForm onCancel={props.onCancel} onSubmit={props.onSubmit} />
     <div className="mt-2">
-      <Button variant="outline" onClick={props.onExport}>
+      <Button onClick={props.onExport} variant="outline">
         Export
       </Button>
     </div>
   </div>
 );
-

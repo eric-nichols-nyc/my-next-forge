@@ -35,4 +35,3 @@ export type TransferFormData = z.infer<typeof transferSchema>;
 export function validateTransfer(data: { recipient: string; amount: string }) {
   return transferSchema.safeParse(data);
 }
-
