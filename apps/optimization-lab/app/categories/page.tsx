@@ -28,7 +28,7 @@ const CategoriesPage = async () => {
           <div className="flex items-center gap-3">
             <ShoppingBag className="h-8 w-8 text-primary" />
             <div>
-              <h1 className="text-4xl font-bold">Categories</h1>
+              <h1 className="font-bold text-4xl">Categories</h1>
               <p className="mt-1 text-muted-foreground">
                 Browse by category (SSG - pre-rendered at build time)
               </p>
@@ -40,7 +40,7 @@ const CategoriesPage = async () => {
       <div className="mx-auto max-w-7xl px-8 py-12">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
-            <Link key={category.id} href={`/categories/${category.slug}`}>
+            <Link href={`/categories/${category.slug}`} key={category.id}>
               <Card className="h-full transition-all hover:shadow-lg">
                 <CardHeader>
                   <CardTitle>{category.name}</CardTitle>
@@ -54,8 +54,8 @@ const CategoriesPage = async () => {
                     <Button variant="outline">View Category</Button>
                   </div>
                   <p className="mt-4 text-muted-foreground text-xs">
-                    This category page is statically generated at build time
-                    for maximum performance.
+                    This category page is statically generated at build time for
+                    maximum performance.
                   </p>
                 </CardContent>
               </Card>
@@ -68,4 +68,3 @@ const CategoriesPage = async () => {
 };
 
 export default CategoriesPage;
-

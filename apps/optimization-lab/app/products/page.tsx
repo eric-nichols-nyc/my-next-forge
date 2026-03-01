@@ -1,15 +1,8 @@
 import { Button } from "@repo/design-system/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@repo/design-system/components/ui/card";
 import { ArrowLeft, Package } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/app/lib/mock-data";
+import { ProductCard } from "./product-card";
 // Note: We fetch from API to demonstrate ISR properly
 // The API call will be cached and re-executed during regeneration
 
@@ -32,10 +25,12 @@ const ProductsPage = async () => {
 
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3020";
+    // 10s delay to test profiler (remove after testing)
+    await new Promise((resolve) => setTimeout(resolve, 10_000));
     const response = await fetch(`${baseUrl}/api/products`, {
       // This fetch is cached and re-executed during ISR regeneration
-      cache: "force-cache", // Cache the response
-      next: { revalidate: 600 }, // Revalidate every 10 minutes (same as page)
+      //cache: "force-cache", // Cache the response
+      //next: { revalidate: 600 }, // Revalidate every 10 minutes (same as page)
     });
 
     if (response.ok) {
@@ -93,61 +88,9 @@ const ProductsPage = async () => {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {products.map(
-            (product: {
-              id: string;
-              name: string;
-              description: string;
-              image: string;
-              price: number;
-              originalPrice?: number;
-              rating: number;
-              reviewCount: number;
-              inStock: boolean;
-            }) => (
-              <Link href={`/products/${product.id}`} key={product.id}>
-                <Card className="h-full transition-all hover:shadow-lg">
-                  <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
-                    <Image
-                      alt={product.name}
-                      className="object-cover"
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      src={product.image}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="line-clamp-2">
-                      {product.name}
-                    </CardTitle>
-                    <CardDescription className="line-clamp-2">
-                      {product.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="font-bold text-2xl">${product.price}</p>
-                        {product.originalPrice && (
-                          <p className="text-muted-foreground text-sm line-through">
-                            ${product.originalPrice}
-                          </p>
-                        )}
-                      </div>
-                      <div className="text-right">
-                        <p className="text-muted-foreground text-sm">
-                          ⭐ {product.rating} ({product.reviewCount})
-                        </p>
-                        <p className="text-muted-foreground text-xs">
-                          {product.inStock ? "In Stock" : "Out of Stock"}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            )
-          )}
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </div>
     </main>

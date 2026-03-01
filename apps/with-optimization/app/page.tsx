@@ -1,4 +1,3 @@
-import { ModeToggle } from "@repo/design-system/components/mode-toggle";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   Card,
@@ -89,15 +88,12 @@ const strategies = [
 const HomePage = () => (
   <main className="min-h-screen bg-background p-8">
     <div className="mx-auto max-w-6xl">
-      <div className="mb-8 flex items-center justify-between">
-        <div>
-          <h1 className="text-4xl font-bold">Next.js Optimization Lab</h1>
-          <p className="mt-2 text-muted-foreground">
-            Explore optimization strategies to improve your Next.js application
-            performance
-          </p>
-        </div>
-        <ModeToggle />
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold">Next.js Optimization Lab</h1>
+        <p className="mt-2 text-muted-foreground">
+          Explore optimization strategies to improve your Next.js application
+          performance
+        </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

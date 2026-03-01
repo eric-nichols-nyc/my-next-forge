@@ -7,8 +7,8 @@ import {
   CardTitle,
 } from "@repo/design-system/components/ui/card";
 import { ArrowLeft, Search as SearchIcon } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { searchProducts } from "@/app/lib/mock-data";
 
 // SSR - Server-Side Rendering (no revalidate, no generateStaticParams)
@@ -37,7 +37,7 @@ const SearchPage = async ({
           <div className="flex items-center gap-3">
             <SearchIcon className="h-8 w-8 text-primary" />
             <div>
-              <h1 className="text-4xl font-bold">Search Products</h1>
+              <h1 className="font-bold text-4xl">Search Products</h1>
               <p className="mt-1 text-muted-foreground">
                 SSR - Results rendered on the server for each search
               </p>
@@ -47,28 +47,7 @@ const SearchPage = async ({
       </div>
 
       <div className="mx-auto max-w-7xl px-8 py-12">
-        {!query ? (
-          <Card>
-            <CardHeader>
-              <CardTitle>Search for Products</CardTitle>
-              <CardDescription>
-                Enter a search query to find products
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form method="get" className="flex gap-2">
-                <input
-                  type="text"
-                  name="q"
-                  placeholder="Search products..."
-                  className="flex-1 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
-                  defaultValue={query}
-                />
-                <Button type="submit">Search</Button>
-              </form>
-            </CardContent>
-          </Card>
-        ) : (
+        {query ? (
           <>
             <div className="mb-6">
               <p className="text-muted-foreground text-sm">
@@ -90,15 +69,15 @@ const SearchPage = async ({
             ) : (
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {products.map((product) => (
-                  <Link key={product.id} href={`/products/${product.id}`}>
+                  <Link href={`/products/${product.id}`} key={product.id}>
                     <Card className="h-full transition-all hover:shadow-lg">
                       <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
                         <Image
-                          src={product.image}
                           alt={product.name}
-                          fill
                           className="object-cover"
+                          fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          src={product.image}
                         />
                       </div>
                       <CardHeader>
@@ -111,9 +90,7 @@ const SearchPage = async ({
                       </CardHeader>
                       <CardContent>
                         <div className="flex items-center justify-between">
-                          <p className="text-2xl font-bold">
-                            ${product.price}
-                          </p>
+                          <p className="font-bold text-2xl">${product.price}</p>
                           {product.originalPrice && (
                             <p className="text-muted-foreground text-sm line-through">
                               ${product.originalPrice}
@@ -127,6 +104,27 @@ const SearchPage = async ({
               </div>
             )}
           </>
+        ) : (
+          <Card>
+            <CardHeader>
+              <CardTitle>Search for Products</CardTitle>
+              <CardDescription>
+                Enter a search query to find products
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form className="flex gap-2" method="get">
+                <input
+                  className="flex-1 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
+                  defaultValue={query}
+                  name="q"
+                  placeholder="Search products..."
+                  type="text"
+                />
+                <Button type="submit">Search</Button>
+              </form>
+            </CardContent>
+          </Card>
         )}
       </div>
     </main>
@@ -134,4 +132,3 @@ const SearchPage = async ({
 };
 
 export default SearchPage;
-

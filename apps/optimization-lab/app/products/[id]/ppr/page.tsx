@@ -6,9 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { ArrowLeft, ShoppingCart, Star, Loader2 } from "lucide-react";
-import Link from "next/link";
+import { ArrowLeft, Loader2, ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { getProductById } from "@/app/lib/mock-data";
@@ -49,10 +49,7 @@ async function getDynamicProductData(id: string) {
     reviewCount: product.reviewCount,
     updatedAt: product.updatedAt,
     // Simulated recommendations
-    recommendations: [
-      getProductById("2"),
-      getProductById("4"),
-    ].filter(Boolean),
+    recommendations: [getProductById("2"), getProductById("4")].filter(Boolean),
   };
 }
 
@@ -86,26 +83,24 @@ async function ProductReviews({ productId }: { productId: string }) {
 
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-semibold">Customer Reviews</h3>
+      <h3 className="font-semibold text-lg">Customer Reviews</h3>
       {reviews.map((review) => (
-        <div key={review.id} className="rounded-lg border p-4">
+        <div className="rounded-lg border p-4" key={review.id}>
           <div className="mb-2 flex items-center gap-2">
             <span className="font-medium">{review.author}</span>
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star
-                  key={i}
                   className={`h-4 w-4 ${
                     i < review.rating
                       ? "fill-yellow-400 text-yellow-400"
                       : "text-muted-foreground"
                   }`}
+                  key={i}
                 />
               ))}
             </div>
-            <span className="text-muted-foreground text-sm">
-              {review.date}
-            </span>
+            <span className="text-muted-foreground text-sm">{review.date}</span>
           </div>
           <p className="text-muted-foreground text-sm">{review.comment}</p>
         </div>
@@ -153,26 +148,26 @@ const PPRProductPage = async ({
           <div className="space-y-4">
             <div className="relative aspect-square w-full overflow-hidden rounded-lg border">
               <Image
-                src={staticInfo.image}
                 alt={staticInfo.name}
-                fill
                 className="object-cover"
+                fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                src={staticInfo.image}
               />
             </div>
             <div className="grid grid-cols-4 gap-4">
               {staticInfo.images.slice(0, 4).map((img, idx) => (
                 <div
-                  key={idx}
                   className="relative aspect-square w-full overflow-hidden rounded-lg border"
+                  key={idx}
                 >
                   <Image
-                    src={img}
                     alt={`${staticInfo.name} ${idx + 1}`}
-                    fill
                     className="object-cover"
+                    fill
                     sizes="(max-width: 1024px) 25vw, 12.5vw"
+                    src={img}
                   />
                 </div>
               ))}
@@ -184,11 +179,11 @@ const PPRProductPage = async ({
             {/* Static Info - Available Immediately */}
             <div>
               <div className="mb-2 flex items-center gap-2">
-                <span className="rounded bg-primary/10 px-2 py-1 text-primary text-xs font-medium">
+                <span className="rounded bg-primary/10 px-2 py-1 font-medium text-primary text-xs">
                   {staticInfo.category}
                 </span>
               </div>
-              <h1 className="text-4xl font-bold">{staticInfo.name}</h1>
+              <h1 className="font-bold text-4xl">{staticInfo.name}</h1>
               <p className="mt-2 text-muted-foreground">
                 {staticInfo.description}
               </p>
@@ -214,8 +209,8 @@ const PPRProductPage = async ({
               <div className="flex flex-wrap gap-2">
                 {staticInfo.tags.map((tag) => (
                   <span
-                    key={tag}
                     className="rounded bg-muted px-3 py-1 text-sm"
+                    key={tag}
                   >
                     {tag}
                   </span>
@@ -264,13 +259,13 @@ async function DynamicProductInfo({ productId }: { productId: string }) {
   return (
     <div className="space-y-4 rounded-lg border p-6">
       <div className="flex items-baseline gap-4">
-        <span className="text-4xl font-bold">${dynamicData.price}</span>
+        <span className="font-bold text-4xl">${dynamicData.price}</span>
         {dynamicData.originalPrice && (
           <>
             <span className="text-muted-foreground text-xl line-through">
               ${dynamicData.originalPrice}
             </span>
-            <span className="rounded bg-red-500/10 px-2 py-1 text-red-600 text-sm font-medium dark:text-red-400">
+            <span className="rounded bg-red-500/10 px-2 py-1 font-medium text-red-600 text-sm dark:text-red-400">
               {Math.round(
                 ((dynamicData.originalPrice - dynamicData.price) /
                   dynamicData.originalPrice) *
@@ -311,18 +306,17 @@ async function DynamicProductInfo({ productId }: { productId: string }) {
         </div>
       </div>
 
-      <Button className="w-full" size="lg" disabled={!dynamicData.inStock}>
+      <Button className="w-full" disabled={!dynamicData.inStock} size="lg">
         <ShoppingCart className="mr-2 h-5 w-5" />
         {dynamicData.inStock ? "Add to Cart" : "Out of Stock"}
       </Button>
 
       <p className="text-muted-foreground text-xs">
-        This pricing and inventory data streams in dynamically. The product
-        info above was pre-rendered.
+        This pricing and inventory data streams in dynamically. The product info
+        above was pre-rendered.
       </p>
     </div>
   );
 }
 
 export default PPRProductPage;
-

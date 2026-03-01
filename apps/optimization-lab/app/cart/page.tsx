@@ -4,18 +4,16 @@ import { Button } from "@repo/design-system/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { ArrowLeft, ShoppingCart, Trash2, Loader2 } from "lucide-react";
-import Link from "next/link";
+import { ArrowLeft, Loader2, ShoppingCart, Trash2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import useSWR from "swr";
 
 // Mock cart API
-const fetcher = (url: string) =>
-  fetch(url).then((res) => res.json());
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 // CSR - Client-Side Rendering
 // This page is rendered on the client with SWR for real-time updates
@@ -30,7 +28,10 @@ const CartPage = () => {
     const optimisticData = {
       ...data,
       items: data.items.filter((item: { id: string }) => item.id !== productId),
-      total: data.total - data.items.find((item: { id: string }) => item.id === productId)?.price || 0,
+      total:
+        data.total -
+          data.items.find((item: { id: string }) => item.id === productId)
+            ?.price || 0,
     };
 
     mutate(optimisticData, false);
@@ -84,7 +85,7 @@ const CartPage = () => {
           <div className="flex items-center gap-3">
             <ShoppingCart className="h-8 w-8 text-primary" />
             <div>
-              <h1 className="text-4xl font-bold">Shopping Cart</h1>
+              <h1 className="font-bold text-4xl">Shopping Cart</h1>
               <p className="mt-1 text-muted-foreground">
                 CSR - Interactive cart with SWR for real-time updates
               </p>
@@ -98,7 +99,7 @@ const CartPage = () => {
           <Card>
             <CardContent className="py-12 text-center">
               <ShoppingCart className="mx-auto mb-4 h-12 w-12 text-muted-foreground" />
-              <h3 className="mb-2 text-lg font-semibold">Your cart is empty</h3>
+              <h3 className="mb-2 font-semibold text-lg">Your cart is empty</h3>
               <p className="mb-4 text-muted-foreground">
                 Start shopping to add items to your cart
               </p>
@@ -116,47 +117,49 @@ const CartPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {items.map((item: {
-                      id: string;
-                      name: string;
-                      image: string;
-                      price: number;
-                      quantity: number;
-                    }) => (
-                      <div
-                        key={item.id}
-                        className="flex items-center gap-4 rounded-lg border p-4"
-                      >
-                        <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg">
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            fill
-                            className="object-cover"
-                            sizes="80px"
-                          />
+                    {items.map(
+                      (item: {
+                        id: string;
+                        name: string;
+                        image: string;
+                        price: number;
+                        quantity: number;
+                      }) => (
+                        <div
+                          className="flex items-center gap-4 rounded-lg border p-4"
+                          key={item.id}
+                        >
+                          <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-lg">
+                            <Image
+                              alt={item.name}
+                              className="object-cover"
+                              fill
+                              sizes="80px"
+                              src={item.image}
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="font-medium">{item.name}</h3>
+                            <p className="text-muted-foreground text-sm">
+                              Quantity: {item.quantity}
+                            </p>
+                          </div>
+                          <div className="text-right">
+                            <p className="font-semibold">
+                              ${(item.price * item.quantity).toFixed(2)}
+                            </p>
+                            <Button
+                              className="mt-2"
+                              onClick={() => removeFromCart(item.id)}
+                              size="sm"
+                              variant="ghost"
+                            >
+                              <Trash2 className="h-4 w-4" />
+                            </Button>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <h3 className="font-medium">{item.name}</h3>
-                          <p className="text-muted-foreground text-sm">
-                            Quantity: {item.quantity}
-                          </p>
-                        </div>
-                        <div className="text-right">
-                          <p className="font-semibold">
-                            ${(item.price * item.quantity).toFixed(2)}
-                          </p>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="mt-2"
-                            onClick={() => removeFromCart(item.id)}
-                          >
-                            <Trash2 className="h-4 w-4" />
-                          </Button>
-                        </div>
-                      </div>
-                    ))}
+                      )
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -185,7 +188,7 @@ const CartPage = () => {
                   <div className="border-t pt-4">
                     <div className="flex justify-between">
                       <span className="font-semibold">Total</span>
-                      <span className="text-2xl font-bold">
+                      <span className="font-bold text-2xl">
                         ${(total * 1.08).toFixed(2)}
                       </span>
                     </div>
@@ -208,4 +211,3 @@ const CartPage = () => {
 };
 
 export default CartPage;
-

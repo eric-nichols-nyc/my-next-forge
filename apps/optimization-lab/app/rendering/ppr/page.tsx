@@ -78,8 +78,12 @@ const PPRPage = async () => {
 
             <div className="space-y-4">
               <div className="rounded-lg border p-4">
-                <p className="font-medium text-sm">Static Content (Pre-rendered):</p>
-                <p className="text-muted-foreground">{staticData.description}</p>
+                <p className="font-medium text-sm">
+                  Static Content (Pre-rendered):
+                </p>
+                <p className="text-muted-foreground">
+                  {staticData.description}
+                </p>
                 <p className="mt-2 text-muted-foreground text-sm">
                   Build time: {staticData.buildTime}
                 </p>
@@ -131,8 +135,13 @@ const PPRPage = async () => {
                 Note:
               </p>
               <p className="mt-1 text-yellow-700 dark:text-yellow-300">
-                Full PPR requires <code className="rounded bg-yellow-600/20 px-1">cacheComponents: true</code> in
-                next.config.ts, but this conflicts with ISR. This demo uses Suspense boundaries to demonstrate the PPR concept - static content loads immediately while dynamic content streams in.
+                Full PPR requires{" "}
+                <code className="rounded bg-yellow-600/20 px-1">
+                  cacheComponents: true
+                </code>{" "}
+                in next.config.ts, but this conflicts with ISR. This demo uses
+                Suspense boundaries to demonstrate the PPR concept - static
+                content loads immediately while dynamic content streams in.
               </p>
             </div>
           </CardContent>
@@ -143,4 +152,3 @@ const PPRPage = async () => {
 };
 
 export default PPRPage;
-

@@ -201,9 +201,7 @@ export function getProductById(id: string): Product | undefined {
   return mockProducts.find((p) => p.id === id);
 }
 
-export function getProductsByCategory(
-  categorySlug: string
-): Product[] {
+export function getProductsByCategory(categorySlug: string): Product[] {
   return mockProducts.filter((p) => p.categorySlug === categorySlug);
 }
 
@@ -224,4 +222,3 @@ export function getAllCategories(): Category[] {
 export function getCategoryBySlug(slug: string): Category | undefined {
   return mockCategories.find((c) => c.slug === slug);
 }
-

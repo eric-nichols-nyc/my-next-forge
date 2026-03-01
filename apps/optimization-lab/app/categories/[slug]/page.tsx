@@ -7,13 +7,10 @@ import {
   CardTitle,
 } from "@repo/design-system/components/ui/card";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  getCategoryBySlug,
-  getProductsByCategory,
-} from "@/app/lib/mock-data";
+import { getCategoryBySlug, getProductsByCategory } from "@/app/lib/mock-data";
 
 // SSG - Generate all category pages at build time
 export async function generateStaticParams() {
@@ -52,7 +49,7 @@ const CategoryPage = async ({
             </Button>
           </Link>
           <div>
-            <h1 className="text-4xl font-bold">{category.name}</h1>
+            <h1 className="font-bold text-4xl">{category.name}</h1>
             <p className="mt-2 text-muted-foreground">{category.description}</p>
             <p className="mt-1 text-muted-foreground text-sm">
               SSG - This page was pre-rendered at build time
@@ -70,15 +67,15 @@ const CategoryPage = async ({
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
-            <Link key={product.id} href={`/products/${product.id}`}>
+            <Link href={`/products/${product.id}`} key={product.id}>
               <Card className="h-full transition-all hover:shadow-lg">
                 <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
                   <Image
-                    src={product.image}
                     alt={product.name}
-                    fill
                     className="object-cover"
+                    fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    src={product.image}
                   />
                 </div>
                 <CardHeader>
@@ -89,7 +86,7 @@ const CategoryPage = async ({
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between">
-                    <p className="text-2xl font-bold">${product.price}</p>
+                    <p className="font-bold text-2xl">${product.price}</p>
                     {product.originalPrice && (
                       <p className="text-muted-foreground text-sm line-through">
                         ${product.originalPrice}
@@ -107,4 +104,3 @@ const CategoryPage = async ({
 };
 
 export default CategoryPage;
-

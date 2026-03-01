@@ -1,4 +1,3 @@
-import { ModeToggle } from "@repo/design-system/components/mode-toggle";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   Card,
@@ -7,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { ShoppingBag, Package, Search, ShoppingCart } from "lucide-react";
+import { Package, Search, ShoppingBag, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 const HomePage = () => (
@@ -15,17 +14,14 @@ const HomePage = () => (
     {/* Hero Section */}
     <div className="border-b bg-muted/50">
       <div className="mx-auto max-w-7xl px-8 py-16">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-5xl font-bold">Optimization Lab</h1>
-            <p className="mt-4 text-xl text-muted-foreground">
-              E-Commerce Product Catalog
-            </p>
-            <p className="mt-2 text-muted-foreground">
-              A real-world showcase of Next.js optimization strategies
-            </p>
-          </div>
-          <ModeToggle />
+        <div>
+          <h1 className="font-bold text-5xl">Optimization Lab</h1>
+          <p className="mt-4 text-muted-foreground text-xl">
+            E-Commerce Product Catalog
+          </p>
+          <p className="mt-2 text-muted-foreground">
+            A real-world showcase of Next.js optimization strategies
+          </p>
         </div>
       </div>
     </div>
@@ -59,9 +55,7 @@ const HomePage = () => (
                 <ShoppingBag className="h-6 w-6 text-primary" />
               </div>
               <CardTitle>Categories</CardTitle>
-              <CardDescription>
-                Browse by category (SSG)
-              </CardDescription>
+              <CardDescription>Browse by category (SSG)</CardDescription>
             </CardHeader>
             <CardContent>
               <Button className="w-full" variant="outline">
@@ -78,9 +72,7 @@ const HomePage = () => (
                 <Search className="h-6 w-6 text-primary" />
               </div>
               <CardTitle>Search</CardTitle>
-              <CardDescription>
-                Search products (SSR)
-              </CardDescription>
+              <CardDescription>Search products (SSR)</CardDescription>
             </CardHeader>
             <CardContent>
               <Button className="w-full" variant="outline">
@@ -97,9 +89,7 @@ const HomePage = () => (
                 <ShoppingCart className="h-6 w-6 text-primary" />
               </div>
               <CardTitle>Shopping Cart</CardTitle>
-              <CardDescription>
-                View your cart (CSR)
-              </CardDescription>
+              <CardDescription>View your cart (CSR)</CardDescription>
             </CardHeader>
             <CardContent>
               <Button className="w-full" variant="outline">
@@ -143,7 +133,7 @@ const HomePage = () => (
               dynamic reviews and pricing
             </li>
           </ul>
-          <p className="mt-4 text-sm text-muted-foreground">
+          <p className="mt-4 text-muted-foreground text-sm">
             See the README.md for a complete list of all optimizations and
             rendering strategies.
           </p>
@@ -154,4 +144,3 @@ const HomePage = () => (
 );
 
 export default HomePage;
-

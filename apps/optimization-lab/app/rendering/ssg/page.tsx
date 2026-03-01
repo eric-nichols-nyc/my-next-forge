@@ -99,4 +99,3 @@ const SSGPage = async () => {
 };
 
 export default SSGPage;
-

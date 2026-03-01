@@ -4,7 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@repo/*": ["../../packages/*"]
+      "@repo/*": ["../../../packages/*"]
     }
   },
   "include": [
@@ -15,4 +15,3 @@
     ".next/types/**/*.ts"
   ]
 }
-

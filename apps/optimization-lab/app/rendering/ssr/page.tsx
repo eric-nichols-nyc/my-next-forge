@@ -113,4 +113,3 @@ const SSRPage = async () => {
 };
 
 export default SSRPage;
-

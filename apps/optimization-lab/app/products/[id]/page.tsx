@@ -7,8 +7,8 @@ import {
   CardTitle,
 } from "@repo/design-system/components/ui/card";
 import { ArrowLeft, ShoppingCart, Star } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { getProductById } from "@/app/lib/mock-data";
@@ -53,26 +53,24 @@ async function ProductReviews({ productId }: { productId: string }) {
 
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-semibold">Customer Reviews</h3>
+      <h3 className="font-semibold text-lg">Customer Reviews</h3>
       {reviews.map((review) => (
-        <div key={review.id} className="rounded-lg border p-4">
+        <div className="rounded-lg border p-4" key={review.id}>
           <div className="mb-2 flex items-center gap-2">
             <span className="font-medium">{review.author}</span>
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star
-                  key={i}
                   className={`h-4 w-4 ${
                     i < review.rating
                       ? "fill-yellow-400 text-yellow-400"
                       : "text-muted-foreground"
                   }`}
+                  key={i}
                 />
               ))}
             </div>
-            <span className="text-muted-foreground text-sm">
-              {review.date}
-            </span>
+            <span className="text-muted-foreground text-sm">{review.date}</span>
           </div>
           <p className="text-muted-foreground text-sm">{review.comment}</p>
         </div>
@@ -112,26 +110,26 @@ const ProductDetailPage = async ({
           <div className="space-y-4">
             <div className="relative aspect-square w-full overflow-hidden rounded-lg border">
               <Image
-                src={product.image}
                 alt={product.name}
-                fill
                 className="object-cover"
+                fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                src={product.image}
               />
             </div>
             <div className="grid grid-cols-4 gap-4">
               {product.images.slice(0, 4).map((img, idx) => (
                 <div
-                  key={idx}
                   className="relative aspect-square w-full overflow-hidden rounded-lg border"
+                  key={idx}
                 >
                   <Image
-                    src={img}
                     alt={`${product.name} ${idx + 1}`}
-                    fill
                     className="object-cover"
+                    fill
                     sizes="(max-width: 1024px) 25vw, 12.5vw"
+                    src={img}
                   />
                 </div>
               ))}
@@ -142,7 +140,7 @@ const ProductDetailPage = async ({
           <div className="space-y-6">
             <div>
               <div className="mb-2 flex items-center gap-2">
-                <span className="rounded bg-primary/10 px-2 py-1 text-primary text-xs font-medium">
+                <span className="rounded bg-primary/10 px-2 py-1 font-medium text-primary text-xs">
                   {product.category}
                 </span>
                 <div className="flex items-center gap-1">
@@ -153,19 +151,21 @@ const ProductDetailPage = async ({
                   </span>
                 </div>
               </div>
-              <h1 className="text-4xl font-bold">{product.name}</h1>
-              <p className="mt-2 text-muted-foreground">{product.description}</p>
+              <h1 className="font-bold text-4xl">{product.name}</h1>
+              <p className="mt-2 text-muted-foreground">
+                {product.description}
+              </p>
             </div>
 
             <div className="space-y-4 rounded-lg border p-6">
               <div className="flex items-baseline gap-4">
-                <span className="text-4xl font-bold">${product.price}</span>
+                <span className="font-bold text-4xl">${product.price}</span>
                 {product.originalPrice && (
                   <>
                     <span className="text-muted-foreground text-xl line-through">
                       ${product.originalPrice}
                     </span>
-                    <span className="rounded bg-red-500/10 px-2 py-1 text-red-600 text-sm font-medium dark:text-red-400">
+                    <span className="rounded bg-red-500/10 px-2 py-1 font-medium text-red-600 text-sm dark:text-red-400">
                       {Math.round(
                         ((product.originalPrice - product.price) /
                           product.originalPrice) *
@@ -200,11 +200,7 @@ const ProductDetailPage = async ({
                 </div>
               </div>
 
-              <Button
-                className="w-full"
-                size="lg"
-                disabled={!product.inStock}
-              >
+              <Button className="w-full" disabled={!product.inStock} size="lg">
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 {product.inStock ? "Add to Cart" : "Out of Stock"}
               </Button>
@@ -220,8 +216,8 @@ const ProductDetailPage = async ({
               <div className="flex flex-wrap gap-2">
                 {product.tags.map((tag) => (
                   <span
-                    key={tag}
                     className="rounded bg-muted px-3 py-1 text-sm"
+                    key={tag}
                   >
                     {tag}
                   </span>
@@ -257,4 +253,3 @@ const ProductDetailPage = async ({
 };
 
 export default ProductDetailPage;
-
