@@ -11,7 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@repo/design-system/components/ui/sidebar";
-import { Boxes, Code, HelpCircle, Home, Layers, RefreshCw, Server, Zap } from "lucide-react";
+import { Boxes, Code, GitCompare, HelpCircle, Home, Layers, RefreshCw, Server, Zap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -23,6 +23,7 @@ const mainNav = [
 const strategiesNav = [
   { href: "/csr", label: "Client-Side (CSR)", icon: Code },
   { href: "/ssr", label: "Server-Side (SSR)", icon: Server },
+  { href: "/ssr-vs-csr", label: "SSR vs CSR", icon: GitCompare },
   { href: "/ssg", label: "Static (SSG)", icon: Zap },
   { href: "/isr", label: "ISR", icon: RefreshCw },
   { href: "/rsc", label: "RSC", icon: Boxes },

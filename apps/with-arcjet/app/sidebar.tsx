@@ -18,6 +18,7 @@ import {
   FileLock,
   Gauge,
   Globe,
+  HelpCircle,
   Home,
   Key,
   Lock,
@@ -31,6 +32,7 @@ import { usePathname } from "next/navigation";
 
 const nav = [
   { href: "/", label: "Home", icon: Home },
+  { href: "/faq", label: "FAQ", icon: HelpCircle },
   { href: "/attack", label: "Attack", icon: Swords },
   { href: "/rate-limiting", label: "Rate limiting", icon: Gauge },
   { href: "/http-cookies", label: "HTTP cookies", icon: Cookie },

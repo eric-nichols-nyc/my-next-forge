@@ -10,6 +10,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:zones": "turbo dev --filter=with-zones --filter=with-arcjet --filter=with-optimization --filter=with-scalable --filter=render-lab",
     "check": "npx ultracite@latest check",
     "fix": "npx ultracite@latest fix",
     "test": "turbo test",
