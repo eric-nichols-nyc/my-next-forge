@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
+import { cacheLife } from "next/cache";
 import { ArrowLeft, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -39,10 +40,10 @@ async function getData(id: string) {
   };
 }
 
-// This page uses ISR with revalidation every 10 seconds
-export const revalidate = 10; // Revalidate every 10 seconds
-
 const ISRProductPage = async ({ params }: PageProps) => {
+  "use cache";
+  cacheLife({ revalidate: 10 }); // Revalidate every 10 seconds (ISR-style)
+
   const { id } = await params;
   const data = await getData(id);
 

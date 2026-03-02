@@ -1,4 +1,3 @@
-import { ModeToggle } from "@repo/design-system/components/mode-toggle";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   Card,
@@ -7,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@repo/design-system/components/ui/card";
-import { Code, Layers, RefreshCw, Server, Zap } from "lucide-react";
+import { Boxes, Code, Layers, RefreshCw, Server, Zap } from "lucide-react";
 import Link from "next/link";
 
 const strategies = [
@@ -40,6 +39,13 @@ const strategies = [
     color: "text-purple-500",
   },
   {
+    name: "React Server Components (RSC)",
+    description: "Components that run on the server and don't ship JS to the client",
+    href: "/rsc",
+    icon: Boxes,
+    color: "text-cyan-500",
+  },
+  {
     name: "Partial Pre-Rendering (PPR)",
     description: "Selectively pre-render parts of a page (Experimental)",
     href: "/ppr",
@@ -49,16 +55,13 @@ const strategies = [
 ];
 
 const HomePage = () => (
-  <main className="min-h-screen bg-background p-8">
+  <div className="p-8">
     <div className="mx-auto max-w-6xl">
-      <div className="mb-8 flex items-center justify-between">
-        <div>
-          <h1 className="font-bold text-4xl">Render Lab</h1>
-          <p className="mt-2 text-muted-foreground">
-            Explore different Next.js rendering strategies
-          </p>
-        </div>
-        <ModeToggle />
+      <div className="mb-8">
+        <h1 className="font-bold text-4xl">Render Lab</h1>
+        <p className="mt-2 text-muted-foreground">
+          Explore different Next.js rendering strategies
+        </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -107,7 +110,7 @@ const HomePage = () => (
         </CardContent>
       </Card>
     </div>
-  </main>
+  </div>
 );
 
 export default HomePage;
