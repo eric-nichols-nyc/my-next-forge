@@ -9,8 +9,7 @@ import {
 
 const faqs = [
   {
-    question:
-      "How does SOLID help you keep your React components scalable?",
+    question: "How does SOLID help you keep your React components scalable?",
     answer:
       "Well, I make sure each component has one responsibility—like a ProductCard just renders the card and a useProducts hook handles the data—so when something changes I only touch one place. I keep components open for extension but closed for modification, so I add behavior with composition, wrappers, or render props instead of editing the component itself. I design so that any component that matches the same contract can be swapped in without breaking the parent. I only pass the props a component actually needs so I don’t end up with giant prop objects, and I depend on props and context instead of concrete APIs so I can plug in different data or themes without rewriting the component. For me that’s how SOLID keeps things scalable.",
   },
@@ -51,7 +50,7 @@ const FaqPage = () => (
         </p>
       </div>
 
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion className="w-full" type="multiple">
         {faqs.map((faq) => (
           <AccordionItem key={faq.question} value={faq.question}>
             <AccordionTrigger>{faq.question}</AccordionTrigger>

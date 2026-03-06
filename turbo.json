@@ -9,6 +9,7 @@
       "outputs": [
         ".next/**",
         "!.next/cache/**",
+        "dist/**",
         "**/generated/**",
         "storybook-static/**",
         ".react-email/**"
