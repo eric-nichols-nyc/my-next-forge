@@ -1,11 +1,10 @@
-import { Injectable } from '@nestjs/common';
-
-export type UserDto = {
-  id: number;
-  name: string;
-  email: string;
-  role: string;
-};
+import {
+  BadRequestException,
+  ConflictException,
+  Injectable,
+} from '@nestjs/common';
+import { createUserSchema } from './dto/create-user.dto';
+import type { UserDto } from './schemas/user.schema';
 
 @Injectable()
 export class UsersService {
@@ -44,5 +43,38 @@ export class UsersService {
 
   findAll(): UserDto[] {
     return this.users;
+  }
+
+  create(payload: unknown): UserDto {
+    const parsed = createUserSchema.safeParse(payload);
+    if (!parsed.success) {
+      const detail = parsed.error.issues
+        .map(
+          (issue) =>
+            `${issue.path.length > 0 ? issue.path.join('.') : 'body'}: ${issue.message}`,
+        )
+        .join('; ');
+      throw new BadRequestException(detail || 'Invalid request body');
+    }
+    const dto = parsed.data;
+    const emailNormalized = dto.email.toLowerCase();
+    const duplicate = this.users.some(
+      (u) => u.email.toLowerCase() === emailNormalized,
+    );
+    if (duplicate) {
+      throw new ConflictException('A user with this email already exists');
+    }
+    const nextId =
+      this.users.length === 0
+        ? 1
+        : Math.max(...this.users.map((u) => u.id)) + 1;
+    const user: UserDto = {
+      id: nextId,
+      name: dto.name,
+      email: dto.email,
+      role: dto.role,
+    };
+    this.users.push(user);
+    return user;
   }
 }

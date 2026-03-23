@@ -59,7 +59,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -108,7 +108,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -228,6 +228,9 @@ importers:
       rxjs:
         specifier: ^7.8.1
         version: 7.8.2
+      zod:
+        specifier: ^4.3.6
+        version: 4.3.6
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.2.0
@@ -309,7 +312,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -367,7 +370,7 @@ importers:
         version: 7.13.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react-spring:
         specifier: ^9.7.3
-        version: 9.7.5(@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2))(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react-konva@18.2.14(@types/react@19.2.7)(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react-zdog@1.2.2)(react@19.2.1)(three@0.183.2)(zdog@1.1.3)
+        version: 9.7.5(@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2))(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react-konva@18.2.14(@types/react@19.2.7)(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react-zdog@1.2.2)(react@19.2.1)(three@0.183.2)(zdog@1.1.3)
       spin-delay:
         specifier: ^2.0.0
         version: 2.0.1(react@19.2.1)
@@ -434,7 +437,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -497,7 +500,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -665,7 +668,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -708,7 +711,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -772,7 +775,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -818,7 +821,7 @@ importers:
         version: 12.23.26(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -891,7 +894,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -937,7 +940,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -980,7 +983,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1023,7 +1026,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1093,7 +1096,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1139,7 +1142,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1185,7 +1188,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1231,7 +1234,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1380,7 +1383,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1423,7 +1426,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1466,7 +1469,7 @@ importers:
         version: 0.556.0(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -1921,7 +1924,7 @@ importers:
         version: 4.0.2(@opentelemetry/api@1.9.0)(next@16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react:
         specifier: 19.2.1
         version: 19.2.1
@@ -1977,7 +1980,7 @@ importers:
         version: 19.2.3(@types/react@19.2.7)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
 
   packages/neon-auth:
     dependencies:
@@ -2036,7 +2039,7 @@ importers:
         version: link:../typescript-config
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
 
   packages/notifications:
     dependencies:
@@ -2256,7 +2259,7 @@ importers:
         version: 19.2.3(@types/react@19.2.7)
       next:
         specifier: 16.0.10
-        version: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
+        version: 16.0.10(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
 
   packages/storage:
     dependencies:
@@ -3478,6 +3481,7 @@ packages:
   '@clerk/types@4.101.5':
     resolution: {integrity: sha512-LEfEizGRM0hN/8GHaia8EIf7kcTHKh2R/Ebj7n1zETB88HrCrM6mvTVv/fqpf5203F1GsCR/UU2l18EOClfWGA==}
     engines: {node: '>=18.17.0'}
+    deprecated: 'This package is no longer supported. Please import types from @clerk/shared/types instead. See the upgrade guide for more info: https://clerk.com/docs/guides/development/upgrading/upgrade-guides/core-3'
 
   '@cloudflare/kv-asset-handler@0.4.2':
     resolution: {integrity: sha512-SIOD2DxrRRwQ+jgzlXCqoEFiKOFqaPjhnNTGKXSRLvp1HiOvapLaFG2kEr9dYQTYe8rKrd9uvDUzmAITeNyaHQ==}
@@ -17820,6 +17824,11 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.4
 
+  '@babel/plugin-syntax-async-generators@7.8.4(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/helper-plugin-utils': 7.27.1
+
   '@babel/plugin-syntax-async-generators@7.8.4(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
@@ -17835,9 +17844,19 @@ snapshots:
       '@babel/core': 7.29.0
       '@babel/helper-plugin-utils': 7.27.1
 
+  '@babel/plugin-syntax-class-properties@7.12.13(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/helper-plugin-utils': 7.27.1
+
   '@babel/plugin-syntax-class-properties@7.12.13(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
+      '@babel/helper-plugin-utils': 7.27.1
+
+  '@babel/plugin-syntax-class-static-block@7.14.5(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
       '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/plugin-syntax-class-static-block@7.14.5(@babel/core@7.29.0)':
@@ -17865,9 +17884,19 @@ snapshots:
       '@babel/core': 7.29.0
       '@babel/helper-plugin-utils': 7.27.1
 
+  '@babel/plugin-syntax-import-meta@7.10.4(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/helper-plugin-utils': 7.27.1
+
   '@babel/plugin-syntax-import-meta@7.10.4(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
+      '@babel/helper-plugin-utils': 7.27.1
+
+  '@babel/plugin-syntax-json-strings@7.8.3(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
       '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/plugin-syntax-json-strings@7.8.3(@babel/core@7.29.0)':
@@ -17885,9 +17914,19 @@ snapshots:
       '@babel/core': 7.29.0
       '@babel/helper-plugin-utils': 7.27.1
 
+  '@babel/plugin-syntax-logical-assignment-operators@7.10.4(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/helper-plugin-utils': 7.27.1
+
   '@babel/plugin-syntax-logical-assignment-operators@7.10.4(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
+      '@babel/helper-plugin-utils': 7.27.1
+
+  '@babel/plugin-syntax-nullish-coalescing-operator@7.8.3(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
       '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/plugin-syntax-nullish-coalescing-operator@7.8.3(@babel/core@7.29.0)':
@@ -17895,9 +17934,19 @@ snapshots:
       '@babel/core': 7.29.0
       '@babel/helper-plugin-utils': 7.27.1
 
+  '@babel/plugin-syntax-numeric-separator@7.10.4(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/helper-plugin-utils': 7.27.1
+
   '@babel/plugin-syntax-numeric-separator@7.10.4(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
+      '@babel/helper-plugin-utils': 7.27.1
+
+  '@babel/plugin-syntax-object-rest-spread@7.8.3(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
       '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/plugin-syntax-object-rest-spread@7.8.3(@babel/core@7.29.0)':
@@ -17905,9 +17954,19 @@ snapshots:
       '@babel/core': 7.29.0
       '@babel/helper-plugin-utils': 7.27.1
 
+  '@babel/plugin-syntax-optional-catch-binding@7.8.3(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/helper-plugin-utils': 7.27.1
+
   '@babel/plugin-syntax-optional-catch-binding@7.8.3(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
+      '@babel/helper-plugin-utils': 7.27.1
+
+  '@babel/plugin-syntax-optional-chaining@7.8.3(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
       '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/plugin-syntax-optional-chaining@7.8.3(@babel/core@7.29.0)':
@@ -17915,9 +17974,19 @@ snapshots:
       '@babel/core': 7.29.0
       '@babel/helper-plugin-utils': 7.27.1
 
+  '@babel/plugin-syntax-private-property-in-object@7.14.5(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/helper-plugin-utils': 7.27.1
+
   '@babel/plugin-syntax-private-property-in-object@7.14.5(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
+      '@babel/helper-plugin-utils': 7.27.1
+
+  '@babel/plugin-syntax-top-level-await@7.14.5(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
       '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/plugin-syntax-top-level-await@7.14.5(@babel/core@7.29.0)':
@@ -18514,37 +18583,37 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@better-auth/core@1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)':
+  '@better-auth/core@1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)':
     dependencies:
       '@better-auth/utils': 0.3.0
       '@better-fetch/fetch': 1.1.18
       '@standard-schema/spec': 1.0.0
-      better-call: 1.1.4(zod@4.2.1)
+      better-call: 1.1.4(zod@4.3.6)
       jose: 6.1.3
       kysely: 0.28.9
       nanostores: 1.1.0
-      zod: 4.2.1
+      zod: 4.3.6
 
-  '@better-auth/core@1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)':
+  '@better-auth/core@1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)':
     dependencies:
       '@better-auth/utils': 0.3.0
       '@better-fetch/fetch': 1.1.18
       '@standard-schema/spec': 1.0.0
-      better-call: 1.1.5(zod@4.2.1)
+      better-call: 1.1.5(zod@4.3.6)
       jose: 6.1.3
       kysely: 0.28.9
       nanostores: 1.1.0
-      zod: 4.2.1
+      zod: 4.3.6
 
-  '@better-auth/telemetry@1.4.5(@better-auth/core@1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0))':
+  '@better-auth/telemetry@1.4.5(@better-auth/core@1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0))':
     dependencies:
-      '@better-auth/core': 1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)
+      '@better-auth/core': 1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)
       '@better-auth/utils': 0.3.0
       '@better-fetch/fetch': 1.1.18
 
-  '@better-auth/telemetry@1.4.6(@better-auth/core@1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0))':
+  '@better-auth/telemetry@1.4.6(@better-auth/core@1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0))':
     dependencies:
-      '@better-auth/core': 1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)
+      '@better-auth/core': 1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)
       '@better-auth/utils': 0.3.0
       '@better-fetch/fetch': 1.1.18
 
@@ -18798,7 +18867,7 @@ snapshots:
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
 
-  '@daveyplate/better-auth-ui@3.2.13(3c0b9ae671bcf33089e36ad0fc721d54)':
+  '@daveyplate/better-auth-ui@3.2.13(74f78bda0f357470b246c72bbb41452f)':
     dependencies:
       '@better-fetch/fetch': 1.1.21
       '@captchafox/react': 1.10.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -18841,7 +18910,7 @@ snapshots:
       tailwindcss: 4.1.17
       ua-parser-js: 2.0.7
       vaul: 1.1.2(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      zod: 4.2.1
+      zod: 4.3.6
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
@@ -20142,7 +20211,7 @@ snapshots:
   '@neondatabase/auth-ui@0.1.0-alpha.10(36e28711c7a15ae79dd40f6640cc301d)':
     dependencies:
       '@captchafox/react': 1.10.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@daveyplate/better-auth-ui': 3.2.13(3c0b9ae671bcf33089e36ad0fc721d54)
+      '@daveyplate/better-auth-ui': 3.2.13(74f78bda0f357470b246c72bbb41452f)
       '@hcaptcha/react-hcaptcha': 1.17.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@hookform/resolvers': 5.2.2(react-hook-form@7.68.0(react@19.2.1))
       '@marsidev/react-turnstile': 1.4.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -20177,7 +20246,7 @@ snapshots:
       tw-animate-css: 1.4.0
       ua-parser-js: 2.0.7
       vaul: 1.1.2(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      zod: 4.2.1
+      zod: 4.3.6
     transitivePeerDependencies:
       - '@daveyplate/better-auth-tanstack'
       - '@instantdb/react'
@@ -20231,7 +20300,7 @@ snapshots:
   '@neondatabase/neon-auth-ui@0.1.0-alpha.2(3127ee9de6317d6eb472069a9d98a1f8)':
     dependencies:
       '@captchafox/react': 1.10.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      '@daveyplate/better-auth-ui': 3.2.13(3c0b9ae671bcf33089e36ad0fc721d54)
+      '@daveyplate/better-auth-ui': 3.2.13(74f78bda0f357470b246c72bbb41452f)
       '@hcaptcha/react-hcaptcha': 1.17.1(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@hookform/resolvers': 5.2.2(react-hook-form@7.68.0(react@19.2.1))
       '@marsidev/react-turnstile': 1.4.0(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -20266,7 +20335,7 @@ snapshots:
       tw-animate-css: 1.4.0
       ua-parser-js: 2.0.7
       vaul: 1.1.2(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
-      zod: 4.2.1
+      zod: 4.3.6
     transitivePeerDependencies:
       - '@daveyplate/better-auth-tanstack'
       - '@instantdb/react'
@@ -22342,9 +22411,9 @@ snapshots:
 
   '@react-native/assets-registry@0.84.1': {}
 
-  '@react-native/codegen@0.84.1(@babel/core@7.29.0)':
+  '@react-native/codegen@0.84.1(@babel/core@7.28.4)':
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.28.4
       '@babel/parser': 7.29.0
       hermes-parser: 0.32.0
       invariant: 2.2.4
@@ -22401,12 +22470,12 @@ snapshots:
 
   '@react-native/normalize-colors@0.84.1': {}
 
-  '@react-native/virtualized-lists@0.84.1(@types/react@19.2.7)(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)':
+  '@react-native/virtualized-lists@0.84.1(@types/react@19.2.7)(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)':
     dependencies:
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 19.2.1
-      react-native: 0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1)
+      react-native: 0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1)
     optionalDependencies:
       '@types/react': 19.2.7
 
@@ -22433,14 +22502,14 @@ snapshots:
       react: 19.2.1
       react-konva: 18.2.14(@types/react@19.2.7)(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
 
-  '@react-spring/native@9.7.5(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)':
+  '@react-spring/native@9.7.5(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)':
     dependencies:
       '@react-spring/animated': 9.7.5(react@19.2.1)
       '@react-spring/core': 9.7.5(react@19.2.1)
       '@react-spring/shared': 9.7.5(react@19.2.1)
       '@react-spring/types': 9.7.5
       react: 19.2.1
-      react-native: 0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1)
+      react-native: 0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1)
 
   '@react-spring/rafz@9.7.5': {}
 
@@ -22450,13 +22519,13 @@ snapshots:
       '@react-spring/types': 9.7.5
       react: 19.2.1
 
-  '@react-spring/three@9.7.5(@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2))(react@19.2.1)(three@0.183.2)':
+  '@react-spring/three@9.7.5(@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2))(react@19.2.1)(three@0.183.2)':
     dependencies:
       '@react-spring/animated': 9.7.5(react@19.2.1)
       '@react-spring/core': 9.7.5(react@19.2.1)
       '@react-spring/shared': 9.7.5(react@19.2.1)
       '@react-spring/types': 9.7.5
-      '@react-three/fiber': 9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2)
+      '@react-three/fiber': 9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2)
       react: 19.2.1
       three: 0.183.2
 
@@ -22482,7 +22551,7 @@ snapshots:
       react-zdog: 1.2.2
       zdog: 1.1.3
 
-  '@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2)':
+  '@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2)':
     dependencies:
       '@babel/runtime': 7.27.1
       '@types/webxr': 0.5.24
@@ -22498,7 +22567,7 @@ snapshots:
       zustand: 5.0.11(@types/react@19.2.7)(react@19.2.1)(use-sync-external-store@1.6.0(react@19.2.1))
     optionalDependencies:
       react-dom: 19.2.1(react@19.2.1)
-      react-native: 0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1)
+      react-native: 0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1)
     transitivePeerDependencies:
       - '@types/react'
       - immer
@@ -25601,13 +25670,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  babel-jest@29.7.0(@babel/core@7.29.0):
+  babel-jest@29.7.0(@babel/core@7.28.4):
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.28.4
       '@jest/transform': 29.7.0
       '@types/babel__core': 7.20.5
       babel-plugin-istanbul: 6.1.1
-      babel-preset-jest: 29.6.3(@babel/core@7.29.0)
+      babel-preset-jest: 29.6.3(@babel/core@7.28.4)
       chalk: 4.1.2
       graceful-fs: 4.2.11
       slash: 3.0.0
@@ -25693,6 +25762,25 @@ snapshots:
     dependencies:
       hermes-parser: 0.32.0
 
+  babel-preset-current-node-syntax@1.2.0(@babel/core@7.28.4):
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/plugin-syntax-async-generators': 7.8.4(@babel/core@7.28.4)
+      '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.28.4)
+      '@babel/plugin-syntax-class-properties': 7.12.13(@babel/core@7.28.4)
+      '@babel/plugin-syntax-class-static-block': 7.14.5(@babel/core@7.28.4)
+      '@babel/plugin-syntax-import-attributes': 7.27.1(@babel/core@7.28.4)
+      '@babel/plugin-syntax-import-meta': 7.10.4(@babel/core@7.28.4)
+      '@babel/plugin-syntax-json-strings': 7.8.3(@babel/core@7.28.4)
+      '@babel/plugin-syntax-logical-assignment-operators': 7.10.4(@babel/core@7.28.4)
+      '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3(@babel/core@7.28.4)
+      '@babel/plugin-syntax-numeric-separator': 7.10.4(@babel/core@7.28.4)
+      '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.28.4)
+      '@babel/plugin-syntax-optional-catch-binding': 7.8.3(@babel/core@7.28.4)
+      '@babel/plugin-syntax-optional-chaining': 7.8.3(@babel/core@7.28.4)
+      '@babel/plugin-syntax-private-property-in-object': 7.14.5(@babel/core@7.28.4)
+      '@babel/plugin-syntax-top-level-await': 7.14.5(@babel/core@7.28.4)
+
   babel-preset-current-node-syntax@1.2.0(@babel/core@7.29.0):
     dependencies:
       '@babel/core': 7.29.0
@@ -25712,11 +25800,11 @@ snapshots:
       '@babel/plugin-syntax-private-property-in-object': 7.14.5(@babel/core@7.29.0)
       '@babel/plugin-syntax-top-level-await': 7.14.5(@babel/core@7.29.0)
 
-  babel-preset-jest@29.6.3(@babel/core@7.29.0):
+  babel-preset-jest@29.6.3(@babel/core@7.28.4):
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.28.4
       babel-plugin-jest-hoist: 29.6.3
-      babel-preset-current-node-syntax: 1.2.0(@babel/core@7.29.0)
+      babel-preset-current-node-syntax: 1.2.0(@babel/core@7.28.4)
 
   babel-preset-jest@30.3.0(@babel/core@7.29.0):
     dependencies:
@@ -25751,19 +25839,19 @@ snapshots:
 
   better-auth@1.4.5(@tanstack/react-start@1.163.2(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(vite@7.3.1(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(tsx@4.21.0)(yaml@2.7.0))(webpack@5.104.1(esbuild@0.27.1)))(next@16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(solid-js@1.9.11):
     dependencies:
-      '@better-auth/core': 1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)
-      '@better-auth/telemetry': 1.4.5(@better-auth/core@1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0))
+      '@better-auth/core': 1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)
+      '@better-auth/telemetry': 1.4.5(@better-auth/core@1.4.5(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.4(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0))
       '@better-auth/utils': 0.3.0
       '@better-fetch/fetch': 1.1.18
       '@noble/ciphers': 2.1.1
       '@noble/hashes': 2.0.1
-      better-call: 1.1.4(zod@4.2.1)
+      better-call: 1.1.4(zod@4.3.6)
       defu: 6.1.4
       jose: 6.1.3
       kysely: 0.28.9
       ms: 4.0.0-nightly.202508271359
       nanostores: 1.1.0
-      zod: 4.2.1
+      zod: 4.3.6
     optionalDependencies:
       '@tanstack/react-start': 1.163.2(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(vite@7.3.1(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(tsx@4.21.0)(yaml@2.7.0))(webpack@5.104.1(esbuild@0.27.1))
       next: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -25773,19 +25861,19 @@ snapshots:
 
   better-auth@1.4.6(@tanstack/react-start@1.163.2(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(vite@7.3.1(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(tsx@4.21.0)(yaml@2.7.0))(webpack@5.104.1(esbuild@0.27.1)))(next@16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(solid-js@1.9.11):
     dependencies:
-      '@better-auth/core': 1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)
-      '@better-auth/telemetry': 1.4.6(@better-auth/core@1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.2.1))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0))
+      '@better-auth/core': 1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0)
+      '@better-auth/telemetry': 1.4.6(@better-auth/core@1.4.6(@better-auth/utils@0.3.0)(@better-fetch/fetch@1.1.18)(better-call@1.1.5(zod@4.3.6))(jose@6.1.3)(kysely@0.28.9)(nanostores@1.1.0))
       '@better-auth/utils': 0.3.0
       '@better-fetch/fetch': 1.1.18
       '@noble/ciphers': 2.1.1
       '@noble/hashes': 2.0.1
-      better-call: 1.1.5(zod@4.2.1)
+      better-call: 1.1.5(zod@4.3.6)
       defu: 6.1.4
       jose: 6.1.3
       kysely: 0.28.9
       ms: 4.0.0-nightly.202508271359
       nanostores: 1.1.0
-      zod: 4.2.1
+      zod: 4.3.6
     optionalDependencies:
       '@tanstack/react-start': 1.163.2(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(vite@7.3.1(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(tsx@4.21.0)(yaml@2.7.0))(webpack@5.104.1(esbuild@0.27.1))
       next: 16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -25793,23 +25881,23 @@ snapshots:
       react-dom: 19.2.1(react@19.2.1)
       solid-js: 1.9.11
 
-  better-call@1.1.4(zod@4.2.1):
+  better-call@1.1.4(zod@4.3.6):
     dependencies:
       '@better-auth/utils': 0.3.0
       '@better-fetch/fetch': 1.1.21
       rou3: 0.7.12
       set-cookie-parser: 2.7.2
     optionalDependencies:
-      zod: 4.2.1
+      zod: 4.3.6
 
-  better-call@1.1.5(zod@4.2.1):
+  better-call@1.1.5(zod@4.3.6):
     dependencies:
       '@better-auth/utils': 0.3.0
       '@better-fetch/fetch': 1.1.21
       rou3: 0.7.12
       set-cookie-parser: 2.7.2
     optionalDependencies:
-      zod: 4.2.1
+      zod: 4.3.6
 
   bidi-js@1.0.3:
     dependencies:
@@ -31036,31 +31124,6 @@ snapshots:
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
 
-  next@16.0.10(@babel/core@7.28.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
-    dependencies:
-      '@next/env': 16.0.10
-      '@swc/helpers': 0.5.15
-      caniuse-lite: 1.0.30001781
-      postcss: 8.4.31
-      react: 19.2.1
-      react-dom: 19.2.1(react@19.2.1)
-      styled-jsx: 5.1.6(@babel/core@7.28.4)(react@19.2.1)
-    optionalDependencies:
-      '@next/swc-darwin-arm64': 16.0.10
-      '@next/swc-darwin-x64': 16.0.10
-      '@next/swc-linux-arm64-gnu': 16.0.10
-      '@next/swc-linux-arm64-musl': 16.0.10
-      '@next/swc-linux-x64-gnu': 16.0.10
-      '@next/swc-linux-x64-musl': 16.0.10
-      '@next/swc-win32-arm64-msvc': 16.0.10
-      '@next/swc-win32-x64-msvc': 16.0.10
-      '@opentelemetry/api': 1.9.0
-      '@playwright/test': 1.57.0
-      sharp: 0.34.5
-    transitivePeerDependencies:
-      - '@babel/core'
-      - babel-plugin-macros
-
   next@16.0.10(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.57.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
     dependencies:
       '@next/env': 16.0.10
@@ -31094,7 +31157,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
-      styled-jsx: 5.1.6(@babel/core@7.29.0)(react@19.2.1)
+      styled-jsx: 5.1.6(@babel/core@7.28.4)(react@19.2.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.0.10
       '@next/swc-darwin-x64': 16.0.10
@@ -32391,20 +32454,20 @@ snapshots:
       react-css-styled: 1.1.9
       react-selecto: 1.26.3
 
-  react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1):
+  react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1):
     dependencies:
       '@jest/create-cache-key-function': 29.7.0
       '@react-native/assets-registry': 0.84.1
-      '@react-native/codegen': 0.84.1(@babel/core@7.29.0)
+      '@react-native/codegen': 0.84.1(@babel/core@7.28.4)
       '@react-native/community-cli-plugin': 0.84.1(bufferutil@4.0.9)
       '@react-native/gradle-plugin': 0.84.1
       '@react-native/js-polyfills': 0.84.1
       '@react-native/normalize-colors': 0.84.1
-      '@react-native/virtualized-lists': 0.84.1(@types/react@19.2.7)(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)
+      '@react-native/virtualized-lists': 0.84.1(@types/react@19.2.7)(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)
       abort-controller: 3.0.0
       anser: 1.4.10
       ansi-regex: 5.0.1
-      babel-jest: 29.7.0(@babel/core@7.29.0)
+      babel-jest: 29.7.0(@babel/core@7.28.4)
       babel-plugin-syntax-hermes-parser: 0.32.0
       base64-js: 1.5.1
       commander: 12.1.0
@@ -32509,12 +32572,12 @@ snapshots:
       react-dom: 19.2.1(react@19.2.1)
       react-transition-group: 4.4.5(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
 
-  react-spring@9.7.5(@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2))(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react-konva@18.2.14(@types/react@19.2.7)(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react-zdog@1.2.2)(react@19.2.1)(three@0.183.2)(zdog@1.1.3):
+  react-spring@9.7.5(@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2))(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react-konva@18.2.14(@types/react@19.2.7)(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react-zdog@1.2.2)(react@19.2.1)(three@0.183.2)(zdog@1.1.3):
     dependencies:
       '@react-spring/core': 9.7.5(react@19.2.1)
       '@react-spring/konva': 9.7.5(konva@10.2.0)(react-konva@18.2.14(@types/react@19.2.7)(konva@10.2.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)
-      '@react-spring/native': 9.7.5(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)
-      '@react-spring/three': 9.7.5(@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.29.0)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2))(react@19.2.1)(three@0.183.2)
+      '@react-spring/native': 9.7.5(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)
+      '@react-spring/three': 9.7.5(@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.1(react@19.2.1))(react-native@0.84.1(@babel/core@7.28.4)(@types/react@19.2.7)(bufferutil@4.0.9)(react@19.2.1))(react@19.2.1)(three@0.183.2))(react@19.2.1)(three@0.183.2)
       '@react-spring/web': 9.7.5(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       '@react-spring/zdog': 9.7.5(react-dom@19.2.1(react@19.2.1))(react-zdog@1.2.2)(react@19.2.1)(zdog@1.1.3)
       react: 19.2.1
@@ -34034,14 +34097,14 @@ snapshots:
 
   trough@2.2.0: {}
 
-  trpc-cli@0.12.1(@trpc/server@11.7.2(typescript@5.9.3))(effect@3.18.4)(valibot@1.2.0(typescript@5.9.3))(zod@4.2.1):
+  trpc-cli@0.12.1(@trpc/server@11.7.2(typescript@5.9.3))(effect@3.18.4)(valibot@1.2.0(typescript@5.9.3))(zod@4.3.6):
     dependencies:
       commander: 14.0.2
     optionalDependencies:
       '@trpc/server': 11.7.2(typescript@5.9.3)
       effect: 3.18.4
       valibot: 1.2.0(typescript@5.9.3)
-      zod: 4.2.1
+      zod: 4.3.6
 
   ts-api-utils@2.4.0(typescript@5.9.3):
     dependencies:
@@ -34327,8 +34390,8 @@ snapshots:
       glob: 13.0.0
       jsonc-parser: 3.3.1
       nypm: 0.6.2
-      trpc-cli: 0.12.1(@trpc/server@11.7.2(typescript@5.9.3))(effect@3.18.4)(valibot@1.2.0(typescript@5.9.3))(zod@4.2.1)
-      zod: 4.2.1
+      trpc-cli: 0.12.1(@trpc/server@11.7.2(typescript@5.9.3))(effect@3.18.4)(valibot@1.2.0(typescript@5.9.3))(zod@4.3.6)
+      zod: 4.3.6
     transitivePeerDependencies:
       - '@orpc/server'
       - '@valibot/to-json-schema'
