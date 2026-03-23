@@ -3,8 +3,7 @@ import {
   ConflictException,
   Injectable,
 } from '@nestjs/common';
-import { createUserSchema } from './dto/create-user.dto';
-import type { UserDto } from './schemas/user.schema';
+import { createUserSchema, type UserDto } from '@repo/schemas';
 
 @Injectable()
 export class UsersService {
