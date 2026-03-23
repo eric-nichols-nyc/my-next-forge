@@ -36,4 +36,3 @@ test("should load the globe and countries modules on demand", async ({
     "🚨 Expected to find a request for the countries module"
   ).toEqual(expect.arrayContaining([expect.stringContaining("countries")]));
 });
-})
