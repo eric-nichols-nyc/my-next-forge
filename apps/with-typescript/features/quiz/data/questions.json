@@ -343,5 +343,80 @@
     "correctOptionIndex": 1,
     "explanation": "Overloads model different valid call shapes while sharing one implementation function.",
     "codeSample": "function format(value: string): string;\nfunction format(value: number): string;\nfunction format(value: string | number): string {\n  return `${value}`;\n}"
+  },
+  {
+    "id": 24,
+    "category": "safety",
+    "difficulty": "medium",
+    "question": "What are type guards?",
+    "options": [
+      "Type guards only work with primitive values.",
+      "Type guards are runtime checks that narrow a variable's type in a control-flow branch.",
+      "Type guards replace TypeScript interfaces at runtime.",
+      "Type guards are only available in classes."
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Type guards let TypeScript narrow union/unknown types safely based on checks like typeof, in, instanceof, or custom predicates.",
+    "codeSample": "type Cat = { meow: () => void };\ntype Dog = { bark: () => void };\n\nfunction speak(pet: Cat | Dog) {\n  if (\"meow\" in pet) {\n    pet.meow();\n  } else {\n    pet.bark();\n  }\n}"
+  },
+  {
+    "id": 25,
+    "category": "advanced",
+    "difficulty": "medium",
+    "question": "What are .d.ts files?",
+    "options": [
+      ".d.ts files contain executable JavaScript logic.",
+      ".d.ts files provide type declarations for JavaScript code so TypeScript can type-check usage.",
+      ".d.ts files are only used by Node.js at runtime.",
+      ".d.ts files are generated only for CSS modules."
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Declaration files describe shapes of modules, globals, and APIs without implementation code.",
+    "codeSample": "// math-lib.d.ts\ndeclare module \"math-lib\" {\n  export function sum(a: number, b: number): number;\n}\n\n// app.ts\nimport { sum } from \"math-lib\";\nconst result = sum(1, 2);"
+  },
+  {
+    "id": 26,
+    "category": "advanced",
+    "difficulty": "medium",
+    "question": "What are discriminated unions?",
+    "options": [
+      "A union where each member has a shared literal tag that enables safe narrowing.",
+      "A union that can only include string types.",
+      "A way to disable strict null checks.",
+      "A runtime enum replacement."
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "A common literal field (like type/kind) lets TypeScript narrow each union member predictably.",
+    "codeSample": "type Loading = { status: \"loading\" };\ntype Success = { status: \"success\"; data: string[] };\ntype ErrorState = { status: \"error\"; message: string };\n\ntype State = Loading | Success | ErrorState;\n\nfunction render(state: State) {\n  if (state.status === \"success\") {\n    return state.data.join(\", \");\n  }\n  return \"not ready\";\n}"
+  },
+  {
+    "id": 27,
+    "category": "advanced",
+    "difficulty": "hard",
+    "question": "How does the infer keyword work?",
+    "options": [
+      "infer extracts a type variable inside conditional types from a matched structure.",
+      "infer only works in runtime if statements.",
+      "infer is used to cast unknown to any.",
+      "infer is a replacement for generic constraints."
+    ],
+    "correctOptionIndex": 0,
+    "explanation": "infer lets you capture parts of a type pattern, such as function return types or tuple members.",
+    "codeSample": "type ReturnTypeOf<T> = T extends (...args: never[]) => infer R ? R : never;\n\ntype A = ReturnTypeOf<() => number>; // number\ntype B = ReturnTypeOf<(s: string) => Promise<boolean>>; // Promise<boolean>"
+  },
+  {
+    "id": 28,
+    "category": "architecture",
+    "difficulty": "medium",
+    "question": "How do you type Express middleware?",
+    "options": [
+      "Use any for req, res, and next in all middleware.",
+      "Use Request, Response, and NextFunction types from express to annotate middleware arguments.",
+      "Middleware cannot be typed in TypeScript.",
+      "Only response should be typed; request is always unknown."
+    ],
+    "correctOptionIndex": 1,
+    "explanation": "Typing middleware gives safer access to request/response fields and improves editor support.",
+    "codeSample": "import type { Request, Response, NextFunction } from \"express\";\n\nfunction logger(req: Request, res: Response, next: NextFunction) {\n  console.log(req.method, req.path);\n  next();\n}"
   }
 ]

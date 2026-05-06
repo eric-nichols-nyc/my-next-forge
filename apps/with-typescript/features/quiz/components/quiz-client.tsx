@@ -21,7 +21,44 @@ const quizSources = [
     label: "Arc.dev - TypeScript Interview Questions",
     url: "https://arc.dev/talent-blog/typescript-interview-questions/",
   },
+  {
+    label: "Mimo - Top TypeScript Interview Questions",
+    url: "https://mimo.org/blog/typescript-interview-questions",
+  },
 ];
+
+const shuffleOptionEntries = (options: string[], correctIndex: number) => {
+  const entries = options.map((option, index) => ({
+    option,
+    isCorrect: index === correctIndex,
+  }));
+
+  for (let index = entries.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [entries[index], entries[randomIndex]] = [entries[randomIndex], entries[index]];
+  }
+
+  const shuffledOptions = entries.map((entry) => entry.option);
+  const shuffledCorrectIndex = entries.findIndex((entry) => entry.isCorrect);
+
+  return { shuffledOptions, shuffledCorrectIndex };
+};
+
+const randomizeQuestionOptions = (question: QuizQuestion): QuizQuestion => {
+  const { shuffledOptions, shuffledCorrectIndex } = shuffleOptionEntries(
+    question.options,
+    question.correctOptionIndex
+  );
+
+  return {
+    ...question,
+    options: shuffledOptions,
+    correctOptionIndex: shuffledCorrectIndex,
+  };
+};
+
+const buildQuizQuestions = (questions: QuizQuestion[]) =>
+  questions.map(randomizeQuestionOptions);
 
 const shuffleQuestions = (questions: QuizQuestion[]): QuizQuestion[] => {
   const copy = [...questions];
@@ -36,7 +73,9 @@ export const QuizClient = ({ questions }: QuizClientProperties) => {
   const [selectedDifficulty, setSelectedDifficulty] = useState<
     QuizDifficulty | "all"
   >("all");
-  const [quizQuestions, setQuizQuestions] = useState(questions);
+  const [quizQuestions, setQuizQuestions] = useState(() =>
+    buildQuizQuestions(questions)
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -169,12 +208,18 @@ export const QuizClient = ({ questions }: QuizClientProperties) => {
     setSubmitted(false);
   };
 
+  const handleSkip = () => {
+    handleNext();
+  };
+
   const handleReset = () => {
     resetQuizState();
   };
 
   const handleShuffle = () => {
-    setQuizQuestions((current) => shuffleQuestions(current));
+    setQuizQuestions((current) =>
+      shuffleQuestions(buildQuizQuestions(current))
+    );
     resetQuizState();
   };
 
@@ -308,6 +353,9 @@ export const QuizClient = ({ questions }: QuizClientProperties) => {
                 >
                   Next Question
                   <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+                <Button disabled={isLastQuestion} onClick={handleSkip} variant="ghost">
+                  Skip Question
                 </Button>
                 <Button onClick={handleReset} variant="ghost">
                   Reset Quiz
