@@ -17,6 +17,11 @@ import { usePathname } from "next/navigation";
 
 const menuItems = [
   {
+    title: "Quiz",
+    href: "/quiz",
+    category: "basic",
+  },
+  {
     title: "Basic Types",
     href: "/basic-types",
     category: "basic",
